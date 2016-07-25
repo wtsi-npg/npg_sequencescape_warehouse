@@ -1,0 +1,639 @@
+ChangeLog for data_handling
+=============================
+
+release 39.1
+ - added -c (cram) option to the call_gtck_composite_rpt.pl commands bsub'ed by the marshall script
+
+release 39.0
+ - drop meta-updater scripts - functionality moved to npg_irods
+ - use perl-irods-wrapper functionality more comprehansively (to avoid clashing with
+   its new caching capability)
+
+release 38.7
+ - grep returns a non-zero exit code if there are no matches, so I replaced find | grep by find -path ..
+   removed the -L option to stop find resolving links, the log tar file now contains links
+
+release 38.6
+ - Added 'purpose' to lims shim
+
+release 38.5
+ - add metadata_cache directory to log archive 
+ - fix a bug in npg_common::irods::run::Log - check return value of chdir and system
+
+release 38.4
+ - fix a bug in run_is_deletable script to allow for deletion of runs  with a status of
+   'run cancelled' or 'data discarded', which do not have a samplesheet 
+ - extend run_is_deletable script to allow to disregard autoqc results for
+   particular subsets
+ - request perl 5.10 as minimum
+
+release 38.3
+ - extend run_is_deletable script to check for presence of samtools_stats and
+   sequence_summary autoqc results
+ - add irods log loader
+
+release 38.2
+ - cope with new unexpected_tags_percent and chimeric_reads_percent in warehouse loading data
+ - cope with iRODS archival of PacBio multiplexed data
+ - generalise dealing with alternative split/filters e.g. _some_bug, as well as _human
+ - run_is_deletable to use LIMs data from a samplesheet RT#486264
+
+release 38.1
+ - bug fix for RT#483665 - pass irods handle to npg_validation::runfolder::deletable::autoqc
+
+release 38.0
+ - archival to IRODS
+   - cache npg qc database handle
+   - use baton
+     - e.g. for metadata and permissions
+     - hold baton handles
+       - to hold iRODS server and DB connections
+       - reduce process creation
+   - ~20 fold speedup
+
+release 37.15
+ - For marshall: Do not bsub if job is already pending
+                 added options for help, dry_run, and seq_irods
+
+release 37.14
+ - add manual_qc meta data from QC database when loading data to irods
+ - modified the irods_bam_deletion.pl script to also delete cram files
+ - removed irods_bam_list_deletion.pl script and corresponding module and test
+
+release 37.13
+ - only load json files corresponding to the current bam/cram file
+ - store qc json files into irods
+
+release 37.12
+ - check_bam_header now runs on cram files provided you specify a verion of samtools_irods_cmd that reads cram e.g. samtools1
+ - ebi submission dates now taken from sub_status table rather then files table in subtrack database
+ - Save samtools stats and sha512primesums512 seqchksum files to iRODS
+
+release 37.11
+ - modified BamConsentWithdrawn.pm to handle cram files and extended tests
+ - replaced duplicated code in npg_common::irods::run::Bam with call to _get_bam_list_to_archive
+   fixed npg_validation::runfolder::deletable::autoqc.pm is_paired_read now works for cram files
+ - updated marshall script to use its new default nfs output area (sf32); added flag to allow specification of the nfs_area
+ - tiny change to npg_common::irods::EbiSubmissionData::PacBio to handle rare file names
+
+release 37.10
+ - added an exclude-bam option to the run_is_deletable script
+ - inflator for string values in the study table where the value
+   represents a boolean flag
+ - removed library for queries on recently sequenced libraries -
+   the calling page has been removed from SeqQC
+
+release 37.9
+ - check md5 of bam files AND cram files
+ - we do not expect human split files for spiked phix
+ - small refactoring of ebi submission data handling to incorporated PacBio data.
+
+release 37.8
+ - handle cram indexes correctly
+ - add 'exclude_bam' flag to prevent .bam files being archived to iRODS
+ - fixed bug in npg_common::irods::run::Bam::bam_fully_archived_for_deletion()
+
+release 37.7
+ - stop warnings about comparison to an undefined value
+
+release 37.6
+ - warehouse dbic: add target_lane relationship to request
+ - non-indexed runs - fix lane asset data for a one plex pool 
+
+release 37.5
+ - warehouse at::api::lims driver - use method to get delegation list
+
+release 37.4
+ - run is deletable - add support for HiSeqX runfolders
+
+release 37.3
+ - run is deletable check - do not examine illumina qc data
+ - metadata updates from cram files
+ - modified definition of columns for verify bam id data, DBIx binding regenerated
+ - tests for loading to wh verify_bam_id autoqc data and insert size normal fit data
+
+release 37.2
+ - irods loader - compute splits for individual plexes
+
+release 37.1
+ - avoid loading npg_plex_information table when run is
+   not indexed
+ - schema update to accommodate new autoqc results
+
+release 37.0
+ - non-lims retrievers for the warehouse loader removed
+   (moved to the new npg_ml_warehouse GitHub package)
+
+release 36.7
+ - ensure cram files have same irods metadata as bam files
+
+release 36.6
+ - remove dependency of the iRODS loader and run_is_deletable script
+   on tag files and tag_info role
+ - do not set 'tag' (tag sequence) metadata for iRODS bam files
+ - when updating EBI accessions in iRods meta data get file names from files table
+
+release 36.5
+ - to cope with a failed pool, increased number of digits for the warehouse tags_decode_cv column
+ - warehouse loader to treat yhuman bam stats the same way as xahuman bam stats
+ - create missing .md5 files on checking match of local and iRODS md5 values
+
+release 36.4
+ - minor change to npg_common::irods::run::Bam to handle bam_flagstats.json with dot 
+   rather than underscore from p4. Also changed method get_number_of_reads_samtools in
+   this module to filter secondary & supplementary alignments and count qc fail reads.
+
+release 36.3
+ - added spatial_filter as a task to bam_align_irods (soft filters so read only marked not removed)
+ - bug fix (malformed hash when some data not defined) in retrieving LIMs data for IRODs metadata
+ - count of skipped tests fixed
+
+release 36.2
+ - set permissions on irods bed files
+
+release 36.1
+ - load bamseqchksum files (.seqchksum) to irods  
+ - add _bed files to list of files uploaded to irods and set permissions
+ - removed npg_common::irods::BamMetaUpdater that was refactored into two new
+     modules in release 36.0
+ - minor imeta query change in npg_common::irods::PacBioMonitor.pm
+
+release 36.0
+ - irods bam metaupdater refactored to alow for sharing of basic attributes
+ - pacbio data irods metaupdater to use factored out attributes
+ - npg_common::irods::BamMetaUpdater is no more used, to be removed in subsequent
+     releases
+
+release 35.6
+ - PacBio iRODS meta data
+     new script bin/irods_pacbio_meta_updater.pl to add/update secondary meta data
+     minor reorganisation of BamMetaUpdater
+ - update runfolder directory structure in test data pending removal of redundant
+     paths from npg_tracking::illumina::run::folder
+ - t/10-irods-Loader.t:
+     do not hardcode replication number to delete (test was failing)
+     fix indentation
+     use package->new() constructor style
+
+release 35.5
+ - irods loader
+   Remove the '.' prefix for metadata attribute 'type' for cram, bamcheck and flagstat types.
+ - PacBio iRODS meta data
+     extended to incorporate new fields from production runs.
+
+release 35.4
+ - run_is_deletable script
+    uses refactored code to determine whether a list of files in IRODs is correct,
+      detects missing files as well as files that should not be there, fails in
+      either of these cases, comparison is made directly against LIMS both for
+      lanes and pools, all splits are taken into account
+    uses a new DBIx-dased module to determine whether autoqc data are fully archived,
+      a list of bam files from IRODs is used to compare against, LIMS is not used
+ - a new role for common attributes and methods for accessing run collection in IRODs
+
+release 35.3
+ - run_is_deletable script:
+     recognise MiSeq runfolder names,
+     do not use xml npg tracking interface
+ - skip empty irods meta data values to prevent ERROR:
+     rcModAVUMetadata failed with error -816000 CAT_INVALID_ARGUMENT messages
+
+release 35.2
+ - EBI submission iRods meta data
+     extended to add meta data to cram files
+     switched ebi_sub_date to timestamp, public_date isn't defined for EGA data
+ - iRods bam file updates
+     dropped -f from iget command, pre-existing files are nolonger overwritten
+     added biobambam bamadapterfind tags to list of retained tags
+     generate and reload cram files 
+
+release 35.1
+ - wh loader code and tests changes to accomodate DBIx-based
+   autoqc data retriver
+ - wh lims retriever: 
+   changes to accommodate retrieving data from a samplesheet,
+     namely, to avoid "Odd number of elements" warnings and misshaped hashes on
+     the lane level, when creating a hash from a list, assign undefined values explicitly;
+   allow for absence of batch_id, might be not available in future
+
+release 35.0
+ - move npg_common/irods name space from useful_modules to data_handling
+ - remove dependency on npg_common::config
+
+release 34.12
+ - add relationship to get plex from lane in DBIC warehouse access
+ - ensure warehouse loader does not use cached manual qc values when run
+   under samplesheet-based pipeline
+
+release 34.11
+ - marshall : 
+    amend resource specification for deployment to precise (remove "select[lenny]")
+    correct determination of references
+    remove explicit sourcing of lsf config
+    add _log for bsubbed command
+
+release 34.10
+ - warehouse loader script to update manual qc for a single run live
+   if loading the run was using web cache
+
+release 34.9
+ - marshall: i) exclude runs with manual_qc fail; ii) reduce seq_irods resource request from 15 to 2
+
+release 34.8
+ - marshall: Look up reference using npg_tracking::data::reference
+
+release 34.7
+ - fix bug in npg_qc_deletable function of run_is_deletable script
+
+release 34.6
+ - update DBIx::Class binding : new column data_access_group in Study
+ - access to NPGQC webserver removed from npg_qc_deletable function of
+     run_is_deletable script reimplemented
+
+release 34.5
+ - st::api::lims::warehouse and associated npg_warehouse::Schema and test enhancements required for samplesheet generation
+
+release 34.4
+ - npg_warehouse schema moosified by using the latest loader with a relevant option
+ - npg_warehouse schema roles removed since most functionality was redundant;
+   useful functionality moved to individual Result classes as relations or methods
+ - new lims-from-warehouse module started
+
+release 34.3
+ - cgi script renamed back to what it was for compatibility reasons
+ - set PERL5LIB for cgi script the same way as for npg web app script
+ - oracle miap db test: removed reconnection test which kept failing
+ - deal with missing values in genotype autoqc results to prevent warnings
+     about uninitialised values
+
+release 34.2
+ - do not pass db credentials to npg_qc::autoqc::db::Schema->load_schema()
+
+release 34.1
+ - oracle miap db test: 2 sec sleep introduced between dosconnecting and pinging to avoid
+   Oracle kernel error seen under perl 5.14.2 RT#323482
+ - change column genotype_mean_depth from float(5,2) to float(7,2) in npg_information and npg_plex_information tables
+ - marshall : 
+   - use DBI instead of SqlEngine2
+   - add resources flag to bsub
+   - extended the selection to include runs with status "qc review pending", "qc complete", "qc in progress", and to exclude manual_qc fails
+   - added check to skip processing of libraries when no new component bam files are specified
+
+release 34.0
+ - correct dependencies in Build.PL
+ - compatibility with Makefile.PL dropped
+ - unused scripts, modules and their tests removed
+ - dependency on SangerPath removed
+ - dependency on srpipe:: modules in other packages removed
+ - /software dependencies removed
+ - cgi script for viewing illumina images of tiles is moved here from sflogin svn project
+ - webinstall build target added to install this cgi script
+
+release 33.6
+ - added test data for sample xml following a change in inferring tags in st::api::lims
+ - reflect that some modules moved from npg_common to npg_tracking
+ - removed unused srpipe::analysisrunfolder module
+
+release 33.5
+ - RT#300732: npg_warehouse test 20 reads from live qc db
+ - reflect the fact that db_connect role and tracking definitions moved from npg_common to npg_tracking
+
+release 33.4
+ - RT#247265: column in the npg_information table to indicate spliked phix plex
+
+release 33.3
+ - schema, dbix binding and tests update following npg tracking release 72.0
+
+release 33.2
+ - add genotype check columns genotype_sample_name_match, genotype_sample_name_relaxed_match, genotype_mean_depth to npg_information
+      and npg_plex_information tables - RT#
+ - amend loader/autoqc.pm to extract and reformat the data for the new fields
+
+release 33.1
+ - load xahuman bamflagstats as human bamflagstats RT#291584
+
+release 33.0
+ - DBIx binding switched from warehouse2 to warehouse3
+ - npg_warehouse::Schema deploy hook introduced to restrict the number of deployed tables for SQLite
+
+release 32.11
+ - a patch to loading pulldown metrics autoqc results to the warehouse to avoid warnings about malformed hashes for undefined results
+
+release 32.10
+ - added a column for tag decoding coeff of variance to npg_information table
+ - added three columns with pulldown stats to npg_plex_information table
+
+release 32.9
+ - added the library_type column to both npg_information and npg_plex_information tables
+ - changes in how project id and study id are populated for a lane level when
+   a lane is a pool - populate id if it is the same accross the whole pool
+   expect the spiked phix plex (if any)
+ - is_dev flag for plexed lanes - set to true is one of the projects in a pool belongs to R&D
+ - definition of the adapter contamination columns modifies to allow for 100.00% 
+
+release 32.8
+ - amended image_list.pm to skip image archiving when run already has a database entry in SEQ_ARCHIVE and --no_rearchive flag is used
+
+release 32.7
+ - npg_warehouse::loader::autoqc top level function refactored (simplified)
+ - warehouse_loader script:
+     info output from run statuses loader deactivated unless --verbose is true
+     if the db is anything but live, info message tells what db it is, but does not assume that it's a staging db
+ - retrieving yields from qc database refactored to use the fastqcheck table instead of the qcal table
+ - q30 yields are saved as kb, the column names changed accordingly
+ - loadeing q40 values to the warehouse is added both on a lane level and on a plex level
+ - q30 yields are loaded on plex level
+
+release 32.6
+ - change npg_* warehouse3 tables to utf8
+
+release 32.5
+ - dbix db fixtures for npg tracking updated pending schema changes in npg-tracking release 68.2
+ - run_is_deletable usage
+
+release-32.4
+ - cope with MiSeq runfolder for image loading
+
+release-32.3
+ - load tag metrics autoqc results into the warehouse RT#245663
+
+release-32.2
+ - ignore TraDIS cycle images for archiving
+
+release-32.1
+ - wh loader script - perl lib location is set through "use lib"
+
+release-32.0
+ - wh loader: load run statuses in a separate function, enable a separate script option
+   for this RT#232029
+ - wh loader - cacelled and data discarded runs - leave manual qc undefined, ie
+   do not load manual qc for later runs for the same batch RT#229549
+ - wh loader: do not load asset_type RT#235508; remove asset_type column
+ - lims wh loader: project codes are cached in memory to stop retrieving live the same
+   project xml multiple times
+ - lims wh loader: supress fallbacks when requesting library name and study id
+ - wh loader: load bam total number of reads RT#235507
+
+release-31.0
+ - Enable passing npg tracking DBIx schema to the autoqc loader to facilitate faster globs
+
+release-30.1
+ - a Moose role to get study names transparently from the warehouse
+ - outdated and unused scripts deleted from the bin directory
+
+release-30.0
+ - srpipe::twitter module and archive_to_sra script removed - both not needed
+ - unconditional deletes should be at that status for 2 weeks in run_is_deletable
+ - refactor of run_is_deletable to only get 1 npg::api::run object
+ - wh loader: do not request batch xml for batch_id=0 RT#229066
+ - wh loader: trap 404 Not Found error when accessign batch xml RT#229066
+ - add id_run option to the warehouse_loader script
+ - redefinition of the is_dev column on the npg_information table of the wh: per-lane value
+   reflecting whether the project cost code belongs to R&D RT#228970
+ - study_id and project_id columns are added to npg_information and npg_plex_information wh tables,
+   relevant code added to the wh loader
+ - bamstats mapped and duplicate percentages (normal and nonhuman), and split perctanges for phix 
+   and human, added to npg tables
+
+release-29.1
+ - q30 values are too large for teh int column; type changed to bigint
+ - tests to ensure that undef values for sample ids are loaded, ie unwanted sample ids for pools are
+   erased (in cases when they get to the db by mistake in batch xml)
+ - dbix schema regenerated
+
+release-29.0
+ - add q30 yields to warehouse
+ - refactor lims module of the warehouse loader to use a new single point lims access module
+ - an option for the loader to load specific runs
+ - removed some unused modules and scripts
+
+release-28.2
+ - extra method study_by_request and sample added for npg_information
+
+release-28.1
+ - npg information tables: extend the size of the fields for gc fraction check results to allow for 100% fraction.
+ - pod improvement
+
+release-28.0
+ - move to warehouse_two
+ - tests updated to work with latest st::api::lane developments (getting study id through lib request)
+ - twitter script removed
+
+release-27.1
+ - add one step to check archived autoqc results for runfolder deletion
+ - stop checking mpsa for runfolder deletion 
+
+release-27.0
+  - columns do display ref_match autoqc check results added to the npg table of teh warehouse
+    and the code to retrieve and load these results
+  - npg_information wh table: new column to display request type (as either library or pool or control)
+  - warehouse: two new npg tables to keep npg run statuses and loading procedures
+  - dbix warehouse binding: exclude temp ss wh tables that they use for loading
+
+release-26.0
+  - a script to monitor taxon ids in recently sequenced samples
+  - gold-crest related code removed
+  - the runforder module refactored to use roles from npg_common
+  - check bam file fully archived in irods in run_is_deletable script
+  - thumbnail image loader can deal with hiseq runfolder
+  - run_is_deletable script can deal with hiseq runfolder
+  - stop checking thumbnail images in miap for runfolder deletion
+  - ignore missing srf files in fuse for hiseq run for runfolder deletion
+  - warehouse loader refactoring: a new module, npg_warehouse::loader::npg, to retrieve npg run info
+  - warehouse npg tables: instrument info added
+  - warehouse loader: load run data even if error when retrieving LIMS data for this run;
+    will create rows for a rtun when gettign batch data gives 404 error (currently for cancelled runs)
+  - a DBIx view for recently sequenced libraries
+  - use mpsa_download to get the list of archived files
+  - wh loader to load autoqc data starting from run 93 and not to glob the staging area for old runs
+
+release-25.0
+    tag_decode_count column added to the npg_plex_warehouse table; the code for populating this column added
+
+release-24.1
+    wh npg_information table run_complete column type changed to datetime to avoid default current timestamp values
+    sample interface (role) for the warehouse DBIx Result classes
+    DBIx binding: conversion of values in date columns to DateTime objects 
+    some DBix result classes converted to Moose objects in order to be able to consume the new role
+    index is set on request_id column of the npg_information table
+    code changes in order to cope with inflated data columns in the wh and npg dbix bindings
+    result objects for npg wh tables consume rpt key role
+
+release-24.0
+    per-run transaction in the warehouse loader
+    extra relationships and meta-data for the wh DBIx binding (needed by NPG_SeqQC)
+    loading of plex autoqc
+    warehouse loader refactored, some functions moved to separate modules
+    run info is loaded to the warehouse as soon as run_pending reached
+    warehouse loader script: names of the arguments updated
+    q20 columns added to npg tables in the warehouse, q20 data are now loaded to these columns
+
+release-23.0
+    npg_plex_information table for the warehouse and loading procedures to fill it
+    library/sample info columns in both npg_inforrmation and npg_plex_information tables
+
+release-22.0
+    a patch for bin/warehouse_loader that allows to always get the data from live databases, but load to any warehouse database
+    run_is_deletable script now can cope with five digits run_folder
+    three columns added to npg_information warehouse table: qc_complete, run_pending, tags_decode_percent and asset_id
+    warehouse loader loads to qc_complete, run_pending, tags_decode_percent
+
+release-21.0
+    add runfolder validation for image loading
+    npg_warehouse::Schema can retrieve db connection details from a configuration file
+    both the warehouse and fixtures loaders take advantage of the above
+    the dbix schema generation script user npg_common::config to get db details
+    following a change in how batch-related data are served by npg::api::run,
+additional XMLs for batches are loaded to test data
+    a bug fixed in srpipe::runfolder::archive_check, control_lanes method
+
+release-20.0
+    configured the distribution test not to run the pod test
+    added a separate podcoverage test
+    stop checking archived gcfreq files
+    warehouse loader reimplemented with DBIx bindings
+    raw_cluster_density and pf_cluster_density columns are added to the npg_information table of the warehouse
+    the warehouse loader get an option to load either all manual qc results or only produced in teh last month
+    columns for teh autoqc data are added to the npg_information table of the warehouse
+    the warehouse loader extended to retrieve and load autoqc data
+    the warehouse loader binding regenerated with the naming => current option; the biggest change is depluralisation of class names
+    dependency on the tracking database binding in QSea removed, dependency on npg_tracking::Schema namespace introduced
+
+release-19.0
+    port number changed for the warehouse database
+    a new namespace, npg_warehouse, for a DBIx binding to the warehouse database is added
+    a DBIx binding to teh warehouse database and its tests moved from teh QSea app to the new npg_warehouse namespace
+    tests for npg_information table loader (the warehouse db): skipped if a localhost db is not available
+    oracle-related tests for image loading: skipped if DBD::Oracle is not available
+    t/00-critic.t: npg_warehouse namespace excluded since currently contains only automatically generated code
+    all explicit imports of /software/solexa/lib/perl5 removed in tests
+    
+    note: tests pass under perl-5.8.8 (using /software/solexa/lib/perl5)  and perl-5.10.1(using /software/solexa/cnan and explicit import of projects from /software/solexa/src, see README for instructions)
+
+release-18.0
+    add fs_resource attribute/method to provide string indictaing which LSF filesystem resource a runfolder has
+    update staging partitions
+    twitter.pm does not post anything - now just a stub until code can be removed which uses this
+    archive_loader can now load just a given run id
+    When finding folders cope with multiple paths to the same folder instance e.g. via /staging/IL4 or /nfs/sf6/IL4, but still bail out if there different folders matching the same run.
+    Add a 'cancelled' field to npg_information in warehouse - indicating a 'run cancelled' status on the run at some point - not necessarily the final or current status
+    Get secondrunfolder early in read_config_string. Add indexing_cycle_range and read_cycle_counts.
+    add util attribute for use with npg calls
+    add is_rta
+    Use hash for moving data between helper methods rather than dcalar refs and typeglobs: simpler and more PBP.
+    add lane_count
+    add read_cycle_counts
+    use before method modifer rather than builder to ensure recipe is parsed before reporting expected_cycle_count
+    Add expected_cycle_count
+    add rta thumbnail images loader    
+
+release-17.0
+   check split human and nonhuman fastq and srf archived files
+   update to add has_two_runfolders and paired_read columns to data warehouse table, and corresponding fields in the information object
+   add module to check indexing cycle number in the recipe file and determine the run is multiplex run or not and add tag for run if required
+   bam2fastq and fastq2bam scripts
+   single run may have two reads (rta run), check the run is_paired_read instead of just checking having a piared run when checking archived files
+   Update actual cycle using Data/Intensities if no Images directory - RTA will not copy images in the future
+
+release-16.0
+   add module to check the cycle count of second read in a run from recipe file to determine the run is paired read or not and update the npg database (add tag for the run) if required
+   add options to remove staging tag for a run when deleting run folder 
+  
+release-15.0
+   Be able to handle new version of recipe files
+   Get and store the following fields: recipe file name, contents and md5 value
+   Count different cycle numbers: first and last indexing cycle, read 1 and read 2 if there are two reads in one run
+
+release-14.0
+        run-allocator - decides best machines to put new runs on
+        check fuse (archive-loading) is complete before deleting run-folder and images directory
+
+release-13.0
+        bin/track_tilelayout deprecated for deletion
+	track_expected_cycle_count and track_actual_cycle_count now object modules rather than methods in srpipe::mirror
+	method in identify_missing_tiles to obtain the cycle which starts the index
+	image compression
+
+release-12.0
+	warehouse loader - correct creds for loading into production
+			   addition to load npg_qc pf cluster counts and pf bases into row
+			   perl api module to represent a row in the npg table
+	move to use Module::Build so that deployment incudes deployment of scripts, instead of using softlinks
+	perlcritic changes to scripts
+	ditched update_npg_cgb as unused
+
+release-11.0
+	Separation of data handling bin and lib files from sanger-pipeline
+	Addition of warehouse loader for loading npg data into the data_warehouse
+
+release-10.0
+
+	Amateur-butchery to excise references to the NFS repository
+	and npg::api::project
+
+	Removed the old billing mechanism, replaced with npg-chainlink
+	(QC Pipeline)
+
+	Marginally better handling of libraries vs. samples now in NPG
+	r28 (also including multiplex pool support, of sorts)
+
+        Image loading into MIAP database improved with continuous loading
+	via mirroring with pick up script to ensure that all cycles are completely
+	loaded
+
+        Improved checking of images being present in MIAP database, and
+	automated script to delete Images directory for runs which are
+	at run complete, in outgoing and have a full set of Images in MIAP
+
+release-7.0 
+
+	track_billability now run post-archival. This pushes billing &
+	yield figures into the ST database.
+
+	Duplicate checks when posting billing data back to ST
+
+	Project & run-pair information in *.status files
+
+
+release-6.0 2008-05-14
+
+	Cleanup improved to support removal of images, archival of
+	GERALD reports to the repository.
+	srpipe::billable_run supports billability checking for a
+	run. track_billability updated accordingly.
+
+release-5.0 2008-05-02
+
+	RunLog*.xml are now concatenated into RunLog_concat.xml.
+	srpipe::billable performs checks pertaining to the billability of a lane.
+	Run statuses are now dropped into target repository folders.
+	Pipeline now outputs SRF files rather than ZTR.
+	Various fixes for detainting run folder names.
+	Support for emailed errors on crash.
+	wget_log scanning for filesystem-full errors thrown by lustre.
+
+release-4.0 2008-03-13
+
+	Fixes for analysis => outgoing folder moves.
+	New script for cleanup up after LSF failures.
+
+release-3.0
+
+	FTP reconnect-on-demand, should reduce instances of
+	instruments not being cleaned up properly on run-completion
+	due to ftp timeouts.
+
+	Weak 2nd-read intensity check modified on recommendation of
+	twost & cgb to be R1C1 vs. R2C1 (not R1Cn vs. R2C1 as
+	previously).
+
+	Run folders are now moved to 'outgoing/' following archival.
+
+release-2.0
+
+	Weak first-cycle-second-read checking & notifications
+	on-the-fly ftp deletion, trailing 10-cycles behind mirror.
+
+release-1.0
+
+	Addition of Tom's Solexa (analysis) Pipeline management.

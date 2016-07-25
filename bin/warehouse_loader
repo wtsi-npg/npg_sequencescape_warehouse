@@ -1,0 +1,175 @@
+#!/usr/bin/env perl
+
+# $Id$
+# Created By: ajb
+# Mast Maintained By: $Author$
+# Created On: 2009-02-25
+# Last Changed On: $Date$
+# $HeadURL$
+
+package warehouse;
+
+use strict;
+use warnings;
+use FindBin qw($Bin);
+use lib ( -d "$Bin/../lib/perl5" ? "$Bin/../lib/perl5" : "$Bin/../lib" );
+use Getopt::Long;
+use Pod::Usage;
+
+use npg_warehouse::loader;
+
+our $VERSION    = do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+
+my $verbose          = 0;
+my $with_lims        = 1;
+my $recent           = 1;
+my $help             = q[];
+my $id_runs          = [];
+my $run_statuses     = 0;
+
+## no critic (Variables::RequireLocalizedPunctuationVars)
+
+GetOptions ('verbose!'        => \$verbose,
+            'help'            => \$help,
+            'load-lims-data!' => \$with_lims,
+            'recent!'         => \$recent,
+            'id_run=i@'       => \$id_runs,
+            'run_statuses!'   => \$run_statuses,
+            );
+if ($help) { pod2usage(0); }
+
+if ($run_statuses) {
+  if ($verbose) {
+    warn qq[Updating run statuses\n];
+  }
+} else {
+  warn qq[Setting npg_warehouse::loader attributes:\n];
+  warn qq[  verbose\t$verbose\n];
+  warn qq[  with_lims\t$with_lims\n];
+  warn qq[  recent\t$recent\n];
+  if (@{$id_runs}) {
+  my $runs = join q[ ], sort {$a <=> $b} @{$id_runs};
+    warn qq[  id_run\t$runs\n];
+  }
+}
+
+if (defined $ENV{dev} && $ENV{dev}) {
+   warn 'LOADING TO ' . $ENV{dev} . " DATABASE\n";
+}
+
+# We always get the data from live databases,
+# but might need to load to different staging databases.
+my $schema = npg_warehouse::Schema->connect();
+$ENV{dev} = q[live];
+my $loader = npg_warehouse::loader->new(
+                      verbose          => $verbose,
+                      with_lims        => $with_lims,
+                      recent           => $recent,
+                      _schema_wh       => $schema,
+                      id_run           => $id_runs,
+                                       );
+if ($run_statuses) {
+  $loader->update_run_statuses;
+} else {
+  $loader->load();
+  if (scalar @{$id_runs} == 1 && ( $ENV{'NPG_WEBSERVICE_CACHE_DIR'} || $ENV{'NPG_CACHED_SAMPLESHEET_FILE'}) ) {
+    my $id_run = $id_runs->[0];
+    if ($verbose) {
+      warn qq[Updating (live) manual qc for run $id_run\n];
+    }
+    local $ENV{'NPG_WEBSERVICE_CACHE_DIR'}    = undef;
+    local $ENV{'NPG_CACHED_SAMPLESHEET_FILE'} = undef;
+    $loader->update_manual_qc();
+  }
+}
+
+if ($verbose) {
+  warn "Completed loading, exiting...\n";
+}
+exit 0;
+
+
+__END__
+
+=head1 NAME
+
+warehouse_loader
+
+=head1 VERSION
+
+$LastChangedRevision$
+
+=head1 SYNOPSIS
+
+Script to load NPG, NPG QC, NPG AUTOQC and LIMS data into the npg_X tables of the warehouse database
+
+warehouse_loader [options]
+
+ Options:
+   --help brief help message
+   --verbose (disabled by default)
+   --noverbose (a default option)
+   --load-lims-data (a default option) : lims data will be loaded
+   --noload-lims-data                  : lims data will not be loaded
+   --recent (a default option)         : lims data for recent runs will be loaded, prerequisite - enabled --load-lims-data
+   --norecent                          : lims data for all runs will be loaded, prerequisite - enabled --lad-lims-data
+   --id_run                            : load particular run, multiple runs can be specified by repeating this option
+
+=head1 DESCRIPTION
+
+=head1 SUBROUTINES/METHODS
+
+=head1 USAGE
+
+=head1 REQUIRED ARGUMENTS
+
+=head1 OPTIONS
+
+=head1 EXIT STATUS
+
+=head1 CONFIGURATION
+
+=head1 DIAGNOSTICS
+
+=head1 CONFIGURATION
+
+=head1 DEPENDENCIES
+
+=over
+
+=item strict
+
+=item warnings
+
+=item npg_warehouse::loader
+
+=item Getopt::Long
+
+=item Pod::Usage
+
+=back
+
+=head1 INCOMPATIBILITIES
+
+=head1 BUGS AND LIMITATIONS
+
+=head1 AUTHOR
+
+$Author$
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright (C) 2010 GRL, by Andy Brown and Marina Gourtovaia
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
