@@ -1,0 +1,4 @@
+ALTER TABLE `npg_information` ADD COLUMN `run_pending` datetime DEFAULT NULL;
+ALTER TABLE `npg_information` ADD COLUMN `qc_complete` datetime DEFAULT NULL;
+ALTER TABLE `npg_information` ADD COLUMN `tags_decode_percent` float(4,2) unsigned DEFAULT NULL;
+ALTER TABLE `npg_information` ADD COLUMN `asset_id` int(11) DEFAULT NULL;

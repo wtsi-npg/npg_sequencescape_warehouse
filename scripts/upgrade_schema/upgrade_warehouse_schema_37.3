@@ -1,0 +1,6 @@
+ alter table npg_information \
+  modify column verify_bam_id_average_depth float(11,2) unsigned DEFAULT NULL, \
+  modify column verify_bam_id_score float(6,5) unsigned DEFAULT NULL;
+ alter table npg_plex_information \
+  modify column verify_bam_id_average_depth float(11,2) unsigned DEFAULT NULL, \
+  modify column verify_bam_id_score float(6,5) unsigned DEFAULT NULL;

@@ -1,0 +1,4 @@
+alter table npg_information modify column run_complete datetime DEFAULT NULL;
+create index npg_request_id_index on npg_information (request_id);
+ALTER TABLE npg_plex_information ADD COLUMN tag_decode_count INTEGER UNSIGNED DEFAULT NULL AFTER tag_decode_percent;
+

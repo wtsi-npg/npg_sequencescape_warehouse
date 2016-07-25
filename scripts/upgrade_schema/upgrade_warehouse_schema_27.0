@@ -1,0 +1,31 @@
+ALTER TABLE npg_information ADD COLUMN ref_match1_name varchar(100) default NULL AFTER contaminants_scan_hit2_score;
+ALTER TABLE npg_information ADD COLUMN ref_match1_percent float(5,2) default NULL AFTER ref_match1_name;
+ALTER TABLE npg_information ADD COLUMN ref_match2_name varchar(100) default NULL AFTER ref_match1_percent;
+ALTER TABLE npg_information ADD COLUMN ref_match2_percent float(5,2) default NULL AFTER ref_match2_name;
+ALTER TABLE npg_plex_information ADD COLUMN ref_match1_name varchar(100) default NULL AFTER contaminants_scan_hit2_score;
+ALTER TABLE npg_plex_information ADD COLUMN ref_match1_percent float(5,2) default NULL AFTER ref_match1_name;
+ALTER TABLE npg_plex_information ADD COLUMN ref_match2_name varchar(100) default NULL AFTER ref_match1_percent;
+ALTER TABLE npg_plex_information ADD COLUMN ref_match2_percent float(5,2) default NULL AFTER ref_match2_name;
+
+
+ALTER TABLE npg_information ADD COLUMN lane_type varchar(20) default NULL AFTER request_id;
+
+CREATE TABLE `npg_run_status_dict` (
+  `id_run_status_dict` int(11),
+  `description` varchar(64) NOT NULL default '',
+  PRIMARY KEY  (`id_run_status_dict`),
+  KEY `npg_status_description` (`description`)
+);
+
+CREATE TABLE `npg_run_status` (
+  `id_run_status` int(11),
+  `id_run` bigint(20) unsigned NOT NULL,
+  `date` datetime DEFAULT NULL,
+  `id_run_status_dict` int(11) NOT NULL,
+  `iscurrent` tinyint(1) NOT NULL,
+  PRIMARY KEY  (`id_run_status`),
+  KEY `npg_id_rsd` (`id_run_status_dict`),
+  KEY `npg_run_date_state` (`id_run`,`date`,`id_run_status_dict`),
+  KEY `npg_rs_iscurrent` (`iscurrent`),
+  CONSTRAINT `npg_id_rsd` FOREIGN KEY (`id_run_status_dict`) REFERENCES `npg_run_status_dict` (`id_run_status_dict`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);

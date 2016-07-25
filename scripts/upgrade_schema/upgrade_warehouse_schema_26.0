@@ -1,0 +1,2 @@
+ALTER TABLE npg_information ADD COLUMN instrument_name char(32) default NULL AFTER cancelled;
+ALTER TABLE npg_information ADD COLUMN instrument_model char(64) default NULL AFTER instrument_name;

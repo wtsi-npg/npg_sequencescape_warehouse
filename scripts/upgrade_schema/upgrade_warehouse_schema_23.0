@@ -1,0 +1,46 @@
+CREATE TABLE `npg_plex_information` (
+  `batch_id` bigint(20) unsigned NOT NULL,
+  `id_run` bigint(20) unsigned NOT NULL,
+  `position` int(1) unsigned NOT NULL,
+  `tag_index` smallint(5) unsigned NOT NULL,
+  `asset_id` int(11) unsigned DEFAULT NULL,
+  `asset_name` varchar(255) DEFAULT NULL,
+  `sample_id` int(11) unsigned DEFAULT NULL,
+  `insert_size_quartile1` smallint(5) unsigned DEFAULT NULL,
+  `insert_size_quartile3` smallint(5) unsigned DEFAULT NULL,
+  `insert_size_median` smallint(5) unsigned DEFAULT NULL,
+  `gc_percent_forward_read` float(4,2) unsigned DEFAULT NULL,
+  `gc_percent_reverse_read` float(4,2) unsigned DEFAULT NULL,
+  `sequence_mismatch_percent_forward_read` float(4,2) unsigned DEFAULT NULL,
+  `sequence_mismatch_percent_reverse_read` float(4,2) unsigned DEFAULT NULL,
+  `adapters_percent_forward_read` float(4,2) unsigned DEFAULT NULL,
+  `adapters_percent_reverse_read` float(4,2) unsigned DEFAULT NULL,
+  `contaminants_scan_hit1_name` varchar(50) DEFAULT NULL,
+  `contaminants_scan_hit1_score` float(6,2) unsigned DEFAULT NULL,
+  `contaminants_scan_hit2_name` varchar(50) DEFAULT NULL,
+  `contaminants_scan_hit2_score` float(6,2) unsigned DEFAULT NULL,
+  `tag_sequence` varchar(255) DEFAULT NULL,
+  `tag_decode_percent` float(4,2) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id_run`, `position`, `tag_index`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE INDEX `npg_plex_asset_id_index` ON `npg_plex_information` (`asset_id`);
+CREATE INDEX `npg_plex_asset_name_index` ON `npg_plex_information` (`asset_name`);
+CREATE INDEX `npg_plex_sample_id_index` ON `npg_plex_information` (`sample_id`);
+
+ALTER TABLE `npg_information` ADD COLUMN `asset_name` int(11) unsigned DEFAULT NULL;
+CREATE INDEX `npg_asset_name_index` ON `npg_information` (`asset_name`);
+
+ALTER TABLE `npg_information` ADD COLUMN `asset_type` varchar(255) DEFAULT NULL;
+CREATE INDEX `npg_asset_type_index` ON `npg_information` (`asset_type`);
+
+ALTER TABLE `npg_information` ADD COLUMN `sample_id` int(11) unsigned  DEFAULT NULL;
+CREATE INDEX `npg_sample_id_index`  ON `npg_information` (`sample_id`);
+
+ALTER TABLE `npg_information` ADD COLUMN `request_id` int(11) unsigned DEFAULT NULL;
+
+CREATE INDEX `npg_asset_id_index` ON `npg_information` (`asset_id`);
+
+
+
+

@@ -1,0 +1,6 @@
+alter table npg_information modify column gc_percent_forward_read float(5,2) unsigned DEFAULT NULL;
+alter table npg_information modify column gc_percent_reverse_read float(5,2) unsigned DEFAULT NULL;
+alter table npg_plex_information modify column gc_percent_forward_read float(5,2) unsigned DEFAULT NULL;
+alter table npg_plex_information modify column gc_percent_reverse_read float(5,2) unsigned DEFAULT NULL;
+alter table npg_information add column q30_yield_forward_read integer unsigned DEFAULT NULL;
+alter table npg_information add column q30_yield_reverse_read integer unsigned DEFAULT NULL;

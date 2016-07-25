@@ -1,0 +1,12 @@
+alter table npg_information change column q30_yield_forward_read q30_yield_kb_forward_read bigint unsigned DEFAULT NULL;
+alter table npg_information change column q30_yield_reverse_read q30_yield_kb_reverse_read bigint unsigned DEFAULT NULL;
+
+alter table npg_information add column q40_yield_kb_forward_read  int(10) unsigned DEFAULT NULL after q30_yield_kb_reverse_read;
+alter table npg_information add column q40_yield_kb_reverse_read  int(10) unsigned DEFAULT NULL after q40_yield_kb_forward_read;
+
+alter table npg_plex_information add column q30_yield_kb_forward_read  int(10) unsigned DEFAULT NULL after q20_yield_kb_reverse_read;
+alter table npg_plex_information add column q30_yield_kb_reverse_read  int(10) unsigned DEFAULT NULL after q30_yield_kb_forward_read;
+alter table npg_plex_information add column q40_yield_kb_forward_read  int(10) unsigned DEFAULT NULL after q30_yield_kb_reverse_read;
+alter table npg_plex_information add column q40_yield_kb_reverse_read  int(10) unsigned DEFAULT NULL after q40_yield_kb_forward_read;
+
+

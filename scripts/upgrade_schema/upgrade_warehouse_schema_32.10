@@ -1,0 +1,5 @@
+alter table npg_information add column tags_decode_cv float(5,2) unsigned DEFAULT NULL after tags_decode_percent;
+
+alter table npg_plex_information add column mean_bait_coverage float (6,2) unsigned DEFAULT NULL;
+alter table npg_plex_information add column on_bait_percent float(5,2) unsigned DEFAULT NULL;
+alter table npg_plex_information add column on_or_near_bait_percent float(5,2) unsigned DEFAULT NULL;

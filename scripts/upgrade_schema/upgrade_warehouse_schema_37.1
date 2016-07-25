@@ -1,0 +1,14 @@
+alter table npg_information add column insert_size_num_modes smallint(4) unsigned DEFAULT NULL after insert_size_median;
+alter table npg_information add column insert_size_normal_fit_confidence float(3,2) unsigned DEFAULT NULL after insert_size_num_modes;
+
+alter table npg_plex_information add column insert_size_num_modes smallint(4) unsigned DEFAULT NULL after insert_size_median;
+alter table npg_plex_information add column insert_size_normal_fit_confidence float(3,2) unsigned DEFAULT NULL after insert_size_num_modes;
+
+alter table npg_information add column verify_bam_id_average_depth smallint(5) unsigned DEFAULT NULL;
+alter table npg_information add column verify_bam_id_score float(7,6) unsigned DEFAULT NULL;
+alter table npg_information add column verify_bam_id_snp_count int(10) unsigned DEFAULT NULL;
+
+alter table npg_plex_information add column verify_bam_id_average_depth smallint(5) unsigned DEFAULT NULL;
+alter table npg_plex_information add column verify_bam_id_score float(7,6) unsigned DEFAULT NULL;
+alter table npg_plex_information add column verify_bam_id_snp_count int(10) unsigned DEFAULT NULL;
+

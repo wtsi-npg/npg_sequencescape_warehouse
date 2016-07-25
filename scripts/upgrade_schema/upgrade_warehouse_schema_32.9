@@ -1,0 +1,8 @@
+alter table npg_information add column library_type varchar(255) DEFAULT NULL after lane_type;
+alter table npg_plex_information add column library_type varchar(255) DEFAULT NULL after project_id;
+
+alter table npg_information modify column adapters_percent_forward_read float(5,2) unsigned DEFAULT NULL;
+alter table npg_information modify column adapters_percent_reverse_read float(5,2) unsigned DEFAULT NULL;
+alter table npg_plex_information modify column adapters_percent_forward_read float(5,2) unsigned DEFAULT NULL;
+alter table npg_plex_information modify column adapters_percent_reverse_read float(5,2) unsigned DEFAULT NULL;
+

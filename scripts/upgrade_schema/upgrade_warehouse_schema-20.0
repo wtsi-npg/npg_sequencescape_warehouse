@@ -1,0 +1,32 @@
+--
+-- add columns for cluster density information
+-- 
+
+ALTER TABLE `npg_information` ADD COLUMN `raw_cluster_density` double(12,3) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `pf_cluster_density` double(12,3) unsigned default NULL;
+
+--
+-- add columns for autoqc information
+-- 
+
+ALTER TABLE `npg_information` ADD COLUMN `insert_size_quartile1` smallint(5) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `insert_size_quartile3` smallint(5) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `insert_size_median`    smallint(5) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `gc_percent_forward_read` float(4,2) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `gc_percent_reverse_read`  float(4,2) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `sequence_mismatch_percent_forward_read` float(4,2) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `sequence_mismatch_percent_reverse_read` float(4,2) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `adapters_percent_forward_read`  float(4,2) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `adapters_percent_reverse_read`  float(4,2) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `contaminants_scan_hit1_name` VARCHAR(50) default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `contaminants_scan_hit1_score` float(5,2) unsigned default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `contaminants_scan_hit2_name` VARCHAR(50) default NULL;
+ALTER TABLE `npg_information` ADD COLUMN `contaminants_scan_hit2_score` float(5,2) unsigned default NULL;
+
+
+--
+-- modify column for contaminats hits
+--
+
+ALTER TABLE `npg_information` MODIFY COLUMN `contaminants_scan_hit1_score` float(6,2) unsigned default NULL;
+ALTER TABLE `npg_information` MODIFY COLUMN `contaminants_scan_hit2_score` float(6,2) unsigned default NULL;

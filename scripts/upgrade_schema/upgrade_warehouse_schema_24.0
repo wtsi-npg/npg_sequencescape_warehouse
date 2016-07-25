@@ -1,0 +1,8 @@
+alter table npg_information modify column asset_name varchar(255) DEFAULT NULL;
+alter table npg_information modify column tags_decode_percent float(5,2) unsigned DEFAULT NULL;
+alter table npg_plex_information modify column tag_decode_percent float(5,2) unsigned DEFAULT NULL;
+
+alter table npg_information add column q20_yield_kb_forward_read int(10) unsigned default NULL;
+alter table npg_information add column q20_yield_kb_reverse_read int(10) unsigned default NULL;
+alter table npg_plex_information add column q20_yield_kb_forward_read int(10) unsigned default NULL;
+alter table npg_plex_information add column q20_yield_kb_reverse_read int(10) unsigned default NULL;

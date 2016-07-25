@@ -1,0 +1,3 @@
+alter table npg_information drop column asset_type;
+alter table npg_information add column bam_num_reads bigint(20) unsigned default NULL after split_phix_percent;
+alter table npg_plex_information add column bam_num_reads bigint(20) unsigned default NULL after q20_yield_kb_reverse_read;

@@ -1,0 +1,8 @@
+alter table npg_information add column genotype_sample_name_match varchar(8) DEFAULT NULL after bam_human_percent_duplicate;
+alter table npg_information add column genotype_sample_name_relaxed_match varchar(8) DEFAULT NULL after genotype_sample_name_match;
+alter table npg_information add column genotype_mean_depth float(5,2) DEFAULT NULL after genotype_sample_name_relaxed_match;
+
+alter table npg_plex_information add column genotype_sample_name_match varchar(8) DEFAULT NULL after bam_human_percent_duplicate;
+alter table npg_plex_information add column genotype_sample_name_relaxed_match varchar(8) DEFAULT NULL after genotype_sample_name_match;
+alter table npg_plex_information add column genotype_mean_depth float(5,2) DEFAULT NULL after genotype_sample_name_relaxed_match;
+

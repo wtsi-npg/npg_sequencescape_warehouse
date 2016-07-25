@@ -1,0 +1,19 @@
+ALTER TABLE npg_information ADD COLUMN split_human_percent float(5,2) default NULL;
+ALTER TABLE npg_information ADD COLUMN split_phix_percent float(5,2) default NULL;
+ALTER TABLE npg_information ADD COLUMN bam_percent_mapped float(5,2) default NULL;
+ALTER TABLE npg_information ADD COLUMN bam_percent_duplicate float(5,2) default NULL;
+ALTER TABLE npg_information ADD COLUMN bam_human_percent_mapped float(5,2) default NULL;
+ALTER TABLE npg_information ADD COLUMN bam_human_percent_duplicate float(5,2) default NULL;
+ALTER TABLE npg_plex_information ADD COLUMN bam_percent_mapped float(5,2) default NULL;
+ALTER TABLE npg_plex_information ADD COLUMN bam_percent_duplicate float(5,2) default NULL;
+ALTER TABLE npg_plex_information ADD COLUMN bam_human_percent_mapped float(5,2) default NULL;
+ALTER TABLE npg_plex_information ADD COLUMN bam_human_percent_duplicate float(5,2) default NULL;
+
+
+ALTER TABLE npg_information ADD COLUMN study_id int(11) unsigned default NULL after sample_id;
+ALTER TABLE npg_information ADD COLUMN project_id int(11) unsigned default NULL after study_id;
+ALTER TABLE npg_plex_information ADD COLUMN study_id int(11) unsigned default NULL after sample_id;
+ALTER TABLE npg_plex_information ADD COLUMN project_id int(11) unsigned default NULL after study_id;
+
+CREATE INDEX `npg_study_id_index`  ON `npg_information` (`study_id`);
+CREATE INDEX `npg_plex_study_id_index` ON `npg_plex_information` (`study_id`);

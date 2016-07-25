@@ -1,0 +1,2 @@
+create index npg_cancelled_and_run_complete_index on npg_information(cancelled, run_complete);
+create index npg_cancelled_and_run_pending_index on npg_information(cancelled, run_pending);
