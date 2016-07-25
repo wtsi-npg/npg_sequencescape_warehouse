@@ -1,0 +1,21 @@
+---
+- barcode: 323332
+  barcode_prefix: NT
+  checked_at: 2013-03-25 14:40:17
+  closed: 0
+  concentration: 2.00
+  created: 2013-03-25 11:56:22
+  current_from: 2013-03-25 14:40:17
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2013-03-25 14:40:17
+  internal_id: 7036639
+  is_current: 1
+  last_updated: 2013-03-25 14:40:17
+  name: 2_663_190313
+  public_name: ~
+  scanned_in_date: 2013-03-25
+  state: pending
+  two_dimensional_barcode: ~
+  uuid: "\x03>,ÐC\x11â±uhµv£"
+  volume: 10.00

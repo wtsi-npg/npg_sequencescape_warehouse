@@ -1,0 +1,73 @@
+---
+- assigned_to: ~
+  checked_at: 2013-01-12 17:41:57
+  created: 2009-08-03 11:38:05
+  created_by: dvs
+  current_from: 2012-12-03 14:11:18
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2013-01-12 17:41:57
+  internal_id: 4319
+  is_current: 1
+  last_updated: 2012-12-03 14:11:18
+  pipeline_internal_id: 1
+  pipeline_name: Illumina-C Library preparation
+  pipeline_uuid: "Eø¦ÜÆd\x11ß¶ö\0\x14O n."
+  production_state: ~
+  qc_state: qc_pending
+  state: released
+  uuid: "~y\x1dÔÆd\x11ß´\r\0\x14O\x01¤\x14"
+- assigned_to: ~
+  checked_at: 2013-01-12 17:41:59
+  created: 2009-08-14 13:51:04
+  created_by: dvs
+  current_from: 2012-12-03 14:11:18
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2013-01-12 17:41:59
+  internal_id: 4429
+  is_current: 1
+  last_updated: 2012-12-03 14:11:18
+  pipeline_internal_id: 1
+  pipeline_name: Illumina-C Library preparation
+  pipeline_uuid: "Eø¦ÜÆd\x11ß¶ö\0\x14O n."
+  production_state: ~
+  qc_state: qc_pending
+  state: released
+  uuid: "Ñ`ªÆd\x11ß´\r\0\x14O\x01¤\x14"
+- assigned_to: ~
+  checked_at: 2013-01-12 17:43:56
+  created: 2010-06-04 12:49:17
+  created_by: hg2
+  current_from: 2012-10-23 15:08:44
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2013-01-12 17:43:56
+  internal_id: 6808
+  is_current: 1
+  last_updated: 2012-10-23 15:08:44
+  pipeline_internal_id: 8
+  pipeline_name: Illumina-B MX Library Preparation
+  pipeline_uuid: "EØBzÆd\x11ß¶ö\0\x14O n."
+  production_state: ~
+  qc_state: qc_pending
+  state: released
+  uuid: "HD?PÆd\x11ß¶ö\0\x14O n."
+- assigned_to: ~
+  checked_at: 2012-06-26 15:56:40
+  created: 2010-11-03 09:42:35
+  created_by: dia
+  current_from: 2012-05-23 14:52:18
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 15:56:40
+  internal_id: 8147
+  is_current: 1
+  last_updated: 2012-05-23 14:52:18
+  pipeline_internal_id: 8
+  pipeline_name: Illumina-B MX Library Preparation
+  pipeline_uuid: "EØBzÆd\x11ß¶ö\0\x14O n."
+  production_state: ~
+  qc_state: qc_pending
+  state: released
+  uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"

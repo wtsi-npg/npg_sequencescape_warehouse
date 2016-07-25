@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch>
+  <id>4915</id>
+  <status>released</status>
+  <lanes>
+    <lane position="1" priority="0" id="79233">
+      <library name="Exp2_PD2126a_WGA 1" request_id="38676" id="58974" qc_state="pass">
+        <sample project_id="378" sample_id="9184" library_type="qPCR only" library_id="58974" consent_withdrawn="false" study_id="490" library_name="Exp2_PD2126a_WGA 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="2" priority="0" id="79248">
+      <library name="Exp2_PD2126a_WGA 1" request_id="38705" id="58974" qc_state="fail">
+        <sample project_id="378" sample_id="9184" library_type="qPCR only" library_id="58974" consent_withdrawn="false" study_id="490" library_name="Exp2_PD2126a_WGA 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="3" priority="0" id="79249">
+      <library name="Exp2_PD2126a_WGA 1" request_id="38706" id="58974" qc_state="pass">
+        <sample project_id="378" sample_id="9184" library_type="qPCR only" library_id="58974" consent_withdrawn="false" study_id="490" library_name="Exp2_PD2126a_WGA 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="4" priority="0" id="82637">
+      <control name="phiX CT1462-2 1" request_id="43858" id="79577">
+        <sample project_id="" sample_id="9836" library_type="" library_id="79577" consent_withdrawn="false" study_id="" library_name="phiX CT1462-2 1">
+        </sample>
+      </control>
+    </lane>
+    <lane position="5" priority="0" id="79250">
+      <library name="Exp2_PD2126b_WGA 1" request_id="38707" id="58976" qc_state="fail">
+        <sample project_id="378" sample_id="9185" library_type="qPCR only" library_id="58976" consent_withdrawn="false" study_id="490" library_name="Exp2_PD2126b_WGA 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="6" priority="0" id="79234">
+      <library name="Exp2_PD2126b_WGA 1" request_id="38679" id="58976" qc_state="pass">
+        <sample project_id="378" sample_id="9185" library_type="qPCR only" library_id="58976" consent_withdrawn="false" study_id="490" library_name="Exp2_PD2126b_WGA 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="7" priority="0" id="79251">
+      <library name="Exp2_PD2126b_WGA 1" request_id="38708" id="58976">
+        <sample project_id="378" sample_id="9185" library_type="qPCR only" library_id="58976" consent_withdrawn="false" study_id="490" library_name="Exp2_PD2126b_WGA 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="8" priority="0" id="79479">
+      <library name="OX008_dscDNA 1" request_id="39342" id="59231" qc_state="fail">
+        <sample project_id="248" sample_id="9365" library_type="Illumina cDNA protocol" library_id="59231" consent_withdrawn="false" study_id="495" library_name="OX008_dscDNA 1">
+          <insert_size from="200" to="300"/>
+        </sample>
+      </library>
+    </lane>
+  </lanes>
+</batch>

@@ -1,0 +1,43 @@
+---
+- approved: 1
+  budget_cost_centre: ~
+  budget_division: 'S0700 - Pathogen sequencing'
+  checked_at: 2013-07-01 11:44:20
+  collaborators: 'Alan Walker, Julian Parkhill'
+  cost_code: S0746
+  created: 2013-07-01 11:27:55
+  current_from: 2013-07-01 11:44:20
+  current_to: ~
+  deleted_at: ~
+  external_funding_source: ~
+  funding_comments: ~
+  funding_model: Internal
+  inserted_at: 2013-07-01 11:44:20
+  internal_id: 1383
+  is_current: 1
+  last_updated: 2013-07-01 11:44:20
+  name: Pilot evaluation of sample collection approaches in microbiome profiling
+  project_manager: Nathalie C Smerdon
+  state: active
+  uuid: "F/AðâA\x11â hµv£"
+- approved: 1
+  budget_cost_centre: ~
+  budget_division: Other external grant
+  checked_at: 2012-08-03 10:00:58
+  collaborators: ~
+  cost_code: S2052
+  created: 2012-04-26 14:32:06
+  current_from: 2012-08-03 10:10:57
+  current_to: ~
+  deleted_at: ~
+  external_funding_source: ~
+  funding_comments: 'Adrian Bird Rett Syndrome grant extension '
+  funding_model: External
+  inserted_at: 2012-08-03 10:00:58
+  internal_id: 1066
+  is_current: 1
+  last_updated: 2012-08-03 10:10:57
+  name: Mapping RTT-like phenotypes onto the Mouse brain
+  project_manager: Sophie Messager
+  state: active
+  uuid: "Nì¬\x11áMhµv£"

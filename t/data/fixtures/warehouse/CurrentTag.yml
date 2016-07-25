@@ -1,0 +1,31 @@
+---
+- checked_at: 2012-06-26 12:09:17
+  created: 2012-03-28 09:45:47
+  current_from: 2012-03-28 09:45:49
+  current_to: ~
+  deleted_at: ~
+  expected_sequence: CTTGTA
+  inserted_at: 2012-06-26 12:09:17
+  internal_id: 1357
+  is_current: 1
+  last_updated: 2012-03-28 09:45:49
+  map_id: 12
+  tag_group_internal_id: 27
+  tag_group_name: TruSeq mRNA Adapter Index Sequences
+  tag_group_uuid: "ÌN²xº\x11á¼Ùhµv£"
+  uuid: "Ë¬Á\x14xº\x11á¼Ùhµv£"
+- checked_at: 2012-06-26 12:09:17
+  created: 2012-03-28 09:45:47
+  current_from: 2012-03-28 09:45:49
+  current_to: ~
+  deleted_at: ~
+  expected_sequence: CAGATC
+  inserted_at: 2012-06-26 12:09:17
+  internal_id: 1361
+  is_current: 1
+  last_updated: 2012-03-28 09:45:49
+  map_id: 7
+  tag_group_internal_id: 27
+  tag_group_name: TruSeq mRNA Adapter Index Sequences
+  tag_group_uuid: "ÌN²xº\x11á¼Ùhµv£"
+  uuid: "ËèJhxº\x11á¼Ùhµv£"

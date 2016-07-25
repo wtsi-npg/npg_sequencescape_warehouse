@@ -1,0 +1,400 @@
+---
+- batch_internal_id: 4319
+  batch_uuid: "~y\x1dÔÆd\x11ß´\r\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:14:08
+  created: 2009-11-05 17:15:48
+  current_from: 2012-05-23 14:52:14
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:14:08
+  internal_id: 3726
+  is_current: 1
+  last_updated: 2012-05-23 14:52:14
+  request_internal_id: 32000
+  request_type: Library creation
+  request_uuid: "å.FÈÆ0\x11ß\0\x14O b°"
+  source_asset_internal_id: 57607
+  source_asset_name: D9_2 1
+  source_asset_uuid: "\x18å\x11àÆ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 57608
+  target_asset_name: D9_2 1
+  target_asset_uuid: "¦§<ÄÆ1\x11ß\0\x14O b°"
+  uuid: "\eiN<Æ0\x11ß\0\x14O b°"
+- batch_internal_id: 4319
+  batch_uuid: "~y\x1dÔÆd\x11ß´\r\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:14:09
+  created: 2009-11-05 17:15:49
+  current_from: 2012-05-23 14:52:14
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:14:09
+  internal_id: 3734
+  is_current: 1
+  last_updated: 2012-05-23 14:52:14
+  request_internal_id: 32033
+  request_type: Library creation
+  request_uuid: "å/P6Æ0\x11ß\0\x14O b°"
+  source_asset_internal_id: 57623
+  source_asset_name: E8_2 1
+  source_asset_uuid: "\x18åR\"Æ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 57624
+  target_asset_name: E8_2 1
+  target_asset_uuid: "¦§TÆ1\x11ß\0\x14O b°"
+  uuid: "\ei@Æ0\x11ß\0\x14O b°"
+- batch_internal_id: 4319
+  batch_uuid: "~y\x1dÔÆd\x11ß´\r\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:14:08
+  created: 2009-11-05 17:15:49
+  current_from: 2012-05-23 14:52:14
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:14:08
+  internal_id: 3738
+  is_current: 1
+  last_updated: 2012-05-23 14:52:14
+  request_internal_id: 32045
+  request_type: Library creation
+  request_uuid: "å/±\x02Æ0\x11ß\0\x14O b°"
+  source_asset_internal_id: 57631
+  source_asset_name: E6_2 1
+  source_asset_uuid: "\x18år\\Æ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 57632
+  target_asset_name: E6_2 1
+  target_asset_uuid: "¦§ ÎÆ1\x11ß\0\x14O b°"
+  uuid: "\ei±\x10Æ0\x11ß\0\x14O b°"
+- batch_internal_id: 4319
+  batch_uuid: "~y\x1dÔÆd\x11ß´\r\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:14:09
+  created: 2009-11-05 17:15:49
+  current_from: 2012-05-23 14:52:14
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:14:09
+  internal_id: 3739
+  is_current: 1
+  last_updated: 2012-05-23 14:52:14
+  request_internal_id: 32048
+  request_type: Library creation
+  request_uuid: "å/É&Æ0\x11ß\0\x14O b°"
+  source_asset_internal_id: 57633
+  source_asset_name: E6_1 1
+  source_asset_uuid: "\x18åzÆ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 57634
+  target_asset_name: E6_1 1
+  target_asset_uuid: "¦§¨äÆ1\x11ß\0\x14O b°"
+  uuid: "\ei¹NÆ0\x11ß\0\x14O b°"
+- batch_internal_id: 4319
+  batch_uuid: "~y\x1dÔÆd\x11ß´\r\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:14:09
+  created: 2009-11-05 17:15:49
+  current_from: 2012-05-23 14:52:14
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:14:09
+  internal_id: 3740
+  is_current: 1
+  last_updated: 2012-05-23 14:52:14
+  request_internal_id: 32051
+  request_type: Library creation
+  request_uuid: "å/áJÆ0\x11ß\0\x14O b°"
+  source_asset_internal_id: 57635
+  source_asset_name: E5_2 1
+  source_asset_uuid: "\x18å¦Æ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 57636
+  target_asset_name: E5_2 1
+  target_asset_uuid: "¦§±\x0eÆ1\x11ß\0\x14O b°"
+  uuid: "\eiÁÆ0\x11ß\0\x14O b°"
+- batch_internal_id: 4319
+  batch_uuid: "~y\x1dÔÆd\x11ß´\r\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:14:09
+  created: 2009-11-05 17:15:49
+  current_from: 2012-05-23 14:52:14
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:14:09
+  internal_id: 3741
+  is_current: 1
+  last_updated: 2012-05-23 14:52:14
+  request_internal_id: 32054
+  request_type: Library creation
+  request_uuid: "å/ùZÆ0\x11ß\0\x14O b°"
+  source_asset_internal_id: 57637
+  source_asset_name: D4_1 1
+  source_asset_uuid: "\x18å¨Æ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 57638
+  target_asset_name: D4_1 1
+  target_asset_uuid: "¦§¹LÆ1\x11ß\0\x14O b°"
+  uuid: "\eiÉ¶Æ0\x11ß\0\x14O b°"
+- batch_internal_id: 4429
+  batch_uuid: "Ñ`ªÆd\x11ß´\r\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:14:10
+  created: 2009-11-05 17:16:06
+  current_from: 2012-05-23 14:52:14
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:14:10
+  internal_id: 3874
+  is_current: 1
+  last_updated: 2012-05-23 14:52:14
+  request_internal_id: 32972
+  request_type: Library creation
+  request_uuid: "åL  Æ0\x11ß\0\x14O b°"
+  source_asset_internal_id: 57932
+  source_asset_name: hES2_RNAPII 1
+  source_asset_uuid: "\x18ê¦æÆ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 57933
+  target_asset_name: hES2_RNAPII 1
+  target_asset_uuid: "¦«üÈÆ1\x11ß\0\x14O b°"
+  uuid: "\en\x10\\Æ0\x11ß\0\x14O b°"
+- batch_internal_id: 6808
+  batch_uuid: "HD?PÆd\x11ß¶ö\0\x14O n."
+  checked_at: 2012-06-26 13:30:52
+  created: 2010-06-04 12:49:18
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:30:52
+  internal_id: 97252
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 519466
+  request_type: Multiplexed library creation
+  request_uuid: "<Ñ<Æ1\x11ß\0\x14O b°"
+  source_asset_internal_id: 140924
+  source_asset_name: 93_3_1-11
+  source_asset_uuid: " ± Æ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 246303
+  target_asset_name: 93_3_1-11 246303
+  target_asset_uuid: "®'\x0eÆ1\x11ß\0\x14O b°"
+  uuid: "WFiÆÆ0\x11ß\0\x14O b°"
+- batch_internal_id: 6808
+  batch_uuid: "HD?PÆd\x11ß¶ö\0\x14O n."
+  checked_at: 2012-06-26 13:30:52
+  created: 2010-06-04 12:49:18
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:30:52
+  internal_id: 97253
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 519467
+  request_type: Multiplexed library creation
+  request_uuid: "<Ñ>Æ1\x11ß\0\x14O b°"
+  source_asset_internal_id: 140925
+  source_asset_name: 93_4_1-11
+  source_asset_uuid: " ±@Æ;\x11ß\0\x14O b°"
+  target_asset_internal_id: 246304
+  target_asset_name: 93_4_1-11 246304
+  target_asset_uuid: "®'üÆ1\x11ß\0\x14O b°"
+  uuid: "WFr\x04Æ0\x11ß\0\x14O b°"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:19
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:19
+  internal_id: 125525
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578555
+  request_type: Multiplexed library creation
+  request_uuid: "ü'xüÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351633
+  source_asset_name: M27_FLU_T146
+  source_asset_uuid: "\x1e°Ï\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381772
+  target_asset_name: M27_FLU_T146 1381772
+  target_asset_uuid: "òÍD²ç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",S%Ðç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125526
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578556
+  request_type: Multiplexed library creation
+  request_uuid: "ü+\x11jÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351634
+  source_asset_name: M28_FLU_T146
+  source_asset_uuid: "\"Ø,Ï\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381773
+  target_asset_name: M28_FLU_T146 1381773
+  target_asset_uuid: "òÆØ*ç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",PH°ç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125527
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578557
+  request_type: Multiplexed library creation
+  request_uuid: "ü.vÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351635
+  source_asset_name: M29_FLU_T146
+  source_asset_uuid: "@UZÏ\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381774
+  target_asset_name: M29_FLU_T146 1381774
+  target_asset_uuid: "òÃ*Jç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",KùÖç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125528
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578558
+  request_type: Multiplexed library creation
+  request_uuid: "ü2\aÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351636
+  source_asset_name: M30_FLU_T146
+  source_asset_uuid: "&lÏ\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381775
+  target_asset_name: M30_FLU_T146 1381775
+  target_asset_uuid: "ò¿Êç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",Hfç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125529
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578559
+  request_type: Multiplexed library creation
+  request_uuid: "ü\t`ÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351637
+  source_asset_name: M31_FLU_T146
+  source_asset_uuid: "*[\x06Ï\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381776
+  target_asset_name: M31_FLU_T146 1381776
+  target_asset_uuid: "ò¼\t@ç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",Ef>ç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125530
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578560
+  request_type: Multiplexed library creation
+  request_uuid: "ü\x0f%ÖÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351638
+  source_asset_name: M32_FLU_T146
+  source_asset_uuid: ".\x17PÏ\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381777
+  target_asset_name: M32_FLU_T146 1381777
+  target_asset_uuid: "ò¸xzç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",B¢Èç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125531
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578561
+  request_type: Multiplexed library creation
+  request_uuid: "ü\x12Ê`ÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351639
+  source_asset_name: M33_FLU_T146
+  source_asset_uuid: "1ÓôÏ\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381778
+  target_asset_name: M33_FLU_T146 1381778
+  target_asset_uuid: "ò´Êþç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",?î\x16ç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125532
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578562
+  request_type: Multiplexed library creation
+  request_uuid: "ü\x16H\\ÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351640
+  source_asset_name: M34_FLU_T146
+  source_asset_uuid: "5wèÏ\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381779
+  target_asset_name: M34_FLU_T146 1381779
+  target_asset_uuid: "ò£m,ç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",-µ\x02ç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125533
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578563
+  request_type: Multiplexed library creation
+  request_uuid: "ü\x19Ü°ÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351641
+  source_asset_name: M36_FLU_T146
+  source_asset_uuid: "9\x17\x04Ï\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381780
+  target_asset_name: M36_FLU_T146 1381780
+  target_asset_uuid: "òá\\ç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",*Ð\x1cç0\x11ß¾\x04\0\x14O\x01¤\x14"
+- batch_internal_id: 8147
+  batch_uuid: " ÖÎç/\x11ßy\0\x14O\x01¤\x14"
+  checked_at: 2012-06-26 13:34:20
+  created: 2010-11-03 09:42:35
+  current_from: 2011-08-05 17:22:46
+  current_to: ~
+  deleted_at: ~
+  inserted_at: 2012-06-26 13:34:20
+  internal_id: 125534
+  is_current: 1
+  last_updated: 2011-08-05 17:22:46
+  request_internal_id: 578564
+  request_type: Multiplexed library creation
+  request_uuid: "ü\x1dY²ÝÙ\x11ß°L\0\x14O n."
+  source_asset_internal_id: 1351642
+  source_asset_name: M37_FLU_T146
+  source_asset_uuid: "<À\fÏ\x11ß¢\0\x14O\x01¤\x14"
+  target_asset_internal_id: 1381781
+  target_asset_name: M37_FLU_T146 1381781
+  target_asset_uuid: "òD®ç/\x11ß»²\0\x14O\x01¤\x14"
+  uuid: ",'Ðç0\x11ß¾\x04\0\x14O\x01¤\x14"

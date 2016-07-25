@@ -1,0 +1,103 @@
+---
+- accession_number: ERS223727
+  checked_at: 2013-03-19 14:12:07
+  cohort: ~
+  common_name: Mus musculus
+  consent_withdrawn: 0
+  control: ~
+  country_of_origin: ~
+  created: 2013-03-19 13:52:59
+  current_from: 2013-03-19 13:56:13
+  current_to: ~
+  deleted_at: ~
+  description: gDNA from FACS sorted glia
+  empty_supplier_sample_name: 0
+  ethnicity: ~
+  father: ~
+  gender: Male
+  geographical_region: ~
+  inserted_at: 2013-03-19 14:12:07
+  internal_id: 1599118
+  is_current: 1
+  last_updated: 2013-03-19 13:56:13
+  mother: ~
+  name: m_5hmC_Control
+  organism: Mouse
+  public_name: m_5hmC_Control
+  reference_genome: Mus_musculus (NCBIm37)
+  replicate: ~
+  sample_visibility: Hold
+  sanger_sample_id: ~
+  strain: Bl6
+  supplier_name: ~
+  taxon_id: 10090
+  updated_by_manifest: 0
+  uuid: "O!\x10\x11âähµv£"
+- accession_number: ERS223728
+  checked_at: 2013-03-19 14:12:07
+  cohort: ~
+  common_name: Mus musculus
+  consent_withdrawn: 0
+  control: ~
+  country_of_origin: ~
+  created: 2013-03-19 13:52:59
+  current_from: 2013-03-19 13:56:14
+  current_to: ~
+  deleted_at: ~
+  description: gDNA from liver
+  empty_supplier_sample_name: 0
+  ethnicity: ~
+  father: ~
+  gender: Male
+  geographical_region: ~
+  inserted_at: 2013-03-19 14:12:07
+  internal_id: 1599119
+  is_current: 1
+  last_updated: 2013-03-19 13:56:14
+  mother: ~
+  name: m_5hmC_Liver
+  organism: Mouse
+  public_name: m_5hmC_Liver
+  reference_genome: Mus_musculus (NCBIm37)
+  replicate: ~
+  sample_visibility: Hold
+  sanger_sample_id: ~
+  strain: Bl6
+  supplier_name: ~
+  taxon_id: 10090
+  updated_by_manifest: 0
+  uuid: "O\að\x11âähµv£"
+- accession_number: ~
+  checked_at: 2013-07-01 11:45:46
+  cohort: ~
+  common_name: ~
+  consent_withdrawn: 0
+  control: ~
+  country_of_origin: ~
+  created: 2013-07-01 11:45:43
+  current_from: 2013-07-01 11:45:43
+  current_to: ~
+  deleted_at: ~
+  description: DNA from faeces
+  empty_supplier_sample_name: 0
+  ethnicity: ~
+  father: ~
+  gender: Unknown
+  geographical_region: ~
+  inserted_at: 2013-07-01 11:45:46
+  internal_id: 1655994
+  is_current: 1
+  last_updated: 2013-07-01 11:45:43
+  mother: ~
+  name: PilotIBDMetagenomics_Faeces
+  organism: Bacteria
+  public_name: ~
+  reference_genome: Not suitable for alignment
+  replicate: ~
+  sample_visibility: Hold
+  sanger_sample_id: ~
+  strain: ~
+  supplier_name: ~
+  taxon_id: ~
+  updated_by_manifest: 0
+  uuid: "Ã\x16!ðâC\x11â¯khµv£"

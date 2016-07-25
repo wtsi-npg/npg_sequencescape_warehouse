@@ -1,0 +1,73 @@
+---
+- abbreviation: IBDMICROPILOT
+  abstract: 'While metagenomic profiling is recognized as a useful approach in understanding the biology of many human diseases, it is not yet clear how best to obtain samples for such studies. Here we have taken 7 samples from a single patient undergoing colonoscopy: 2 from biopsy, 2 from colonoscopic brush, 2 from lavage and 1 from feces. We will sequence them to determine the ratio of human to microbial DNA, and how consistent the populations of microbiomes are measured in different samples. '
+  accession_number: ~
+  alignments_in_bam: 1
+  array_express_accession_number: ~
+  checked_at: 2013-07-01 12:44:57
+  contains_human_dna: Yes
+  contaminated_human_dna: Yes
+  created: 2013-07-01 11:30:18
+  current_from: 2013-07-01 12:44:56
+  current_to: ~
+  data_release_delay_period: ~
+  data_release_delay_reason: ~
+  data_release_sort_of_study: genomic sequencing
+  data_release_strategy: not applicable
+  data_release_timing: never
+  deleted_at: ~
+  description: "This data is part of a pre-publication release. For information on the proper use of pre-publication data shared by the Wellcome Trust Sanger Institute (including details of any publication moratoria), please see http://www.sanger.ac.uk/datasharing/\r\n\r\n"
+  ega_dac_accession_number: ~
+  ega_policy_accession_number: ~
+  ena_project_id: ~
+  ethically_approved: 1
+  faculty_sponsor: Julian Parkhill
+  inserted_at: 2013-07-01 12:44:57
+  internal_id: 2686
+  is_current: 1
+  last_updated: 2013-07-01 12:44:56
+  name: Pilot evaluation of sample collection approaches in microbiome profiling
+  reference_genome: Not suitable for alignment
+  remove_x_and_autosomes: 0
+  separate_y_chromosome_data: 0
+  state: active
+  study_title: Pilot evaluation of sample collection approaches in microbiome profiling
+  study_type: Metagenomics
+  study_visibility: Hold
+  uuid: "ÀxPâA\x11â¬ahµv£"
+- abbreviation: 663STDY
+  abstract: 'This project aims to determine the functional properties of the co-repressor molecule MeCP2, by mapping it to its endogenous sites in mouse Brain. '
+  accession_number: ERP001529
+  alignments_in_bam: 1
+  array_express_accession_number: E-ERAD-81
+  checked_at: 2013-04-05 13:05:38
+  contains_human_dna: No
+  contaminated_human_dna: No
+  created: 2010-08-19 12:45:03
+  current_from: 2013-04-05 13:05:38
+  current_to: ~
+  data_release_delay_period: ~
+  data_release_delay_reason: ~
+  data_release_sort_of_study: other sequencing-based assay
+  data_release_strategy: open
+  data_release_timing: standard
+  deleted_at: ~
+  description: "MeCP2 is a nuclear protein with an affinity for methylated DNA that can recruit histone deacetylases. Deficiency or excess of MeCP2 causes severe neurological problems, highlighting the functional importance of this protein. Chromatin immunoprecipitation of MeCP2 in combination with high-throughput solexa sequencing identified genome-wide binding which tracks methyl-CpG density but does not grossly affect the binding of RNA polymerase II.  \r\nProtocol: Brains were manually homogenised to a single cells suspension and crosslinked using 1% formaldehyde. Chromatin was sheared using a combination of Micrococcal nuclease and sonication (Skene et al, Mol Cell, 2010). Protein-DNA complexes were immunoprecipitated with the appropriate antibody and DNA was subsequently extracted.  Adaptors were ligated to purified DNA which was then amplified by PCR. The purified DNA was captured on an Illumina flow cell for cluster generation. Libraries were sequenced on the Genome Analyzer following the manufacturer's protocols Sequencing was performed at the Wellcome Trust Sanger Institute; Hinxton, Cambridge, UK.\r\n\r\nThis data is part of a pre-publication release. For information on the proper use of pre-publication data shared by the Wellcome Trust Sanger Institute (including details of any publication moratoria), please see http://www.sanger.ac.uk/datasharing/\r\n\r\n\r\n"
+  ega_dac_accession_number: ~
+  ega_policy_accession_number: ~
+  ena_project_id: 0
+  ethically_approved: ~
+  faculty_sponsor: Adrian Bird
+  inserted_at: 2013-04-05 13:05:38
+  internal_id: 663
+  is_current: 1
+  last_updated: 2013-04-05 13:05:38
+  name: 'MeCP2: Global distribution and transcription'
+  reference_genome: Mus_musculus (NCBIm37)
+  remove_x_and_autosomes: 0
+  separate_y_chromosome_data: 0
+  state: active
+  study_title: 'MeCP2: Global distribution and transcription'
+  study_type: Epigenetics
+  study_visibility: Hold
+  uuid: "Ë\x05g¾®¿\x11ß´¯\0\x14O\x01¤\x14"

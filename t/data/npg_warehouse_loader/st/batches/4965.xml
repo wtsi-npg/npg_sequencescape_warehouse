@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch>
+  <id>4965</id>
+  <status>released</status>
+  <lanes>
+    <lane position="1" priority="0" id="1424651">
+      <library name="B1267_Exp4 1" request_id="2913038" id="59157" qc_state="pass">
+        <sample project_id="377" sample_id="9272" library_type="qPCR only" library_id="59157" consent_withdrawn="false" study_id="377" library_name="B1267_Exp4 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="2" priority="0" id="1424652">
+      <library name="B3009_Exp4 1" request_id="2913039" id="59159" qc_state="pass">
+        <sample project_id="377" sample_id="9286" library_type="qPCR only" library_id="59159" consent_withdrawn="false" study_id="377" library_name="B3009_Exp4 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="3" priority="0" id="1424653">
+      <library name="B3006_Exp4 1" request_id="2913040" id="59161" qc_state="pass">
+        <sample project_id="377" sample_id="9285" library_type="qPCR only" library_id="59161" consent_withdrawn="false" study_id="377" library_name="B3006_Exp4 1">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="4" priority="0" id="82664">
+      <control name="phiX CT1462-2 1" request_id="43885" id="79577">
+        <sample project_id="" sample_id="9836" library_type="" library_id="79577" consent_withdrawn="false" study_id="" library_name="phiX CT1462-2 1">
+        </sample>
+      </control>
+    </lane>
+    <lane position="5" priority="0" id="79494">
+      <library name="NA18623pd2a 1" request_id="39449" id="59255" qc_state="pass">
+        <sample project_id="188" sample_id="9386" library_type="qPCR only" library_id="59255" consent_withdrawn="false" study_id="188" library_name="NA18623pd2a 1">
+          <insert_size from="200" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="6" priority="0" id="79495">
+      <library name="NA18633pda 1" request_id="39452" id="59257" qc_state="pass">
+        <sample project_id="188" sample_id="9387" library_type="qPCR only" library_id="59257" consent_withdrawn="false" study_id="188" library_name="NA18633pda 1">
+          <insert_size from="200" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="7" priority="0" id="79496">
+      <library name="NA18563pd2a 1" request_id="39455" id="59259" qc_state="pass">
+        <sample project_id="188" sample_id="9388" library_type="qPCR only" library_id="59259" consent_withdrawn="false" study_id="188" library_name="NA18563pd2a 1">
+          <insert_size from="200" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="8" priority="0" id="79497">
+      <library name="NA18545pd2a 1" request_id="39458" id="59261" qc_state="pass">
+        <sample project_id="188" sample_id="9389" library_type="qPCR only" library_id="59261" consent_withdrawn="false" study_id="188" library_name="NA18545pd2a 1">
+          <insert_size from="200" to="400"/>
+        </sample>
+      </library>
+    </lane>
+  </lanes>
+</batch>

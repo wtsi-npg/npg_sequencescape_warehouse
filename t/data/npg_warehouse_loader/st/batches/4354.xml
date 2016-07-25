@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch>
+  <id>4354</id>
+  <status>released</status>
+  <lanes>
+    <lane position="1" priority="0" id="75805">
+      <library name="AC0001C 1" request_id="30270" id="54773" qc_state="pass">
+        <sample project_id="25" sample_id="3055" library_type="Standard" library_id="54773" consent_withdrawn="false" study_id="544" library_name="AC0001C 1">
+          <insert_size from="300" to="300"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="2" priority="0" id="75017">
+      <library name="A_J_SLX_500_DSS_1" request_id="28033" id="56231" qc_state="pass">
+        <sample project_id="152" sample_id="1730" library_type="Double size selected" library_id="56231" consent_withdrawn="false" study_id="152" library_name="A_J_SLX_500_DSS_1">
+          <insert_size from="500" to="500"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="3" priority="0" id="75020">
+      <library name="A_J_SLX_500_DSS_2" request_id="28036" id="56233" qc_state="pass">
+        <sample project_id="152" sample_id="1730" library_type="Double size selected" library_id="56233" consent_withdrawn="false" study_id="152" library_name="A_J_SLX_500_DSS_2">
+          <insert_size from="500" to="500"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="4" priority="0" id="82230">
+      <control name="phiX_SI_SPRI 1" request_id="43451" id="79572">
+        <sample project_id="" sample_id="9831" library_type="" library_id="79572" consent_withdrawn="false" study_id="" library_name="phiX_SI_SPRI 1">
+        </sample>
+      </control>
+    </lane>
+    <lane position="5" priority="0" id="75023">
+      <library name="A_J_SLX_500_DSS_3" request_id="28039" id="56235" qc_state="pass">
+        <sample project_id="152" sample_id="1730" library_type="Double size selected" library_id="56235" consent_withdrawn="false" study_id="152" library_name="A_J_SLX_500_DSS_3">
+          <insert_size from="500" to="500"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="6" priority="0" id="74835">
+      <library name="NA07056-CEU-2" request_id="27643" id="56008" qc_state="pass">
+        <sample project_id="204" sample_id="2134" library_type="Standard" library_id="56008" consent_withdrawn="false" study_id="204" library_name="NA07056-CEU-2">
+          <insert_size from="400" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="7" priority="0" id="74968">
+      <library name="AKR_J_SLX_500_DSS_1" request_id="27925" id="56166" qc_state="fail">
+        <sample project_id="168" sample_id="2116" library_type="Double size selected" library_id="56166" consent_withdrawn="false" study_id="168" library_name="AKR_J_SLX_500_DSS_1">
+          <insert_size from="500" to="500"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="8" priority="0" id="74971">
+      <library name="AKR_J_SLX_500_DSS_2" request_id="27928" id="56168" qc_state="pass">
+        <sample project_id="168" sample_id="2116" library_type="Double size selected" library_id="56168" consent_withdrawn="false" study_id="168" library_name="AKR_J_SLX_500_DSS_2">
+          <insert_size from="500" to="500"/>
+        </sample>
+      </library>
+    </lane>
+  </lanes>
+</batch>

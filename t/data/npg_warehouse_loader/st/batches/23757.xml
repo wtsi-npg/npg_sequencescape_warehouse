@@ -1,0 +1,3356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch>
+<id>23757</id>
+<status>released</status>
+<lanes>
+<lane position="1" id="8372419" priority="0">
+<pool id="8106777" name="DN295625R A1:G12" request_id="5601493" >
+<sample sample_id="1674734" library_id="8215314" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="144">
+<index>1</index>
+<expected_sequence>ATCACGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674735" library_id="8215326" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="149">
+<index>2</index>
+<expected_sequence>CGATGTTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674736" library_id="8215338" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="153">
+<index>3</index>
+<expected_sequence>TTAGGCAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674737" library_id="8215350" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="158">
+<index>4</index>
+<expected_sequence>TGACCACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674738" library_id="8215362" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="162">
+<index>5</index>
+<expected_sequence>ACAGTGGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674739" library_id="8215374" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="167">
+<index>6</index>
+<expected_sequence>GCCAATGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674740" library_id="8215386" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="173">
+<index>7</index>
+<expected_sequence>CAGATCTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674741" library_id="8215398" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="179">
+<index>8</index>
+<expected_sequence>ACTTGATG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674742" library_id="8215315" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="188">
+<index>9</index>
+<expected_sequence>GATCAGCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674743" library_id="8215327" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="193">
+<index>10</index>
+<expected_sequence>TAGCTTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674744" library_id="8215339" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="175">
+<index>11</index>
+<expected_sequence>GGCTACAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674745" library_id="8215351" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="184">
+<index>12</index>
+<expected_sequence>CTTGTACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674746" library_id="8215363" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="189">
+<index>13</index>
+<expected_sequence>TGGTTGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674747" library_id="8215375" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="195">
+<index>14</index>
+<expected_sequence>TCTCGGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674748" library_id="8215387" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="200">
+<index>15</index>
+<expected_sequence>TAAGCGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674749" library_id="8215399" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="207">
+<index>16</index>
+<expected_sequence>TCCGTCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674750" library_id="8215316" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="208">
+<index>17</index>
+<expected_sequence>TGTACCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674751" library_id="8215328" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="213">
+<index>18</index>
+<expected_sequence>TTCTGTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674752" library_id="8215340" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="218">
+<index>19</index>
+<expected_sequence>TCTGCTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674753" library_id="8215352" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="223">
+<index>20</index>
+<expected_sequence>TTGGAGGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674754" library_id="8215364" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="237">
+<index>21</index>
+<expected_sequence>TCGAGCGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674755" library_id="8215376" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="242">
+<index>22</index>
+<expected_sequence>TGATACGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674756" library_id="8215388" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="250">
+<index>23</index>
+<expected_sequence>TGCATAGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674757" library_id="8215400" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="256">
+<index>24</index>
+<expected_sequence>TTGACTCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674758" library_id="8215317" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="261">
+<index>25</index>
+<expected_sequence>TGCGATCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674759" library_id="8215329" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="98">
+<index>26</index>
+<expected_sequence>TTCCTGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674760" library_id="8215341" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="100">
+<index>27</index>
+<expected_sequence>TAGTGACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674761" library_id="8215353" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="104">
+<index>28</index>
+<expected_sequence>TACAGGAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674762" library_id="8215365" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="109">
+<index>29</index>
+<expected_sequence>TCCTCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674763" library_id="8215377" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="113">
+<index>30</index>
+<expected_sequence>TGTGGTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674764" library_id="8215389" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="125">
+<index>31</index>
+<expected_sequence>TAGTCTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674765" library_id="8215401" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="129">
+<index>32</index>
+<expected_sequence>TTCCATTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674766" library_id="8215318" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="133">
+<index>33</index>
+<expected_sequence>TCGAAGTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674767" library_id="8215330" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="139">
+<index>34</index>
+<expected_sequence>TAACGCTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674768" library_id="8215342" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="143">
+<index>35</index>
+<expected_sequence>TTGGTATG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674769" library_id="8215354" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="148">
+<index>36</index>
+<expected_sequence>TGAACTGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674770" library_id="8215366" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="156">
+<index>37</index>
+<expected_sequence>TACTTCGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674771" library_id="8215378" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="160">
+<index>38</index>
+<expected_sequence>TCTCACGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674772" library_id="8215390" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="166">
+<index>39</index>
+<expected_sequence>TCAGGAGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674773" library_id="8215402" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="171">
+<index>40</index>
+<expected_sequence>TAAGTTCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674774" library_id="8215319" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="187">
+<index>41</index>
+<expected_sequence>TCCAGTCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674775" library_id="8215331" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="192">
+<index>42</index>
+<expected_sequence>TGTATGCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674776" library_id="8215343" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="199">
+<index>43</index>
+<expected_sequence>TCATTGAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674777" library_id="8215355" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="204">
+<index>44</index>
+<expected_sequence>TGGCTCAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674778" library_id="8215367" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="209">
+<index>45</index>
+<expected_sequence>TATGCCAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674779" library_id="8215379" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="214">
+<index>46</index>
+<expected_sequence>TCAGATTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674780" library_id="8215391" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="219">
+<index>47</index>
+<expected_sequence>TACTAGTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674781" library_id="8215403" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="224">
+<index>48</index>
+<expected_sequence>TTCAGCTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674782" library_id="8215320" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="228">
+<index>49</index>
+<expected_sequence>TGTCTATC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674783" library_id="8215332" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="232">
+<index>50</index>
+<expected_sequence>TATGTGGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674784" library_id="8215344" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="247">
+<index>51</index>
+<expected_sequence>TTACTCGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674785" library_id="8215356" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="252">
+<index>52</index>
+<expected_sequence>TCGTTAGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674786" library_id="8215368" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="257">
+<index>53</index>
+<expected_sequence>TACCGAGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674787" library_id="8215380" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="262">
+<index>54</index>
+<expected_sequence>TGTTCTCC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674788" library_id="8215392" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="97">
+<index>55</index>
+<expected_sequence>TTCGCACC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674789" library_id="8215404" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="103">
+<index>56</index>
+<expected_sequence>TTGCGTAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674790" library_id="8215321" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="107">
+<index>57</index>
+<expected_sequence>TCTACGAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674791" library_id="8215333" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="116">
+<index>58</index>
+<expected_sequence>TGACAGAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674792" library_id="8215345" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="120">
+<index>59</index>
+<expected_sequence>TAGAACAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674793" library_id="8215357" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="123">
+<index>60</index>
+<expected_sequence>TCATCCTA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674794" library_id="8215369" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="135">
+<index>61</index>
+<expected_sequence>TGCTGATA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674795" library_id="8215381" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="138">
+<index>62</index>
+<expected_sequence>TAGACGGA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674796" library_id="8215393" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="142">
+<index>63</index>
+<expected_sequence>TGTGAAGA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674797" library_id="8215405" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="147">
+<index>64</index>
+<expected_sequence>TCTCTTCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674804" library_id="8215394" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="197">
+<index>71</index>
+<expected_sequence>GTGTCCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674805" library_id="8215406" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="202">
+<index>72</index>
+<expected_sequence>GACGGATT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674806" library_id="8215323" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="206">
+<index>73</index>
+<expected_sequence>GCAACATT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674807" library_id="8215335" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="212">
+<index>74</index>
+<expected_sequence>GGTCGTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674808" library_id="8215347" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="215">
+<index>75</index>
+<expected_sequence>GAATCTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674809" library_id="8215359" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="220">
+<index>76</index>
+<expected_sequence>GTACATCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674810" library_id="8215371" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="225">
+<index>77</index>
+<expected_sequence>GAGGTGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674811" library_id="8215383" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="233">
+<index>78</index>
+<expected_sequence>GCATGGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674812" library_id="8215395" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="236">
+<index>79</index>
+<expected_sequence>GTTAGCCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674813" library_id="8215407" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="241">
+<index>80</index>
+<expected_sequence>GTCGCTAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674814" library_id="8215324" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="255">
+<index>81</index>
+<expected_sequence>GGAATGAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674815" library_id="8215336" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="260">
+<index>82</index>
+<expected_sequence>GAGCCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674816" library_id="8215348" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="99">
+<index>83</index>
+<expected_sequence>GCTCCTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674817" library_id="8215360" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="102">
+<index>84</index>
+<expected_sequence>GTAAGGTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674822" library_id="8215325" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="126">
+<index>89</index>
+<expected_sequence>GTGTGTCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674823" library_id="8215337" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="130">
+<index>90</index>
+<expected_sequence>GCAATCCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674824" library_id="8215349" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="140">
+<index>91</index>
+<expected_sequence>GACCTTAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674825" library_id="8215361" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="145">
+<index>92</index>
+<expected_sequence>GCCTGTTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674826" library_id="8215373" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="150">
+<index>93</index>
+<expected_sequence>GCACTGTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674827" library_id="8215385" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="154">
+<index>94</index>
+<expected_sequence>GCTAACTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674828" library_id="8215397" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="159">
+<index>95</index>
+<expected_sequence>GATTCATC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+</pool>
+<hyb_buffer id="8158709">
+<sample sample_id="1255141" library_id="6200285" library_name="PhiX_PS_20120919" library_type="" study_id="198" project_id="" consent_withdrawn="false">
+<tag tag_id="264">
+<index>168</index>
+<expected_sequence>ACAACGCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+</sample>
+</hyb_buffer>
+</lane>
+<lane position="2" id="8372420" priority="0">
+<pool id="8153263" name="DN295626S A1:H11" request_id="5627324" >
+<sample sample_id="1674830" library_id="8207084" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="144">
+<index>1</index>
+<expected_sequence>ATCACGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674831" library_id="8207096" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="149">
+<index>2</index>
+<expected_sequence>CGATGTTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674832" library_id="8207108" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="153">
+<index>3</index>
+<expected_sequence>TTAGGCAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674833" library_id="8207120" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="158">
+<index>4</index>
+<expected_sequence>TGACCACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674834" library_id="8207132" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="162">
+<index>5</index>
+<expected_sequence>ACAGTGGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674835" library_id="8207144" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="167">
+<index>6</index>
+<expected_sequence>GCCAATGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674836" library_id="8207156" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="173">
+<index>7</index>
+<expected_sequence>CAGATCTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674837" library_id="8207168" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="179">
+<index>8</index>
+<expected_sequence>ACTTGATG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674838" library_id="8207085" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="188">
+<index>9</index>
+<expected_sequence>GATCAGCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674839" library_id="8207097" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="193">
+<index>10</index>
+<expected_sequence>TAGCTTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674840" library_id="8207109" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="175">
+<index>11</index>
+<expected_sequence>GGCTACAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674841" library_id="8207121" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="184">
+<index>12</index>
+<expected_sequence>CTTGTACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674842" library_id="8207133" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="189">
+<index>13</index>
+<expected_sequence>TGGTTGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674843" library_id="8207145" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="195">
+<index>14</index>
+<expected_sequence>TCTCGGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674844" library_id="8207157" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="200">
+<index>15</index>
+<expected_sequence>TAAGCGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674845" library_id="8207169" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="207">
+<index>16</index>
+<expected_sequence>TCCGTCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674846" library_id="8207086" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="208">
+<index>17</index>
+<expected_sequence>TGTACCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674847" library_id="8207098" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="213">
+<index>18</index>
+<expected_sequence>TTCTGTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674848" library_id="8207110" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="218">
+<index>19</index>
+<expected_sequence>TCTGCTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674849" library_id="8207122" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="223">
+<index>20</index>
+<expected_sequence>TTGGAGGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674850" library_id="8207134" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="237">
+<index>21</index>
+<expected_sequence>TCGAGCGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674851" library_id="8207146" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="242">
+<index>22</index>
+<expected_sequence>TGATACGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674852" library_id="8207158" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="250">
+<index>23</index>
+<expected_sequence>TGCATAGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674853" library_id="8207170" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="256">
+<index>24</index>
+<expected_sequence>TTGACTCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674854" library_id="8207087" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="261">
+<index>25</index>
+<expected_sequence>TGCGATCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674855" library_id="8207099" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="98">
+<index>26</index>
+<expected_sequence>TTCCTGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674856" library_id="8207111" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="100">
+<index>27</index>
+<expected_sequence>TAGTGACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674857" library_id="8207123" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="104">
+<index>28</index>
+<expected_sequence>TACAGGAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674858" library_id="8207135" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="109">
+<index>29</index>
+<expected_sequence>TCCTCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674859" library_id="8207147" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="113">
+<index>30</index>
+<expected_sequence>TGTGGTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674860" library_id="8207159" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="125">
+<index>31</index>
+<expected_sequence>TAGTCTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674861" library_id="8207171" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="129">
+<index>32</index>
+<expected_sequence>TTCCATTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674862" library_id="8207088" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="133">
+<index>33</index>
+<expected_sequence>TCGAAGTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674863" library_id="8207100" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="139">
+<index>34</index>
+<expected_sequence>TAACGCTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674864" library_id="8207112" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="143">
+<index>35</index>
+<expected_sequence>TTGGTATG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674865" library_id="8207124" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="148">
+<index>36</index>
+<expected_sequence>TGAACTGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674866" library_id="8207136" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="156">
+<index>37</index>
+<expected_sequence>TACTTCGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674867" library_id="8207148" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="160">
+<index>38</index>
+<expected_sequence>TCTCACGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674868" library_id="8207160" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="166">
+<index>39</index>
+<expected_sequence>TCAGGAGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674869" library_id="8207172" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="171">
+<index>40</index>
+<expected_sequence>TAAGTTCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674870" library_id="8207089" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="187">
+<index>41</index>
+<expected_sequence>TCCAGTCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674871" library_id="8207101" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="192">
+<index>42</index>
+<expected_sequence>TGTATGCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674872" library_id="8207113" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="199">
+<index>43</index>
+<expected_sequence>TCATTGAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674873" library_id="8207125" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="204">
+<index>44</index>
+<expected_sequence>TGGCTCAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674874" library_id="8207137" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="209">
+<index>45</index>
+<expected_sequence>TATGCCAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674875" library_id="8207149" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="214">
+<index>46</index>
+<expected_sequence>TCAGATTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674876" library_id="8207161" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="219">
+<index>47</index>
+<expected_sequence>TACTAGTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674877" library_id="8207173" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="224">
+<index>48</index>
+<expected_sequence>TTCAGCTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674878" library_id="8207090" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="228">
+<index>49</index>
+<expected_sequence>TGTCTATC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674879" library_id="8207102" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="232">
+<index>50</index>
+<expected_sequence>TATGTGGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674880" library_id="8207114" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="247">
+<index>51</index>
+<expected_sequence>TTACTCGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674881" library_id="8207126" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="252">
+<index>52</index>
+<expected_sequence>TCGTTAGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674882" library_id="8207138" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="257">
+<index>53</index>
+<expected_sequence>TACCGAGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674883" library_id="8207150" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="262">
+<index>54</index>
+<expected_sequence>TGTTCTCC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674884" library_id="8207162" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="97">
+<index>55</index>
+<expected_sequence>TTCGCACC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674885" library_id="8207174" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="103">
+<index>56</index>
+<expected_sequence>TTGCGTAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674886" library_id="8207091" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="107">
+<index>57</index>
+<expected_sequence>TCTACGAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674887" library_id="8207103" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="116">
+<index>58</index>
+<expected_sequence>TGACAGAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674888" library_id="8207115" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="120">
+<index>59</index>
+<expected_sequence>TAGAACAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674889" library_id="8207127" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="123">
+<index>60</index>
+<expected_sequence>TCATCCTA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674890" library_id="8207139" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="135">
+<index>61</index>
+<expected_sequence>TGCTGATA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674891" library_id="8207151" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="138">
+<index>62</index>
+<expected_sequence>TAGACGGA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674892" library_id="8207163" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="142">
+<index>63</index>
+<expected_sequence>TGTGAAGA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674893" library_id="8207175" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="147">
+<index>64</index>
+<expected_sequence>TCTCTTCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674894" library_id="8207092" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="151">
+<index>65</index>
+<expected_sequence>TTGTTCCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674895" library_id="8207104" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="155">
+<index>66</index>
+<expected_sequence>TGAAGCCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674896" library_id="8207116" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="164">
+<index>67</index>
+<expected_sequence>TACCACCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674897" library_id="8207128" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="169">
+<index>68</index>
+<expected_sequence>TGCGTGAA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674898" library_id="8207140" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="176">
+<index>69</index>
+<expected_sequence>GGTGAGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674899" library_id="8207152" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="181">
+<index>70</index>
+<expected_sequence>GATCTCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674900" library_id="8207164" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="197">
+<index>71</index>
+<expected_sequence>GTGTCCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674901" library_id="8207176" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="202">
+<index>72</index>
+<expected_sequence>GACGGATT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674902" library_id="8207093" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="206">
+<index>73</index>
+<expected_sequence>GCAACATT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674903" library_id="8207105" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="212">
+<index>74</index>
+<expected_sequence>GGTCGTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674904" library_id="8207117" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="215">
+<index>75</index>
+<expected_sequence>GAATCTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674905" library_id="8207129" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="220">
+<index>76</index>
+<expected_sequence>GTACATCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674906" library_id="8207141" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="225">
+<index>77</index>
+<expected_sequence>GAGGTGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674907" library_id="8207153" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="233">
+<index>78</index>
+<expected_sequence>GCATGGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674908" library_id="8207165" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="236">
+<index>79</index>
+<expected_sequence>GTTAGCCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674909" library_id="8207177" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="241">
+<index>80</index>
+<expected_sequence>GTCGCTAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674910" library_id="8207094" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="255">
+<index>81</index>
+<expected_sequence>GGAATGAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674911" library_id="8207106" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="260">
+<index>82</index>
+<expected_sequence>GAGCCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674912" library_id="8207118" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="99">
+<index>83</index>
+<expected_sequence>GCTCCTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674913" library_id="8207130" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="102">
+<index>84</index>
+<expected_sequence>GTAAGGTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674914" library_id="8207142" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="106">
+<index>85</index>
+<expected_sequence>GAGGATGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674915" library_id="8207154" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="111">
+<index>86</index>
+<expected_sequence>GTTGTCGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674916" library_id="8207166" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="115">
+<index>87</index>
+<expected_sequence>GGATTAGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1674917" library_id="8207178" library_name="" library_type="Agilent Pulldown" study_id="2680" project_id="1177" consent_withdrawn="false">
+<tag tag_id="119">
+<index>88</index>
+<expected_sequence>GATAGAGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="33">
+<name>FFPE_CPA_0470571</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+</pool>
+<hyb_buffer id="8158709">
+<sample sample_id="1255141" library_id="6200285" library_name="PhiX_PS_20120919" library_type="" study_id="198" project_id="" consent_withdrawn="false">
+<tag tag_id="264">
+<index>168</index>
+<expected_sequence>ACAACGCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+</sample>
+</hyb_buffer>
+</lane>
+<lane position="3" id="8372421" priority="0">
+<pool id="8212956" name="DN299968H A1:G12" request_id="5664016" >
+<sample sample_id="1691606" library_id="8281388" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="144">
+<index>1</index>
+<expected_sequence>ATCACGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691607" library_id="8281400" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="149">
+<index>2</index>
+<expected_sequence>CGATGTTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691608" library_id="8281412" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="153">
+<index>3</index>
+<expected_sequence>TTAGGCAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691609" library_id="8281424" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="158">
+<index>4</index>
+<expected_sequence>TGACCACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691610" library_id="8281436" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="162">
+<index>5</index>
+<expected_sequence>ACAGTGGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691611" library_id="8281448" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="167">
+<index>6</index>
+<expected_sequence>GCCAATGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691612" library_id="8281460" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="173">
+<index>7</index>
+<expected_sequence>CAGATCTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691613" library_id="8281472" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="179">
+<index>8</index>
+<expected_sequence>ACTTGATG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691614" library_id="8281389" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="188">
+<index>9</index>
+<expected_sequence>GATCAGCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691615" library_id="8281401" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="193">
+<index>10</index>
+<expected_sequence>TAGCTTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691616" library_id="8281413" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="175">
+<index>11</index>
+<expected_sequence>GGCTACAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691617" library_id="8281425" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="184">
+<index>12</index>
+<expected_sequence>CTTGTACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691618" library_id="8281437" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="189">
+<index>13</index>
+<expected_sequence>TGGTTGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691619" library_id="8281449" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="195">
+<index>14</index>
+<expected_sequence>TCTCGGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691620" library_id="8281461" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="200">
+<index>15</index>
+<expected_sequence>TAAGCGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691621" library_id="8281473" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="207">
+<index>16</index>
+<expected_sequence>TCCGTCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691622" library_id="8281390" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="208">
+<index>17</index>
+<expected_sequence>TGTACCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691623" library_id="8281402" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="213">
+<index>18</index>
+<expected_sequence>TTCTGTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691624" library_id="8281414" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="218">
+<index>19</index>
+<expected_sequence>TCTGCTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691625" library_id="8281426" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="223">
+<index>20</index>
+<expected_sequence>TTGGAGGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691626" library_id="8281438" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="237">
+<index>21</index>
+<expected_sequence>TCGAGCGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691627" library_id="8281450" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="242">
+<index>22</index>
+<expected_sequence>TGATACGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691628" library_id="8281462" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="250">
+<index>23</index>
+<expected_sequence>TGCATAGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691629" library_id="8281474" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="256">
+<index>24</index>
+<expected_sequence>TTGACTCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691630" library_id="8281391" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="261">
+<index>25</index>
+<expected_sequence>TGCGATCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691631" library_id="8281403" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="98">
+<index>26</index>
+<expected_sequence>TTCCTGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691632" library_id="8281415" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="100">
+<index>27</index>
+<expected_sequence>TAGTGACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691633" library_id="8281427" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="104">
+<index>28</index>
+<expected_sequence>TACAGGAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691634" library_id="8281439" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="109">
+<index>29</index>
+<expected_sequence>TCCTCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691635" library_id="8281451" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="113">
+<index>30</index>
+<expected_sequence>TGTGGTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691636" library_id="8281463" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="125">
+<index>31</index>
+<expected_sequence>TAGTCTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691637" library_id="8281475" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="129">
+<index>32</index>
+<expected_sequence>TTCCATTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691638" library_id="8281392" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="133">
+<index>33</index>
+<expected_sequence>TCGAAGTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691639" library_id="8281404" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="139">
+<index>34</index>
+<expected_sequence>TAACGCTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691640" library_id="8281416" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="143">
+<index>35</index>
+<expected_sequence>TTGGTATG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691641" library_id="8281428" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="148">
+<index>36</index>
+<expected_sequence>TGAACTGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691642" library_id="8281440" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="156">
+<index>37</index>
+<expected_sequence>TACTTCGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691643" library_id="8281452" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="160">
+<index>38</index>
+<expected_sequence>TCTCACGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691644" library_id="8281464" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="166">
+<index>39</index>
+<expected_sequence>TCAGGAGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691645" library_id="8281476" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="171">
+<index>40</index>
+<expected_sequence>TAAGTTCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691646" library_id="8281393" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="187">
+<index>41</index>
+<expected_sequence>TCCAGTCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691647" library_id="8281405" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="192">
+<index>42</index>
+<expected_sequence>TGTATGCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691648" library_id="8281417" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="199">
+<index>43</index>
+<expected_sequence>TCATTGAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691649" library_id="8281429" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="204">
+<index>44</index>
+<expected_sequence>TGGCTCAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691650" library_id="8281441" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="209">
+<index>45</index>
+<expected_sequence>TATGCCAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691651" library_id="8281453" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="214">
+<index>46</index>
+<expected_sequence>TCAGATTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691652" library_id="8281465" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="219">
+<index>47</index>
+<expected_sequence>TACTAGTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691653" library_id="8281477" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="224">
+<index>48</index>
+<expected_sequence>TTCAGCTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691654" library_id="8281394" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="228">
+<index>49</index>
+<expected_sequence>TGTCTATC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691655" library_id="8281406" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="232">
+<index>50</index>
+<expected_sequence>TATGTGGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691656" library_id="8281418" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="247">
+<index>51</index>
+<expected_sequence>TTACTCGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691657" library_id="8281430" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="252">
+<index>52</index>
+<expected_sequence>TCGTTAGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691658" library_id="8281442" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="257">
+<index>53</index>
+<expected_sequence>TACCGAGC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691659" library_id="8281454" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="262">
+<index>54</index>
+<expected_sequence>TGTTCTCC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691660" library_id="8281466" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="97">
+<index>55</index>
+<expected_sequence>TTCGCACC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691661" library_id="8281478" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="103">
+<index>56</index>
+<expected_sequence>TTGCGTAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691662" library_id="8281395" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="107">
+<index>57</index>
+<expected_sequence>TCTACGAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691663" library_id="8281407" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="116">
+<index>58</index>
+<expected_sequence>TGACAGAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691664" library_id="8281419" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="120">
+<index>59</index>
+<expected_sequence>TAGAACAC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691665" library_id="8281431" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="123">
+<index>60</index>
+<expected_sequence>TCATCCTA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691666" library_id="8281443" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="135">
+<index>61</index>
+<expected_sequence>TGCTGATA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691667" library_id="8281455" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="138">
+<index>62</index>
+<expected_sequence>TAGACGGA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691668" library_id="8281467" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="142">
+<index>63</index>
+<expected_sequence>TGTGAAGA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691669" library_id="8281479" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="147">
+<index>64</index>
+<expected_sequence>TCTCTTCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691670" library_id="8281396" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="151">
+<index>65</index>
+<expected_sequence>TTGTTCCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691671" library_id="8281408" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="155">
+<index>66</index>
+<expected_sequence>TGAAGCCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691672" library_id="8281420" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="164">
+<index>67</index>
+<expected_sequence>TACCACCA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691673" library_id="8281432" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="169">
+<index>68</index>
+<expected_sequence>TGCGTGAA</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691674" library_id="8281444" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="176">
+<index>69</index>
+<expected_sequence>GGTGAGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691675" library_id="8281456" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="181">
+<index>70</index>
+<expected_sequence>GATCTCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691676" library_id="8281468" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="197">
+<index>71</index>
+<expected_sequence>GTGTCCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691677" library_id="8281480" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="202">
+<index>72</index>
+<expected_sequence>GACGGATT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691678" library_id="8281397" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="206">
+<index>73</index>
+<expected_sequence>GCAACATT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691679" library_id="8281409" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="212">
+<index>74</index>
+<expected_sequence>GGTCGTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691680" library_id="8281421" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="215">
+<index>75</index>
+<expected_sequence>GAATCTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691681" library_id="8281433" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="220">
+<index>76</index>
+<expected_sequence>GTACATCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691682" library_id="8281445" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="225">
+<index>77</index>
+<expected_sequence>GAGGTGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691683" library_id="8281457" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="233">
+<index>78</index>
+<expected_sequence>GCATGGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691684" library_id="8281469" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="236">
+<index>79</index>
+<expected_sequence>GTTAGCCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691685" library_id="8281481" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="241">
+<index>80</index>
+<expected_sequence>GTCGCTAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691686" library_id="8281398" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="255">
+<index>81</index>
+<expected_sequence>GGAATGAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691687" library_id="8281410" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="260">
+<index>82</index>
+<expected_sequence>GAGCCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691688" library_id="8281422" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="99">
+<index>83</index>
+<expected_sequence>GCTCCTTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691689" library_id="8281434" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="102">
+<index>84</index>
+<expected_sequence>GTAAGGTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691690" library_id="8281446" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="106">
+<index>85</index>
+<expected_sequence>GAGGATGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691691" library_id="8281458" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="111">
+<index>86</index>
+<expected_sequence>GTTGTCGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691692" library_id="8281470" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="115">
+<index>87</index>
+<expected_sequence>GGATTAGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691693" library_id="8281482" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="119">
+<index>88</index>
+<expected_sequence>GATAGAGG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691694" library_id="8281399" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="126">
+<index>89</index>
+<expected_sequence>GTGTGTCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691695" library_id="8281411" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="130">
+<index>90</index>
+<expected_sequence>GCAATCCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691696" library_id="8281423" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="140">
+<index>91</index>
+<expected_sequence>GACCTTAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691697" library_id="8281435" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="145">
+<index>92</index>
+<expected_sequence>GCCTGTTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691698" library_id="8281447" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="150">
+<index>93</index>
+<expected_sequence>GCACTGTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691699" library_id="8281459" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="154">
+<index>94</index>
+<expected_sequence>GCTAACTC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1691700" library_id="8281471" library_name="" library_type="Agilent Pulldown" study_id="2182" project_id="1053" consent_withdrawn="false">
+<tag tag_id="159">
+<index>95</index>
+<expected_sequence>GATTCATC</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="14">
+<name>Chlamydia trachomatis</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+</pool>
+<hyb_buffer id="8158709">
+<sample sample_id="1255141" library_id="6200285" library_name="PhiX_PS_20120919" library_type="" study_id="198" project_id="" consent_withdrawn="false">
+<tag tag_id="264">
+<index>168</index>
+<expected_sequence>ACAACGCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+</sample>
+</hyb_buffer>
+</lane>
+<lane position="4" id="8372422" priority="0">
+<pool id="8212957" name="DN299965E A1:H1" request_id="5664026" >
+<sample sample_id="1673519" library_id="8269881" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="144">
+<index>1</index>
+<expected_sequence>ATCACGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673520" library_id="8269893" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="149">
+<index>2</index>
+<expected_sequence>CGATGTTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673521" library_id="8269905" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="153">
+<index>3</index>
+<expected_sequence>TTAGGCAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673522" library_id="8269917" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="158">
+<index>4</index>
+<expected_sequence>TGACCACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673523" library_id="8269929" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="162">
+<index>5</index>
+<expected_sequence>ACAGTGGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673524" library_id="8269941" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="167">
+<index>6</index>
+<expected_sequence>GCCAATGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673525" library_id="8269953" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="173">
+<index>7</index>
+<expected_sequence>CAGATCTG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673526" library_id="8269965" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="179">
+<index>8</index>
+<expected_sequence>ACTTGATG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+</pool>
+<hyb_buffer id="8158709">
+<sample sample_id="1255141" library_id="6200285" library_name="PhiX_PS_20120919" library_type="" study_id="198" project_id="" consent_withdrawn="false">
+<tag tag_id="264">
+<index>168</index>
+<expected_sequence>ACAACGCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+</sample>
+</hyb_buffer>
+</lane>
+<lane position="5" id="8372423" priority="0">
+<pool id="8212958" name="DN299965E A2:G2" request_id="5664035" >
+<sample sample_id="1673527" library_id="8269882" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="188">
+<index>9</index>
+<expected_sequence>GATCAGCG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673528" library_id="8269894" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="193">
+<index>10</index>
+<expected_sequence>TAGCTTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673529" library_id="8269906" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="175">
+<index>11</index>
+<expected_sequence>GGCTACAG</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673530" library_id="8269918" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="184">
+<index>12</index>
+<expected_sequence>CTTGTACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673531" library_id="8269930" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="189">
+<index>13</index>
+<expected_sequence>TGGTTGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673532" library_id="8269942" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="195">
+<index>14</index>
+<expected_sequence>TCTCGGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673533" library_id="8269954" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="200">
+<index>15</index>
+<expected_sequence>TAAGCGTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+</pool>
+<hyb_buffer id="8158709">
+<sample sample_id="1255141" library_id="6200285" library_name="PhiX_PS_20120919" library_type="" study_id="198" project_id="" consent_withdrawn="false">
+<tag tag_id="264">
+<index>168</index>
+<expected_sequence>ACAACGCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+</sample>
+</hyb_buffer>
+</lane>
+<lane position="6" id="8372424" priority="0">
+<pool id="8212959" name="DN299965E H2:C3" request_id="5664040" >
+<sample sample_id="1673534" library_id="8269966" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="207">
+<index>16</index>
+<expected_sequence>TCCGTCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673535" library_id="8269883" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="208">
+<index>17</index>
+<expected_sequence>TGTACCTT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673536" library_id="8269895" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="213">
+<index>18</index>
+<expected_sequence>TTCTGTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1673537" library_id="8269907" library_name="" library_type="Agilent Pulldown" study_id="2327" project_id="1149" consent_withdrawn="false">
+<tag tag_id="218">
+<index>19</index>
+<expected_sequence>TCTGCTGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+</pool>
+<hyb_buffer id="8158709">
+<sample sample_id="1255141" library_id="6200285" library_name="PhiX_PS_20120919" library_type="" study_id="198" project_id="" consent_withdrawn="false">
+<tag tag_id="264">
+<index>168</index>
+<expected_sequence>ACAACGCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+</sample>
+</hyb_buffer>
+</lane>
+<lane position="7" id="8372425" priority="0">
+<pool id="8212960" name="DN299965E D3:E3" request_id="5664044" >
+<sample sample_id="1682500" library_id="8269919" library_name="" library_type="Agilent Pulldown" study_id="2747" project_id="1417" consent_withdrawn="false">
+<tag tag_id="223">
+<index>20</index>
+<expected_sequence>TTGGAGGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1682508" library_id="8269931" library_name="" library_type="Agilent Pulldown" study_id="2747" project_id="1417" consent_withdrawn="false">
+<tag tag_id="237">
+<index>21</index>
+<expected_sequence>TCGAGCGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="24">
+<name>Human all exon V5</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+</pool>
+<hyb_buffer id="8158709">
+<sample sample_id="1255141" library_id="6200285" library_name="PhiX_PS_20120919" library_type="" study_id="198" project_id="" consent_withdrawn="false">
+<tag tag_id="264">
+<index>168</index>
+<expected_sequence>ACAACGCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+</sample>
+</hyb_buffer>
+</lane>
+<lane position="8" id="8372426" priority="0">
+<pool id="8212961" name="DN299965E F3:C4" request_id="5664052" >
+<sample sample_id="1624697" library_id="8269943" library_name="" library_type="Agilent Pulldown" study_id="2620" project_id="1347" consent_withdrawn="false">
+<tag tag_id="242">
+<index>22</index>
+<expected_sequence>TGATACGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="2">
+<name>Mouse all exon</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1624698" library_id="8269955" library_name="" library_type="Agilent Pulldown" study_id="2620" project_id="1347" consent_withdrawn="false">
+<tag tag_id="250">
+<index>23</index>
+<expected_sequence>TGCATAGT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="2">
+<name>Mouse all exon</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1624699" library_id="8269967" library_name="" library_type="Agilent Pulldown" study_id="2620" project_id="1347" consent_withdrawn="false">
+<tag tag_id="256">
+<index>24</index>
+<expected_sequence>TTGACTCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="2">
+<name>Mouse all exon</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1624700" library_id="8269884" library_name="" library_type="Agilent Pulldown" study_id="2620" project_id="1347" consent_withdrawn="false">
+<tag tag_id="261">
+<index>25</index>
+<expected_sequence>TGCGATCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="2">
+<name>Mouse all exon</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1624701" library_id="8269896" library_name="" library_type="Agilent Pulldown" study_id="2620" project_id="1347" consent_withdrawn="false">
+<tag tag_id="98">
+<index>26</index>
+<expected_sequence>TTCCTGCT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="2">
+<name>Mouse all exon</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+<sample sample_id="1624702" library_id="8269908" library_name="" library_type="Agilent Pulldown" study_id="2620" project_id="1347" consent_withdrawn="false">
+<tag tag_id="100">
+<index>27</index>
+<expected_sequence>TAGTGACT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+<bait id="2">
+<name>Mouse all exon</name>
+</bait>
+<insert_size from="100" to="400"/>
+</sample>
+</pool>
+<hyb_buffer id="8158709">
+<sample sample_id="1255141" library_id="6200285" library_name="PhiX_PS_20120919" library_type="" study_id="198" project_id="" consent_withdrawn="false">
+<tag tag_id="264">
+<index>168</index>
+<expected_sequence>ACAACGCAAT</expected_sequence>
+<tag_group_id>6</tag_group_id>
+</tag>
+</sample>
+</hyb_buffer>
+</lane>
+</lanes>
+</batch>

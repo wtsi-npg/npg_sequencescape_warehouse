@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch>
+  <id>4380</id>
+  <status>released</status>
+  <lanes>
+    <lane position="1" priority="0" id="1423623">
+      <library name="DHTu2v2 1" request_id="2912010" id="57076" qc_state="fail">
+        <sample project_id="182" sample_id="6984" library_type="No PCR" library_id="57076" consent_withdrawn="false" study_id="182" library_name="DHTu2v2 1">
+          <insert_size from="400" to="450"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="2" priority="0" id="1423624">
+      <library name="DHTu2v2 1" request_id="2912011" id="57076" qc_state="fail">
+        <sample project_id="182" sample_id="6984" library_type="No PCR" library_id="57076" consent_withdrawn="false" study_id="182" library_name="DHTu2v2 1">
+          <insert_size from="400" to="450"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="3" priority="0" id="1423625">
+      <library name="DHTu2v2 1" request_id="2912012" id="57076" qc_state="fail">
+        <sample project_id="182" sample_id="6984" library_type="No PCR" library_id="57076" consent_withdrawn="false" study_id="182" library_name="DHTu2v2 1">
+          <insert_size from="400" to="450"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="4" priority="0" id="82254">
+      <control name="Illumina phiX" request_id="43475" id="79573">
+        <sample project_id="" sample_id="9832" library_type="" library_id="79573" consent_withdrawn="false" study_id="" library_name="Illumina phiX">
+        </sample>
+      </control>
+    </lane>
+    <lane position="5" priority="0" id="1423620">
+      <library name="DHTu2v2 1" request_id="2912007" id="57074" qc_state="fail">
+        <sample project_id="182" sample_id="6984" library_type="No PCR" library_id="57074" consent_withdrawn="false" study_id="182" library_name="DHTu2v2 1">
+          <insert_size from="350" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="6" priority="0" id="84579">
+      <library name="DHTu2v2 1" request_id="33257" id="57074" qc_state="pending">
+        <sample project_id="182" sample_id="6984" library_type="No PCR" library_id="57074" consent_withdrawn="false" study_id="182" library_name="DHTu2v2 1">
+          <insert_size from="350" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="7" priority="0" id="84580">
+      <library name="DHTu2v2 1" request_id="33258" id="57074" qc_state="pending">
+        <sample project_id="182" sample_id="6984" library_type="No PCR" library_id="57074" consent_withdrawn="false" study_id="182" library_name="DHTu2v2 1">
+          <insert_size from="350" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="8" priority="0" id="1423619">
+      <library name="DHTu2v2 1" request_id="2912006" id="57074" qc_state="fail">
+        <sample project_id="182" sample_id="6984" library_type="No PCR" library_id="57074" consent_withdrawn="false" study_id="182" library_name="DHTu2v2 1">
+          <insert_size from="350" to="400"/>
+        </sample>
+      </library>
+    </lane>
+  </lanes>
+</batch>

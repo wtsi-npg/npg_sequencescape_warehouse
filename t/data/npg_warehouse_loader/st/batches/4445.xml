@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch>
+  <id>4445</id>
+  <status>released</status>
+  <lanes>
+    <lane position="1" priority="0" id="77239">
+      <library name="hES2_RNAPII 1" request_id="32973" id="57933" qc_state="pass">
+        <sample project_id="227" sample_id="7597" library_type="Standard" library_id="57933" consent_withdrawn="false" study_id="502" library_name="hES2_RNAPII 1">
+          <insert_size from="0" to="0"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="2" priority="0" id="76617">
+      <library name="D9_2 1" request_id="32001" id="57608" qc_state="pass">
+        <sample project_id="227" sample_id="7356" library_type="Standard" library_id="57608" consent_withdrawn="false" study_id="227" library_name="D9_2 1">
+          <insert_size from="0" to="0"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="3" priority="0" id="76622">
+      <library name="E8_2 1" request_id="32034" id="57624" qc_state="fail">
+        <sample project_id="227" sample_id="7375" library_type="Standard" library_id="57624" consent_withdrawn="false" study_id="227" library_name="E8_2 1">
+          <insert_size from="0" to="0"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="4" priority="0" id="82300">
+      <control name="Illumina phiX" request_id="43521" id="79573">
+        <sample project_id="" sample_id="9832" library_type="" library_id="79573" consent_withdrawn="false" study_id="" library_name="Illumina phiX">
+        </sample>
+      </control>
+    </lane>
+    <lane position="5" priority="0" id="76626">
+      <library name="E6_2 1" request_id="32046" id="57632" qc_state="pass">
+        <sample project_id="227" sample_id="7371" library_type="Standard" library_id="57632" consent_withdrawn="false" study_id="227" library_name="E6_2 1">
+          <insert_size from="0" to="0"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="6" priority="0" id="76627">
+      <library name="E6_1 1" request_id="32049" id="57634" qc_state="pass">
+        <sample project_id="227" sample_id="7370" library_type="Standard" library_id="57634" consent_withdrawn="false" study_id="227" library_name="E6_1 1">
+          <insert_size from="0" to="0"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="7" priority="0" id="76628">
+      <library name="E5_2 1" request_id="32052" id="57636" qc_state="pass">
+        <sample project_id="227" sample_id="7369" library_type="Standard" library_id="57636" consent_withdrawn="false" study_id="227" library_name="E5_2 1">
+          <insert_size from="0" to="0"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="8" priority="0" id="1423317">
+      <library name="D4_1 1" request_id="2911704" id="57638" qc_state="pass">
+        <sample project_id="227" sample_id="7353" library_type="Standard" library_id="57638" consent_withdrawn="false" study_id="227" library_name="D4_1 1">
+          <insert_size from="0" to="0"/>
+        </sample>
+      </library>
+    </lane>
+  </lanes>
+</batch>

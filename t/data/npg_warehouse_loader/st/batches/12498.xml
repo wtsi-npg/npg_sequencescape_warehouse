@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch>
+  <id>12498</id>
+  <status>released</status>
+  <lanes>
+    <lane position="1" priority="0" id="3293627">
+      <library name="MHco3_10_BC4_IVM 1662036" request_id="3445299" id="1662036" qc_state="pass">
+        <sample project_id="714" sample_id="1021160" library_type="No PCR" library_id="1662036" consent_withdrawn="false" study_id="1697" library_name="MHco3_10_BC4_IVM 1662036">
+          <insert_size from="300" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="2" priority="0" id="3293626">
+      <pool name="3d7-size-distribtn" request_id="3442125" id="3055214" qc_state="pass">
+        <sample project_id="721" sample_id="1199254" library_type="Custom" library_id="3055210" consent_withdrawn="false" study_id="1672" library_name="3d7-calip-250-tg1 3055210">
+          <tag tag_id="265">
+            <index>1</index>
+            <expected_sequence>ATCACGTTAT</expected_sequence>
+            <tag_group_id>7</tag_group_id>
+          </tag>
+          <insert_size from="150" to="1000"/>
+        </sample>
+        <sample project_id="721" sample_id="1199255" library_type="Custom" library_id="3055211" consent_withdrawn="false" study_id="1672" library_name="3d7-calip-550-tg2 3055211">
+          <tag tag_id="266">
+            <index>2</index>
+            <expected_sequence>CGATGTTTAT</expected_sequence>
+            <tag_group_id>7</tag_group_id>
+          </tag>
+          <insert_size from="150" to="1000"/>
+        </sample>
+        <sample project_id="721" sample_id="1199256" library_type="Custom" library_id="3055212" consent_withdrawn="false" study_id="1672" library_name="3d7-calip-1000-tg3 3055212">
+          <tag tag_id="267">
+            <index>3</index>
+            <expected_sequence>TTAGGCATAT</expected_sequence>
+            <tag_group_id>7</tag_group_id>
+          </tag>
+          <insert_size from="150" to="1000"/>
+        </sample>
+        <sample project_id="721" sample_id="1199257" library_type="Custom" library_id="3055213" consent_withdrawn="false" study_id="1672" library_name="3d7-Whole-tg4 3055213">
+          <tag tag_id="268">
+            <index>4</index>
+            <expected_sequence>TGACCACTAT</expected_sequence>
+            <tag_group_id>7</tag_group_id>
+          </tag>
+          <insert_size from="150" to="1000"/>
+        </sample>
+      </pool>
+    </lane>
+    <lane position="3" priority="0" id="3293620">
+      <library name="PD4293c_pd 3169562" request_id="3400741" id="3169562" qc_state="pass">
+        <sample project_id="639" sample_id="1195658" library_type="Agilent Pulldown" library_id="3169562" consent_withdrawn="false" study_id="646" library_name="PD4293c_pd 3169562">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="4" priority="0" id="3293621">
+      <library name="PD4295c_pd 3169563" request_id="3400743" id="3169563" qc_state="pass">
+        <sample project_id="639" sample_id="1195659" library_type="Agilent Pulldown" library_id="3169563" consent_withdrawn="false" study_id="646" library_name="PD4295c_pd 3169563">
+          <insert_size from="100" to="400"/>
+        </sample>
+      </library>
+    </lane>
+    <lane position="5" priority="0" id="3293622">
+      <pool name="14N2108_1710_190711" request_id="3409475" id="3203879" qc_state="pass">
+        <sample project_id="728" sample_id="1048992" library_type="Agilent Pulldown" library_id="3203873" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034576 3203873">
+          <tag tag_id="188">
+            <index>9</index>
+            <expected_sequence>GATCAGCG</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048994" library_type="Agilent Pulldown" library_id="3203874" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034577 3203874">
+          <tag tag_id="193">
+            <index>10</index>
+            <expected_sequence>TAGCTTGT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048996" library_type="Agilent Pulldown" library_id="3203875" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034578 3203875">
+          <tag tag_id="175">
+            <index>11</index>
+            <expected_sequence>GGCTACAG</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048998" library_type="Agilent Pulldown" library_id="3203876" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034579 3203876">
+          <tag tag_id="184">
+            <index>12</index>
+            <expected_sequence>CTTGTACT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1049000" library_type="Agilent Pulldown" library_id="3203877" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034580 3203877">
+          <tag tag_id="189">
+            <index>13</index>
+            <expected_sequence>TGGTTGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1049002" library_type="Agilent Pulldown" library_id="3203878" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034581 3203878">
+          <tag tag_id="195">
+            <index>14</index>
+            <expected_sequence>TCTCGGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1049003" library_type="Agilent Pulldown" library_id="3203871" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034582 3203871">
+          <tag tag_id="200">
+            <index>15</index>
+            <expected_sequence>TAAGCGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1049006" library_type="Agilent Pulldown" library_id="3203872" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034583 3203872">
+          <tag tag_id="207">
+            <index>16</index>
+            <expected_sequence>TCCGTCTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+      </pool>
+    </lane>
+    <lane position="6" priority="0" id="3293623">
+      <pool name="14N2108_1710_190711" request_id="3409482" id="3203879" qc_state="pass">
+        <sample project_id="728" sample_id="1048992" library_type="Agilent Pulldown" library_id="3203873" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034576 3203873">
+          <tag tag_id="188">
+            <index>9</index>
+            <expected_sequence>GATCAGCG</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048994" library_type="Agilent Pulldown" library_id="3203874" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034577 3203874">
+          <tag tag_id="193">
+            <index>10</index>
+            <expected_sequence>TAGCTTGT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048996" library_type="Agilent Pulldown" library_id="3203875" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034578 3203875">
+          <tag tag_id="175">
+            <index>11</index>
+            <expected_sequence>GGCTACAG</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048998" library_type="Agilent Pulldown" library_id="3203876" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034579 3203876">
+          <tag tag_id="184">
+            <index>12</index>
+            <expected_sequence>CTTGTACT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1049000" library_type="Agilent Pulldown" library_id="3203877" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034580 3203877">
+          <tag tag_id="189">
+            <index>13</index>
+            <expected_sequence>TGGTTGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1049002" library_type="Agilent Pulldown" library_id="3203878" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034581 3203878">
+          <tag tag_id="195">
+            <index>14</index>
+            <expected_sequence>TCTCGGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1049003" library_type="Agilent Pulldown" library_id="3203871" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034582 3203871">
+          <tag tag_id="200">
+            <index>15</index>
+            <expected_sequence>TAAGCGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1049006" library_type="Agilent Pulldown" library_id="3203872" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034583 3203872">
+          <tag tag_id="207">
+            <index>16</index>
+            <expected_sequence>TCCGTCTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+      </pool>
+    </lane>
+    <lane position="7" priority="0" id="3293624">
+      <pool name="17N2108_1710_190711" request_id="3409604" id="3203896" qc_state="pass">
+        <sample project_id="728" sample_id="1049135" library_type="Agilent Pulldown" library_id="3203890" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034647 3203890">
+          <tag tag_id="188">
+            <index>9</index>
+            <expected_sequence>GATCAGCG</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048975" library_type="Agilent Pulldown" library_id="3203891" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034660 3203891">
+          <tag tag_id="193">
+            <index>10</index>
+            <expected_sequence>TAGCTTGT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048983" library_type="Agilent Pulldown" library_id="3203892" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034661 3203892">
+          <tag tag_id="175">
+            <index>11</index>
+            <expected_sequence>GGCTACAG</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048991" library_type="Agilent Pulldown" library_id="3203893" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034665 3203893">
+          <tag tag_id="184">
+            <index>12</index>
+            <expected_sequence>CTTGTACT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048993" library_type="Agilent Pulldown" library_id="3203894" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034666 3203894">
+          <tag tag_id="189">
+            <index>13</index>
+            <expected_sequence>TGGTTGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048995" library_type="Agilent Pulldown" library_id="3203895" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034667 3203895">
+          <tag tag_id="195">
+            <index>14</index>
+            <expected_sequence>TCTCGGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048997" library_type="Agilent Pulldown" library_id="3203888" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034668 3203888">
+          <tag tag_id="200">
+            <index>15</index>
+            <expected_sequence>TAAGCGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048999" library_type="Agilent Pulldown" library_id="3203889" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034669 3203889">
+          <tag tag_id="207">
+            <index>16</index>
+            <expected_sequence>TCCGTCTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+      </pool>
+    </lane>
+    <lane position="8" priority="0" id="3293625">
+      <pool name="17N2108_1710_190711" request_id="3409619" id="3203896" qc_state="pass">
+        <sample project_id="728" sample_id="1049135" library_type="Agilent Pulldown" library_id="3203890" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034647 3203890">
+          <tag tag_id="188">
+            <index>9</index>
+            <expected_sequence>GATCAGCG</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048975" library_type="Agilent Pulldown" library_id="3203891" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034660 3203891">
+          <tag tag_id="193">
+            <index>10</index>
+            <expected_sequence>TAGCTTGT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048983" library_type="Agilent Pulldown" library_id="3203892" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034661 3203892">
+          <tag tag_id="175">
+            <index>11</index>
+            <expected_sequence>GGCTACAG</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048991" library_type="Agilent Pulldown" library_id="3203893" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034665 3203893">
+          <tag tag_id="184">
+            <index>12</index>
+            <expected_sequence>CTTGTACT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048993" library_type="Agilent Pulldown" library_id="3203894" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034666 3203894">
+          <tag tag_id="189">
+            <index>13</index>
+            <expected_sequence>TGGTTGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048995" library_type="Agilent Pulldown" library_id="3203895" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034667 3203895">
+          <tag tag_id="195">
+            <index>14</index>
+            <expected_sequence>TCTCGGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048997" library_type="Agilent Pulldown" library_id="3203888" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034668 3203888">
+          <tag tag_id="200">
+            <index>15</index>
+            <expected_sequence>TAAGCGTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+        <sample project_id="728" sample_id="1048999" library_type="Agilent Pulldown" library_id="3203889" consent_withdrawn="false" study_id="1710" library_name="1710STDY5034669 3203889">
+          <tag tag_id="207">
+            <index>16</index>
+            <expected_sequence>TCCGTCTT</expected_sequence>
+            <tag_group_id>6</tag_group_id>
+          </tag>
+          <insert_size from="100" to="400"/>
+        </sample>
+      </pool>
+    </lane>
+  </lanes>
+</batch>
