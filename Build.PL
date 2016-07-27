@@ -69,6 +69,7 @@ my $requires = {
                     'MooseX::MarkAsMethods'     => 0,
                     'MooseX::NonMoose'          => 0,
                     'MooseX::StrictConstructor' => 0,
+                    'namespace::autoclean'      => 0,
                     'Perl6::Slurp'              => 0,
                     'Pod::Usage'                => 0,
                     'POSIX'                     => '1.09',
