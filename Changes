@@ -1,6 +1,10 @@
 ChangeLog for data_handling
 =============================
 
+release 40.0
+ - unused scripts (bam realignment, loading, deletion) and modules removed
+ - code for checking iRODs sequencing files moved to the npg_validation namespace
+
 release 39.1
  - added -c (cram) option to the call_gtck_composite_rpt.pl commands bsub'ed by the marshall script
 
