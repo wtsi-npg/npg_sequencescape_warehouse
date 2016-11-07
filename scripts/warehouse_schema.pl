@@ -38,6 +38,17 @@ make_schema_at(
             components      => [qw(InflateColumn::DateTime)],
             skip_load_external => 1,
             use_moose       => 1,
+
+            filter_generated_code => sub {
+              my ($type, $class, $text) = @_;
+              my $code = $text;
+              $code =~ s/use\ utf8;//;
+              $code =~ tr/"/'/;
+              if ($type eq 'result') {
+                $code =~ s/=head1\ NAME/\#\#no\ critic\(RequirePodAtEnd\ RequirePodLinksIncludeText\ ProhibitMagicNumbers\ ProhibitEmptyQuotes\)\n\n=head1\ NAME/;
+              }
+              return $code;
+            },
           }, 
           [ $config->{'dsn'}, $config->{'dbuser'}, $config->{'dbpass'}]
               );
