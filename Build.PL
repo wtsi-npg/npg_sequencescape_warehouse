@@ -81,7 +81,6 @@ my $requires = {
                     'YAML'                      => 0,
 
                     'npg_common::roles::log'                  => 0,
-                    'npg_common::sequence::BAM_MarkDuplicate' => 0,
 
                     'npg_qc::illumina::loader'                => 0,
                     'npg_qc::Schema'                          => 0,
