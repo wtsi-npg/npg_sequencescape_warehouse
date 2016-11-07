@@ -1,6 +1,13 @@
 ChangeLog for data_handling
 =============================
 
+ - removed npg_common::sequence::BAM_MarkDuplicate
+ - merged two perlcritic test files into one
+ - updated DBIx binding
+ - DBIx binding generator filters code to make it more acceptable for perlcritic
+ - code for checking iRODs sequencing files refactored; now assumes that
+   there always should be the phix subset file
+
 release 40.0
  - unused scripts (bam realignment, loading, deletion) and modules removed
  - code for checking iRODs sequencing files moved to the npg_validation namespace
