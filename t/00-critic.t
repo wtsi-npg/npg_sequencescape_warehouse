@@ -1,17 +1,7 @@
-#########
-# Author:        rmp
-# Last Modified: $Date$ $Author$
-# Id:            $Id$
-# Source:        $Source: /cvsroot/Bio-DasLite/Bio-DasLite/t/00-critic.t,v $
-# $HeadURL$
-#
-package critic;
 use strict;
 use warnings;
 use Test::More;
 use English qw(-no_match_vars);
-
-our $VERSION = do { my @r = (q$LastChangedRevision$ =~ /\d+/mxg); sprintf '%d.'.'%03d' x $#r, @r };
 
 if (!$ENV{TEST_AUTHOR}) {
   my $msg = 'Author test.  Set $ENV{TEST_AUTHOR} to a true value to run.';
@@ -20,6 +10,7 @@ if (!$ENV{TEST_AUTHOR}) {
 
 eval {
   require Test::Perl::Critic;
+  require Perl::Critic::Utils;
 };
 
 if($EVAL_ERROR) {
@@ -29,6 +20,7 @@ if($EVAL_ERROR) {
   Test::Perl::Critic->import(
 	-severity => 1,
         -profile  => 't/perlcriticrc',
+        -verbose  => "%m at %f line %l, policy %p\n",
 	-exclude  => [ 'tidy',
                    'ValuesAndExpressions::ProhibitImplicitNewlines',
                    'ValuesAndExpressions::RequireConstantVersion',
@@ -42,7 +34,20 @@ if($EVAL_ERROR) {
                  ],
   );
 
-  all_critic_ok( 'bin', 'lib/srpipe', 'lib/npg_common');
+  my @files = qw (lib/npg_warehouse/loader.pm
+                lib/npg_warehouse/loader/lims.pm
+                lib/npg_warehouse/Schema.pm
+                lib/npg_warehouse/Schema/Result/NpgInformation.pm
+                lib/npg_warehouse/Schema/Result/NpgPlexInformation.pm
+                lib/npg_warehouse/Schema/Result/CurrentStudy.pm
+                lib/npg_warehouse/Schema/Result/CurrentSample.pm
+               );
+  push @files, Perl::Critic::Utils::all_perl_files(
+    'bin', 'lib/srpipe', 'lib/npg_common', 'lib/npg_validation');
+  foreach my $file (@files) {
+    critic_ok($file);
+  }
+  done_testing(scalar @files);
 }
 
 1;
