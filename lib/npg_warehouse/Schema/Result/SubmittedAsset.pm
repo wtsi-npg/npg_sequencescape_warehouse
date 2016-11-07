@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::SubmittedAsset;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<submitted_assets>
 
 =cut
 
-__PACKAGE__->table("submitted_assets");
+__PACKAGE__->table('submitted_assets');
 
 =head1 ACCESSORS
 
@@ -65,15 +67,15 @@ __PACKAGE__->table("submitted_assets");
 =cut
 
 __PACKAGE__->add_columns(
-  "dont_use_id",
-  { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
-  "order_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "asset_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "deleted_at",
+  'dont_use_id',
+  { data_type => 'integer', is_auto_increment => 1, is_nullable => 0 },
+  'order_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'asset_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
@@ -89,11 +91,11 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("dont_use_id");
+__PACKAGE__->set_primary_key('dont_use_id');
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:10
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:1IAnnEo8Z5X3pS6MZGJsFQ
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:7Ee/FDVXyJIFLuuFlWbDDQ
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

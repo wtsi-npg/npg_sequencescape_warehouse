@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::Order;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<orders>
 
 =cut
 
-__PACKAGE__->table("orders");
+__PACKAGE__->table('orders');
 
 =head1 ACCESSORS
 
@@ -185,81 +187,81 @@ __PACKAGE__->table("orders");
 =cut
 
 __PACKAGE__->add_columns(
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 0 },
-  "checked_at",
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 0 },
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created_by",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "template_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "study_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "study_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "project_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "project_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "comments",
-  { data_type => "text", is_nullable => 1 },
-  "inserted_at",
+  'created_by',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'template_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'study_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'study_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'project_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'project_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'comments',
+  { data_type => 'text', is_nullable => 1 },
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "read_length",
-  { data_type => "integer", is_nullable => 1 },
-  "fragment_size_required_from",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "fragment_size_required_to",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "library_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "sequencing_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "insert_size",
-  { data_type => "integer", is_nullable => 1 },
-  "number_of_lanes",
-  { data_type => "integer", is_nullable => 1 },
-  "submission_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "deleted_at",
+  'read_length',
+  { data_type => 'integer', is_nullable => 1 },
+  'fragment_size_required_from',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'fragment_size_required_to',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'library_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'sequencing_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'insert_size',
+  { data_type => 'integer', is_nullable => 1 },
+  'number_of_lanes',
+  { data_type => 'integer', is_nullable => 1 },
+  'submission_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "current_from",
+  'current_from',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "current_to",
+  'current_to',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
@@ -282,13 +284,13 @@ __PACKAGE__->add_columns(
 =cut
 
 __PACKAGE__->add_unique_constraint(
-  "uuid_and_current_from_and_current_to_idx",
-  ["uuid", "current_from", "current_to"],
+  'uuid_and_current_from_and_current_to_idx',
+  ['uuid', 'current_from', 'current_to'],
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:iwxVQfERrvk46U64WjcMyA
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:OTRHbbGNyMoA5WrVQNmMbg
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

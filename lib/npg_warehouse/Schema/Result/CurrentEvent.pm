@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::CurrentEvent;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<current_events>
 
 =cut
 
-__PACKAGE__->table("current_events");
+__PACKAGE__->table('current_events');
 
 =head1 ACCESSORS
 
@@ -168,75 +170,75 @@ __PACKAGE__->table("current_events");
 =cut
 
 __PACKAGE__->add_columns(
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "source_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "source_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "source_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "message",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "state",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "identifier",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "location",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "actioned",
-  { data_type => "tinyint", is_nullable => 1 },
-  "content",
-  { data_type => "text", is_nullable => 1 },
-  "created_by",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "of_interest_to",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "descriptor_key",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 0 },
-  "checked_at",
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'source_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'source_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'source_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'message',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'state',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'identifier',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'location',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'actioned',
+  { data_type => 'tinyint', is_nullable => 1 },
+  'content',
+  { data_type => 'text', is_nullable => 1 },
+  'created_by',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'of_interest_to',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'descriptor_key',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 0 },
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "inserted_at",
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "deleted_at",
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "current_from",
+  'current_from',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "current_to",
+  'current_to',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
@@ -254,7 +256,7 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->add_unique_constraint("internal_id_idx", ["internal_id"]);
+__PACKAGE__->add_unique_constraint('internal_id_idx', ['internal_id']);
 
 =head2 C<uuid_idx>
 
@@ -266,11 +268,11 @@ __PACKAGE__->add_unique_constraint("internal_id_idx", ["internal_id"]);
 
 =cut
 
-__PACKAGE__->add_unique_constraint("uuid_idx", ["uuid"]);
+__PACKAGE__->add_unique_constraint('uuid_idx', ['uuid']);
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:oEVpcdFyPNj4Xt5dUJGK8A
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:YF9IyuVsFYHUtsXlG4SkdQ
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

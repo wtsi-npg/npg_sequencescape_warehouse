@@ -23,10 +23,6 @@ Readonly::Scalar our $LOOKBACK_NUM_DAYS => 50;
 
 npg_warehouse::loader::lims
 
-=head1 VERSION
-
-$LastChangedRevision$
-
 =head1 SYNOPSIS
 
  my $id_run = 222;
@@ -113,7 +109,7 @@ sub is_recent {
     my ($self, $date) = @_;
     if (!$self->recent) {return 1;}
     if (!$date) {
-        carp qq[Warning: no date to evaluate];
+        carp q[Warning: no date to evaluate];
         return 0;
     }
     my $dt = DateTime->now(time_zone => 'floating');
@@ -299,7 +295,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2010 GRL, Marina Gourtovaia
+Copyright (C) 2016 GRL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

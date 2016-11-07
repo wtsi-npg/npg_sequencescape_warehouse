@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::Well;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<wells>
 
 =cut
 
-__PACKAGE__->table("wells");
+__PACKAGE__->table('wells');
 
 =head1 ACCESSORS
 
@@ -219,96 +221,96 @@ __PACKAGE__->table("wells");
 =cut
 
 __PACKAGE__->add_columns(
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "map",
-  { data_type => "varchar", is_nullable => 1, size => 5 },
-  "plate_barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "plate_barcode_prefix",
-  { data_type => "varchar", is_nullable => 1, size => 2 },
-  "sample_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "sample_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "sample_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "gel_pass",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "concentration",
-  { data_type => "decimal", is_nullable => 1, size => [10, 2] },
-  "current_volume",
-  { data_type => "float", is_nullable => 1 },
-  "buffer_volume",
-  { data_type => "float", is_nullable => 1 },
-  "requested_volume",
-  { data_type => "float", is_nullable => 1 },
-  "picked_volume",
-  { data_type => "float", is_nullable => 1 },
-  "pico_pass",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 0 },
-  "checked_at",
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'map',
+  { data_type => 'varchar', is_nullable => 1, size => 5 },
+  'plate_barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'plate_barcode_prefix',
+  { data_type => 'varchar', is_nullable => 1, size => 2 },
+  'sample_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'sample_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'sample_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'gel_pass',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'concentration',
+  { data_type => 'decimal', is_nullable => 1, size => [10, 2] },
+  'current_volume',
+  { data_type => 'float', is_nullable => 1 },
+  'buffer_volume',
+  { data_type => 'float', is_nullable => 1 },
+  'requested_volume',
+  { data_type => 'float', is_nullable => 1 },
+  'picked_volume',
+  { data_type => 'float', is_nullable => 1 },
+  'pico_pass',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 0 },
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "plate_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "measured_volume",
-  { data_type => "decimal", is_nullable => 1, size => [5, 2] },
-  "sequenom_count",
-  { data_type => "integer", is_nullable => 1 },
-  "gender_markers",
-  { data_type => "varchar", is_nullable => 1, size => 40 },
-  "genotyping_status",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "genotyping_snp_plate_id",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "inserted_at",
+  'plate_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'measured_volume',
+  { data_type => 'decimal', is_nullable => 1, size => [5, 2] },
+  'sequenom_count',
+  { data_type => 'integer', is_nullable => 1 },
+  'gender_markers',
+  { data_type => 'varchar', is_nullable => 1, size => 40 },
+  'genotyping_status',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'genotyping_snp_plate_id',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "deleted_at",
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "current_from",
+  'current_from',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "current_to",
+  'current_to',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "display_name",
-  { data_type => "varchar", is_nullable => 1, size => 20 },
+  'display_name',
+  { data_type => 'varchar', is_nullable => 1, size => 20 },
 );
 
 =head1 UNIQUE CONSTRAINTS
@@ -328,13 +330,13 @@ __PACKAGE__->add_columns(
 =cut
 
 __PACKAGE__->add_unique_constraint(
-  "uuid_and_current_from_and_current_to_idx",
-  ["uuid", "current_from", "current_to"],
+  'uuid_and_current_from_and_current_to_idx',
+  ['uuid', 'current_from', 'current_to'],
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:10
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:dunwXmisKh8TdvwQ9H1P/w
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:TBNlv2uQH5rq3VCDlKrE5Q
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

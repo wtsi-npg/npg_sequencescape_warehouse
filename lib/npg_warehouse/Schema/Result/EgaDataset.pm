@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::EgaDataset;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<ega_datasets>
 
 =cut
 
-__PACKAGE__->table("ega_datasets");
+__PACKAGE__->table('ega_datasets');
 
 =head1 ACCESSORS
 
@@ -65,24 +67,24 @@ __PACKAGE__->table("ega_datasets");
 =cut
 
 __PACKAGE__->add_columns(
-  "ebi_study_acc",
-  { data_type => "varchar", is_nullable => 1, size => 15 },
-  "dataset_acc",
-  { data_type => "varchar", is_nullable => 1, size => 15 },
-  "study_id",
-  { data_type => "integer", is_nullable => 1 },
-  "timestamp",
+  'ebi_study_acc',
+  { data_type => 'varchar', is_nullable => 1, size => 15 },
+  'dataset_acc',
+  { data_type => 'varchar', is_nullable => 1, size => 15 },
+  'study_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'timestamp',
   {
-    data_type => "timestamp",
+    data_type => 'timestamp',
     datetime_undef_if_invalid => 1,
-    default_value => \"current_timestamp",
+    default_value => \'current_timestamp',
     is_nullable => 0,
   },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:wOmtmcjhOuMzIxocbzEMjg
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:D7+29HFknRlKa9OigpHQKA
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::CurrentSample;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<current_samples>
 
 =cut
 
-__PACKAGE__->table("current_samples");
+__PACKAGE__->table('current_samples');
 
 =head1 ACCESSORS
 
@@ -245,104 +247,104 @@ __PACKAGE__->table("current_samples");
 =cut
 
 __PACKAGE__->add_columns(
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "reference_genome",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "organism",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "accession_number",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
-  "common_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "description",
-  { data_type => "text", is_nullable => 1 },
-  "taxon_id",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "father",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "mother",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "replicate",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "ethnicity",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "gender",
-  { data_type => "varchar", is_nullable => 1, size => 20 },
-  "cohort",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "country_of_origin",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "geographical_region",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 0 },
-  "checked_at",
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'reference_genome',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'organism',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'accession_number',
+  { data_type => 'varchar', is_nullable => 1, size => 50 },
+  'common_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'description',
+  { data_type => 'text', is_nullable => 1 },
+  'taxon_id',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'father',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'mother',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'replicate',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'ethnicity',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'gender',
+  { data_type => 'varchar', is_nullable => 1, size => 20 },
+  'cohort',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'country_of_origin',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'geographical_region',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 0 },
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "sanger_sample_id",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "control",
-  { data_type => "tinyint", is_nullable => 1 },
-  "empty_supplier_sample_name",
-  { data_type => "tinyint", is_nullable => 1 },
-  "supplier_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "public_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "sample_visibility",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "strain",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "updated_by_manifest",
-  { data_type => "tinyint", is_nullable => 1 },
-  "inserted_at",
+  'sanger_sample_id',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'control',
+  { data_type => 'tinyint', is_nullable => 1 },
+  'empty_supplier_sample_name',
+  { data_type => 'tinyint', is_nullable => 1 },
+  'supplier_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'public_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'sample_visibility',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'strain',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'updated_by_manifest',
+  { data_type => 'tinyint', is_nullable => 1 },
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "deleted_at",
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "current_from",
+  'current_from',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "current_to",
+  'current_to',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "consent_withdrawn",
-  { data_type => "tinyint", default_value => 0, is_nullable => 0 },
-  "donor_id",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'consent_withdrawn',
+  { data_type => 'tinyint', default_value => 0, is_nullable => 0 },
+  'donor_id',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
 
 =head1 UNIQUE CONSTRAINTS
@@ -357,7 +359,7 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->add_unique_constraint("internal_id_idx", ["internal_id"]);
+__PACKAGE__->add_unique_constraint('internal_id_idx', ['internal_id']);
 
 =head2 C<uuid_idx>
 
@@ -369,11 +371,11 @@ __PACKAGE__->add_unique_constraint("internal_id_idx", ["internal_id"]);
 
 =cut
 
-__PACKAGE__->add_unique_constraint("uuid_idx", ["uuid"]);
+__PACKAGE__->add_unique_constraint('uuid_idx', ['uuid']);
 
 
-# Created by DBIx::Class::Schema::Loader v0.07036 @ 2014-03-17 10:57:04
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:KvKlp6tMtOcXemTOVQYuxw
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:5M+KM1VmWvaw4VtfFkN3qA
 
 
 #########
@@ -385,10 +387,6 @@ __PACKAGE__->add_unique_constraint("uuid_idx", ["uuid"]);
 # $HeadURL$
 
 use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
-
-=head1 VERSION
-
-$LastChangedRevision$
 
 =head1 SYNOPSIS
 
@@ -473,7 +471,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2013 GRL, Marina Gourtovaia
+Copyright (C) 2016 GRL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

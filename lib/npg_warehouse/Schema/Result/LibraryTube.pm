@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::LibraryTube;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<library_tubes>
 
 =cut
 
-__PACKAGE__->table("library_tubes");
+__PACKAGE__->table('library_tubes');
 
 =head1 ACCESSORS
 
@@ -243,101 +245,101 @@ __PACKAGE__->table("library_tubes");
 =cut
 
 __PACKAGE__->add_columns(
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "barcode_prefix",
-  { data_type => "varchar", is_nullable => 1, size => 2 },
-  "closed",
-  { data_type => "tinyint", is_nullable => 1 },
-  "state",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
-  "two_dimensional_barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "sample_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "sample_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "volume",
-  { data_type => "decimal", is_nullable => 1, size => [10, 2] },
-  "concentration",
-  { data_type => "decimal", is_nullable => 1, size => [18, 2] },
-  "tag_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "tag_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "expected_sequence",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "tag_map_id",
-  { data_type => "integer", is_nullable => 1 },
-  "tag_group_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "tag_group_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "tag_group_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "source_request_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "source_request_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "library_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "fragment_size_required_from",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "fragment_size_required_to",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "sample_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 0 },
-  "scanned_in_date",
-  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
-  "checked_at",
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'barcode_prefix',
+  { data_type => 'varchar', is_nullable => 1, size => 2 },
+  'closed',
+  { data_type => 'tinyint', is_nullable => 1 },
+  'state',
+  { data_type => 'varchar', is_nullable => 1, size => 50 },
+  'two_dimensional_barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'sample_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'sample_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'volume',
+  { data_type => 'decimal', is_nullable => 1, size => [10, 2] },
+  'concentration',
+  { data_type => 'decimal', is_nullable => 1, size => [18, 2] },
+  'tag_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'tag_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'expected_sequence',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'tag_map_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'tag_group_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'tag_group_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'tag_group_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'source_request_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'source_request_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'library_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'fragment_size_required_from',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'fragment_size_required_to',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'sample_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 0 },
+  'scanned_in_date',
+  { data_type => 'date', datetime_undef_if_invalid => 1, is_nullable => 1 },
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "public_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "inserted_at",
+  'public_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "deleted_at",
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "current_from",
+  'current_from',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "current_to",
+  'current_to',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
@@ -360,13 +362,13 @@ __PACKAGE__->add_columns(
 =cut
 
 __PACKAGE__->add_unique_constraint(
-  "uuid_and_current_from_and_current_to_idx",
-  ["uuid", "current_from", "current_to"],
+  'uuid_and_current_from_and_current_to_idx',
+  ['uuid', 'current_from', 'current_to'],
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:VLg+Wyqe+cqikoCg1D2qTg
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:tmmejsk2H4/XDqmsBmXMZw
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

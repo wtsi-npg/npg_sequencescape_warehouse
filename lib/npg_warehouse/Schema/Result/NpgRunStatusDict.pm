@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::NpgRunStatusDict;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<npg_run_status_dict>
 
 =cut
 
-__PACKAGE__->table("npg_run_status_dict");
+__PACKAGE__->table('npg_run_status_dict');
 
 =head1 ACCESSORS
 
@@ -67,19 +69,19 @@ __PACKAGE__->table("npg_run_status_dict");
 =cut
 
 __PACKAGE__->add_columns(
-  "id_run_status_dict",
-  { data_type => "integer", default_value => 0, is_nullable => 0 },
-  "description",
-  { data_type => "varchar", default_value => "", is_nullable => 0, size => 64 },
-  "iscurrent",
+  'id_run_status_dict',
+  { data_type => 'integer', default_value => 0, is_nullable => 0 },
+  'description',
+  { data_type => 'varchar', default_value => '', is_nullable => 0, size => 64 },
+  'iscurrent',
   {
-    data_type => "tinyint",
+    data_type => 'tinyint',
     default_value => 1,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "temporal_index",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
+  'temporal_index',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -92,7 +94,7 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("id_run_status_dict");
+__PACKAGE__->set_primary_key('id_run_status_dict');
 
 =head1 RELATIONS
 
@@ -105,15 +107,15 @@ Related object: L<npg_warehouse::Schema::Result::NpgRunStatus>
 =cut
 
 __PACKAGE__->has_many(
-  "npg_run_statuses",
-  "npg_warehouse::Schema::Result::NpgRunStatus",
-  { "foreign.id_run_status_dict" => "self.id_run_status_dict" },
+  'npg_run_statuses',
+  'npg_warehouse::Schema::Result::NpgRunStatus',
+  { 'foreign.id_run_status_dict' => 'self.id_run_status_dict' },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:DDQ7seOsaUR7rdIziRFeXg
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:kf5wQFLpC19UI/D/pTl2pQ
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

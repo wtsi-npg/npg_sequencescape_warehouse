@@ -35,10 +35,6 @@ Readonly::Scalar our $PLEXES_KEY         => q[plexes];
 
 npg_warehouse::loader
 
-=head1 VERSION
-
-$LastChangedRevision$
-
 =head1 SYNOPSIS
 
  npg_:warehouse::loader->new()->load;
@@ -520,7 +516,7 @@ Updates manual qc values for one run.
 sub update_manual_qc {
     my ($self) = @_;
     if (scalar @{$self->id_run} != 1) {
-      croak "Cannot update manual qc for multiple runs";
+      croak 'Cannot update manual qc for multiple runs';
     }
     my $id_run = $self->id_run->[0];
     eval {
@@ -612,11 +608,12 @@ __END__
 
 =head1 AUTHOR
 
-Andy Brown and Marina Gourtovaia
+Andy Brown
+Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2010 GRL, by Andy Brown and Marina Gourtovaia
+Copyright (C) 2016 GRL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

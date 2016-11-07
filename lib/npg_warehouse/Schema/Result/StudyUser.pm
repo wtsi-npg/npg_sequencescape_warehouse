@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::StudyUser;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<study_users>
 
 =cut
 
-__PACKAGE__->table("study_users");
+__PACKAGE__->table('study_users');
 
 =head1 ACCESSORS
 
@@ -82,20 +84,20 @@ __PACKAGE__->table("study_users");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
-  { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
-  "study_internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "study_uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "role",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "login",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "email",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'id',
+  { data_type => 'integer', is_auto_increment => 1, is_nullable => 0 },
+  'study_internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'study_uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'role',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'login',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'email',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
 
 =head1 PRIMARY KEY
@@ -108,11 +110,11 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:x+J2Q6UqnP5EJ2ihaq3SWQ
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Iel+fEeKYmbQ85T3zOIgVw
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

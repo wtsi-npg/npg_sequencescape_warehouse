@@ -1,4 +1,4 @@
-use utf8;
+
 package npg_warehouse::Schema;
 
 # Created by DBIx::Class::Schema::Loader
@@ -11,8 +11,8 @@ extends 'DBIx::Class::Schema';
 __PACKAGE__->load_namespaces;
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:y58TcRQZmOsSf2pW+LGEGQ
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:R8ea9/5ZIcfZU2PXYKtAFw
 
 #########
 # Author:        Marina Gourtovaia
@@ -45,10 +45,6 @@ __END__
 =head1 NAME
 
 npg_warehouse::Schema
-
-=head1 VERSION
-
-$LastChangedRevision$
 
 =head1 SYNOPSIS
 
@@ -98,7 +94,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2010 GRL, Marina Gourtovaia
+Copyright (C) 2016 GRL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

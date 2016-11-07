@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::NpgPlexInformation;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<npg_plex_information>
 
 =cut
 
-__PACKAGE__->table("npg_plex_information");
+__PACKAGE__->table('npg_plex_information');
 
 =head1 ACCESSORS
 
@@ -368,185 +370,185 @@ __PACKAGE__->table("npg_plex_information");
 =cut
 
 __PACKAGE__->add_columns(
-  "batch_id",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 0 },
-  "id_run",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 0 },
-  "position",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "tag_index",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 0 },
-  "asset_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "asset_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "sample_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "study_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "project_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "library_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "insert_size_quartile1",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "insert_size_quartile3",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "insert_size_median",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "insert_size_num_modes",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "insert_size_normal_fit_confidence",
+  'batch_id',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 0 },
+  'id_run',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 0 },
+  'position',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'tag_index',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 0 },
+  'asset_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'asset_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'sample_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'study_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'project_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'library_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'insert_size_quartile1',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'insert_size_quartile3',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'insert_size_median',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'insert_size_num_modes',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'insert_size_normal_fit_confidence',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [3, 2],
   },
-  "gc_percent_forward_read",
+  'gc_percent_forward_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "gc_percent_reverse_read",
+  'gc_percent_reverse_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "sequence_mismatch_percent_forward_read",
+  'sequence_mismatch_percent_forward_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [4, 2],
   },
-  "sequence_mismatch_percent_reverse_read",
+  'sequence_mismatch_percent_reverse_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [4, 2],
   },
-  "adapters_percent_forward_read",
+  'adapters_percent_forward_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "adapters_percent_reverse_read",
+  'adapters_percent_reverse_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "contaminants_scan_hit1_name",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
-  "contaminants_scan_hit1_score",
+  'contaminants_scan_hit1_name',
+  { data_type => 'varchar', is_nullable => 1, size => 50 },
+  'contaminants_scan_hit1_score',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [6, 2],
   },
-  "contaminants_scan_hit2_name",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
-  "contaminants_scan_hit2_score",
+  'contaminants_scan_hit2_name',
+  { data_type => 'varchar', is_nullable => 1, size => 50 },
+  'contaminants_scan_hit2_score',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [6, 2],
   },
-  "ref_match1_name",
-  { data_type => "varchar", is_nullable => 1, size => 100 },
-  "ref_match1_percent",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "ref_match2_name",
-  { data_type => "varchar", is_nullable => 1, size => 100 },
-  "ref_match2_percent",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "tag_sequence",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "tag_decode_percent",
+  'ref_match1_name',
+  { data_type => 'varchar', is_nullable => 1, size => 100 },
+  'ref_match1_percent',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'ref_match2_name',
+  { data_type => 'varchar', is_nullable => 1, size => 100 },
+  'ref_match2_percent',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'tag_sequence',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'tag_decode_percent',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "tag_decode_count",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q20_yield_kb_forward_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q20_yield_kb_reverse_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q30_yield_kb_forward_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q30_yield_kb_reverse_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q40_yield_kb_forward_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q40_yield_kb_reverse_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "bam_num_reads",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "bam_percent_mapped",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "bam_percent_duplicate",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "bam_human_percent_mapped",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "bam_human_percent_duplicate",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "genotype_sample_name_match",
-  { data_type => "varchar", is_nullable => 1, size => 8 },
-  "genotype_sample_name_relaxed_match",
-  { data_type => "varchar", is_nullable => 1, size => 8 },
-  "genotype_mean_depth",
-  { data_type => "float", is_nullable => 1, size => [7, 2] },
-  "mean_bait_coverage",
+  'tag_decode_count',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q20_yield_kb_forward_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q20_yield_kb_reverse_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q30_yield_kb_forward_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q30_yield_kb_reverse_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q40_yield_kb_forward_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q40_yield_kb_reverse_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'bam_num_reads',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'bam_percent_mapped',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'bam_percent_duplicate',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'bam_human_percent_mapped',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'bam_human_percent_duplicate',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'genotype_sample_name_match',
+  { data_type => 'varchar', is_nullable => 1, size => 8 },
+  'genotype_sample_name_relaxed_match',
+  { data_type => 'varchar', is_nullable => 1, size => 8 },
+  'genotype_mean_depth',
+  { data_type => 'float', is_nullable => 1, size => [7, 2] },
+  'mean_bait_coverage',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [6, 2],
   },
-  "on_bait_percent",
+  'on_bait_percent',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "on_or_near_bait_percent",
+  'on_or_near_bait_percent',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "verify_bam_id_average_depth",
+  'verify_bam_id_average_depth',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [11, 2],
   },
-  "verify_bam_id_score",
+  'verify_bam_id_score',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [6, 5],
   },
-  "verify_bam_id_snp_count",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
+  'verify_bam_id_snp_count',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -563,11 +565,11 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("id_run", "position", "tag_index");
+__PACKAGE__->set_primary_key('id_run', 'position', 'tag_index');
 
 
-# Created by DBIx::Class::Schema::Loader v0.07036 @ 2014-12-02 14:45:51
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:0hexw/vXsTY3Af7MX+vEBw
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Bjy11S1+7ZlvSU2rKvVQ+A
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration
@@ -687,10 +689,6 @@ sub request {
 1;
 __END__
 
-=head1 VERSION
-
-$LastChangedRevision$
-
 =head1 SYNOPSIS
 
 =head1 DESCRIPTION
@@ -737,7 +735,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2011 GRL, Marina Gourtovaia
+Copyright (C) 2016 GRL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::NpgInformation;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<npg_information>
 
 =cut
 
-__PACKAGE__->table("npg_information");
+__PACKAGE__->table('npg_information');
 
 =head1 ACCESSORS
 
@@ -480,258 +482,258 @@ __PACKAGE__->table("npg_information");
 =cut
 
 __PACKAGE__->add_columns(
-  "id_npg_information",
+  'id_npg_information',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "batch_id",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 0 },
-  "id_run",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 0 },
-  "position",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "id_run_pair",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "run_complete",
+  'batch_id',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 0 },
+  'id_run',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 0 },
+  'position',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'id_run_pair',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'run_complete',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "cycles",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "cluster_count",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "pf_bases",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "is_dev",
+  'cycles',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'cluster_count',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'pf_bases',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'is_dev',
   {
-    data_type => "tinyint",
+    data_type => 'tinyint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "has_two_runfolders",
+  'has_two_runfolders',
   {
-    data_type => "tinyint",
+    data_type => 'tinyint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "paired_read",
+  'paired_read',
   {
-    data_type => "tinyint",
+    data_type => 'tinyint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "cancelled",
+  'cancelled',
   {
-    data_type => "tinyint",
+    data_type => 'tinyint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "instrument_name",
-  { data_type => "char", is_nullable => 1, size => 32 },
-  "instrument_model",
-  { data_type => "char", is_nullable => 1, size => 64 },
-  "manual_qc",
-  { data_type => "tinyint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "clusters_raw",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "raw_cluster_density",
+  'instrument_name',
+  { data_type => 'char', is_nullable => 1, size => 32 },
+  'instrument_model',
+  { data_type => 'char', is_nullable => 1, size => 64 },
+  'manual_qc',
+  { data_type => 'tinyint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'clusters_raw',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'raw_cluster_density',
   {
-    data_type => "double precision",
+    data_type => 'double precision',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [12, 3],
   },
-  "pf_cluster_density",
+  'pf_cluster_density',
   {
-    data_type => "double precision",
+    data_type => 'double precision',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [12, 3],
   },
-  "insert_size_quartile1",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "insert_size_quartile3",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "insert_size_median",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "insert_size_num_modes",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "insert_size_normal_fit_confidence",
+  'insert_size_quartile1',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'insert_size_quartile3',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'insert_size_median',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'insert_size_num_modes',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'insert_size_normal_fit_confidence',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [3, 2],
   },
-  "gc_percent_forward_read",
+  'gc_percent_forward_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "gc_percent_reverse_read",
+  'gc_percent_reverse_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "sequence_mismatch_percent_forward_read",
+  'sequence_mismatch_percent_forward_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [4, 2],
   },
-  "sequence_mismatch_percent_reverse_read",
+  'sequence_mismatch_percent_reverse_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [4, 2],
   },
-  "adapters_percent_forward_read",
+  'adapters_percent_forward_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "adapters_percent_reverse_read",
+  'adapters_percent_reverse_read',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "contaminants_scan_hit1_name",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
-  "contaminants_scan_hit1_score",
+  'contaminants_scan_hit1_name',
+  { data_type => 'varchar', is_nullable => 1, size => 50 },
+  'contaminants_scan_hit1_score',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [6, 2],
   },
-  "contaminants_scan_hit2_name",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
-  "contaminants_scan_hit2_score",
+  'contaminants_scan_hit2_name',
+  { data_type => 'varchar', is_nullable => 1, size => 50 },
+  'contaminants_scan_hit2_score',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [6, 2],
   },
-  "ref_match1_name",
-  { data_type => "varchar", is_nullable => 1, size => 100 },
-  "ref_match1_percent",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "ref_match2_name",
-  { data_type => "varchar", is_nullable => 1, size => 100 },
-  "ref_match2_percent",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "run_pending",
+  'ref_match1_name',
+  { data_type => 'varchar', is_nullable => 1, size => 100 },
+  'ref_match1_percent',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'ref_match2_name',
+  { data_type => 'varchar', is_nullable => 1, size => 100 },
+  'ref_match2_percent',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'run_pending',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "qc_complete",
+  'qc_complete',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "tags_decode_percent",
+  'tags_decode_percent',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [5, 2],
   },
-  "tags_decode_cv",
+  'tags_decode_cv',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [6, 2],
   },
-  "asset_id",
-  { data_type => "integer", is_nullable => 1 },
-  "asset_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "sample_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "study_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "project_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "request_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "lane_type",
-  { data_type => "varchar", is_nullable => 1, size => 20 },
-  "spike_tag_index",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "library_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "q20_yield_kb_forward_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q20_yield_kb_reverse_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q30_yield_kb_forward_read",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q30_yield_kb_reverse_read",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q40_yield_kb_forward_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "q40_yield_kb_reverse_read",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "split_human_percent",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "split_phix_percent",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "bam_num_reads",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 1 },
-  "bam_percent_mapped",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "bam_percent_duplicate",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "bam_human_percent_mapped",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "bam_human_percent_duplicate",
-  { data_type => "float", is_nullable => 1, size => [5, 2] },
-  "genotype_sample_name_match",
-  { data_type => "varchar", is_nullable => 1, size => 8 },
-  "genotype_sample_name_relaxed_match",
-  { data_type => "varchar", is_nullable => 1, size => 8 },
-  "genotype_mean_depth",
-  { data_type => "float", is_nullable => 1, size => [7, 2] },
-  "verify_bam_id_average_depth",
+  'asset_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'asset_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'sample_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'study_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'project_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'request_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'lane_type',
+  { data_type => 'varchar', is_nullable => 1, size => 20 },
+  'spike_tag_index',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'library_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'q20_yield_kb_forward_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q20_yield_kb_reverse_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q30_yield_kb_forward_read',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q30_yield_kb_reverse_read',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q40_yield_kb_forward_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'q40_yield_kb_reverse_read',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'split_human_percent',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'split_phix_percent',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'bam_num_reads',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 1 },
+  'bam_percent_mapped',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'bam_percent_duplicate',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'bam_human_percent_mapped',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'bam_human_percent_duplicate',
+  { data_type => 'float', is_nullable => 1, size => [5, 2] },
+  'genotype_sample_name_match',
+  { data_type => 'varchar', is_nullable => 1, size => 8 },
+  'genotype_sample_name_relaxed_match',
+  { data_type => 'varchar', is_nullable => 1, size => 8 },
+  'genotype_mean_depth',
+  { data_type => 'float', is_nullable => 1, size => [7, 2] },
+  'verify_bam_id_average_depth',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [11, 2],
   },
-  "verify_bam_id_score",
+  'verify_bam_id_score',
   {
-    data_type => "float",
+    data_type => 'float',
     extra => { unsigned => 1 },
     is_nullable => 1,
     size => [6, 5],
   },
-  "verify_bam_id_snp_count",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
+  'verify_bam_id_snp_count',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -744,7 +746,7 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("id_npg_information");
+__PACKAGE__->set_primary_key('id_npg_information');
 
 =head1 UNIQUE CONSTRAINTS
 
@@ -762,7 +764,7 @@ __PACKAGE__->set_primary_key("id_npg_information");
 
 =cut
 
-__PACKAGE__->add_unique_constraint("batch_run_pos", ["batch_id", "id_run", "position"]);
+__PACKAGE__->add_unique_constraint('batch_run_pos', ['batch_id', 'id_run', 'position']);
 
 =head2 C<id_run_position>
 
@@ -776,11 +778,11 @@ __PACKAGE__->add_unique_constraint("batch_run_pos", ["batch_id", "id_run", "posi
 
 =cut
 
-__PACKAGE__->add_unique_constraint("id_run_position", ["id_run", "position"]);
+__PACKAGE__->add_unique_constraint('id_run_position', ['id_run', 'position']);
 
 
-# Created by DBIx::Class::Schema::Loader v0.07036 @ 2014-12-02 14:45:51
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:9LuqPsXLuRpPUgm1lyjPpA
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Mf0q8WzyybqXtsFLlBNagQ
 
 # The text below will be preserved on regeneration
 
@@ -803,9 +805,9 @@ Related object: L<npg_warehouse::Schema::Result::NpgPlexInformation>
 =cut
 
 __PACKAGE__->has_many(
-  "npg_plex_information",
-  "npg_warehouse::Schema::Result::NpgPlexInformation",
-  { "foreign.id_run" => "self.id_run", "foreign.position" => "self.position", },
+  'npg_plex_information',
+  'npg_warehouse::Schema::Result::NpgPlexInformation',
+  { 'foreign.id_run' => 'self.id_run', 'foreign.position' => 'self.position', },
 );
 
 
@@ -816,9 +818,9 @@ Related object: L<npg_warehouse::Schema::Result::NpgRunStatus>
 =cut
 
 __PACKAGE__->has_many(
-  "run_statuses",
-  "npg_warehouse::Schema::Result::NpgRunStatus",
-  { "foreign.id_run" => "self.id_run" },
+  'run_statuses',
+  'npg_warehouse::Schema::Result::NpgRunStatus',
+  { 'foreign.id_run' => 'self.id_run' },
   { order_by => { '-desc' => 'me.iscurrent'},
     prefetch => 'id_run_status_dict',
   },
@@ -887,8 +889,8 @@ sample name or, if unavailable, sample id
 =cut
 
 sub sample_name {
-    my $self = shift;
-    return $self->sample ? $self->sample->sample_name() : $self->sample_id;
+  my $self = shift;
+  return $self->sample ? $self->sample->sample_name() : $self->sample_id;
 }
 
 =head2 study_name
@@ -898,8 +900,8 @@ study name or, if unavailable, study id
 =cut
 
 sub study_name {
-    my $self = shift;
-    return $self->study ? $self->study->study_name() : $self->study_id;
+  my $self = shift;
+  return $self->study ? $self->study->study_name() : $self->study_id;
 }
 
 =head2 library_name
@@ -909,8 +911,8 @@ library name or, if unavailable, library id
 =cut
 
 sub library_name {
-    my $self = shift;
-    return $self->asset_name || $self->asset_id;
+  my $self = shift;
+  return $self->asset_name || $self->asset_id;
 }
 
 =head2 current_run_status
@@ -931,11 +933,6 @@ sub current_run_status {
 
 1;
 __END__
-
-
-=head1 VERSION
-
-$LastChangedRevision$
 
 =head1 SYNOPSIS
 
@@ -981,7 +978,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2011 GRL, Marina Gourtovaia
+Copyright (C) 2016 GRL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

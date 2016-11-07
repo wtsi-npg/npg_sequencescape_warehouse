@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::Plate;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<plates>
 
 =cut
 
-__PACKAGE__->table("plates");
+__PACKAGE__->table('plates');
 
 =head1 ACCESSORS
 
@@ -157,74 +159,74 @@ __PACKAGE__->table("plates");
 =cut
 
 __PACKAGE__->add_columns(
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "barcode_prefix",
-  { data_type => "varchar", is_nullable => 1, size => 2 },
-  "plate_size",
-  { data_type => "integer", is_nullable => 1 },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 0 },
-  "checked_at",
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'barcode_prefix',
+  { data_type => 'varchar', is_nullable => 1, size => 2 },
+  'plate_size',
+  { data_type => 'integer', is_nullable => 1 },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 0 },
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "plate_purpose_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "plate_purpose_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "plate_purpose_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "infinium_barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "location",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "inserted_at",
+  'plate_purpose_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'plate_purpose_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'plate_purpose_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'infinium_barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'location',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "deleted_at",
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "current_from",
+  'current_from',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "current_to",
+  'current_to',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "fluidigm_barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'fluidigm_barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
 
 =head1 UNIQUE CONSTRAINTS
@@ -244,13 +246,13 @@ __PACKAGE__->add_columns(
 =cut
 
 __PACKAGE__->add_unique_constraint(
-  "uuid_and_current_from_and_current_to_idx",
-  ["uuid", "current_from", "current_to"],
+  'uuid_and_current_from_and_current_to_idx',
+  ['uuid', 'current_from', 'current_to'],
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07036 @ 2014-03-17 10:57:04
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:DLPSXeNv91owY4z36HeCnw
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:GnTsXLjqeBFmq3ay2gGWbA
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

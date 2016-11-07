@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::NpgRunStatus;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<npg_run_status>
 
 =cut
 
-__PACKAGE__->table("npg_run_status");
+__PACKAGE__->table('npg_run_status');
 
 =head1 ACCESSORS
 
@@ -70,20 +72,20 @@ __PACKAGE__->table("npg_run_status");
 =cut
 
 __PACKAGE__->add_columns(
-  "id_run_status",
-  { data_type => "integer", default_value => 0, is_nullable => 0 },
-  "id_run",
-  { data_type => "bigint", extra => { unsigned => 1 }, is_nullable => 0 },
-  "date",
+  'id_run_status',
+  { data_type => 'integer', default_value => 0, is_nullable => 0 },
+  'id_run',
+  { data_type => 'bigint', extra => { unsigned => 1 }, is_nullable => 0 },
+  'date',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "id_run_status_dict",
-  { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
-  "iscurrent",
-  { data_type => "tinyint", is_nullable => 0 },
+  'id_run_status_dict',
+  { data_type => 'integer', is_foreign_key => 1, is_nullable => 0 },
+  'iscurrent',
+  { data_type => 'tinyint', is_nullable => 0 },
 );
 
 =head1 PRIMARY KEY
@@ -96,7 +98,7 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("id_run_status");
+__PACKAGE__->set_primary_key('id_run_status');
 
 =head1 RELATIONS
 
@@ -109,15 +111,15 @@ Related object: L<npg_warehouse::Schema::Result::NpgRunStatusDict>
 =cut
 
 __PACKAGE__->belongs_to(
-  "id_run_status_dict",
-  "npg_warehouse::Schema::Result::NpgRunStatusDict",
-  { id_run_status_dict => "id_run_status_dict" },
-  { is_deferrable => 1, on_delete => "NO ACTION", on_update => "NO ACTION" },
+  'id_run_status_dict',
+  'npg_warehouse::Schema::Result::NpgRunStatusDict',
+  { id_run_status_dict => 'id_run_status_dict' },
+  { is_deferrable => 1, on_delete => 'NO ACTION', on_update => 'NO ACTION' },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:lt7RzPdG0hHJDq8HaKMxtA
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:zcnxezE6B+HM/XjTys6IUg
 
 
 __PACKAGE__->belongs_to(

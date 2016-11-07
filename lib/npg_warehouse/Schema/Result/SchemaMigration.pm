@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::SchemaMigration;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<schema_migrations>
 
 =cut
 
-__PACKAGE__->table("schema_migrations");
+__PACKAGE__->table('schema_migrations');
 
 =head1 ACCESSORS
 
@@ -47,8 +49,8 @@ __PACKAGE__->table("schema_migrations");
 =cut
 
 __PACKAGE__->add_columns(
-  "version",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
+  'version',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
 );
 
 =head1 UNIQUE CONSTRAINTS
@@ -63,11 +65,11 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->add_unique_constraint("unique_schema_migrations", ["version"]);
+__PACKAGE__->add_unique_constraint('unique_schema_migrations', ['version']);
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:swWLYirf5NbUWpks2b1kfw
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:N8fxHcF7SrJmYVQlB3wi+w
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

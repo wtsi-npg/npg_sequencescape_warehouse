@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::SampleTube;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<sample_tubes>
 
 =cut
 
-__PACKAGE__->table("sample_tubes");
+__PACKAGE__->table('sample_tubes');
 
 =head1 ACCESSORS
 
@@ -169,75 +171,75 @@ __PACKAGE__->table("sample_tubes");
 =cut
 
 __PACKAGE__->add_columns(
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "closed",
-  { data_type => "tinyint", is_nullable => 1 },
-  "state",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
-  "two_dimensional_barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "sample_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "sample_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "sample_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "scanned_in_date",
-  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
-  "volume",
-  { data_type => "decimal", is_nullable => 1, size => [5, 2] },
-  "concentration",
-  { data_type => "decimal", is_nullable => 1, size => [10, 2] },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 0 },
-  "checked_at",
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'closed',
+  { data_type => 'tinyint', is_nullable => 1 },
+  'state',
+  { data_type => 'varchar', is_nullable => 1, size => 50 },
+  'two_dimensional_barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'sample_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'sample_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'sample_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'scanned_in_date',
+  { data_type => 'date', datetime_undef_if_invalid => 1, is_nullable => 1 },
+  'volume',
+  { data_type => 'decimal', is_nullable => 1, size => [5, 2] },
+  'concentration',
+  { data_type => 'decimal', is_nullable => 1, size => [10, 2] },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 0 },
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "barcode_prefix",
-  { data_type => "varchar", is_nullable => 1, size => 2 },
-  "inserted_at",
+  'barcode_prefix',
+  { data_type => 'varchar', is_nullable => 1, size => 2 },
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "deleted_at",
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "current_from",
+  'current_from',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "current_to",
+  'current_to',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
@@ -260,13 +262,13 @@ __PACKAGE__->add_columns(
 =cut
 
 __PACKAGE__->add_unique_constraint(
-  "uuid_and_current_from_and_current_to_idx",
-  ["uuid", "current_from", "current_to"],
+  'uuid_and_current_from_and_current_to_idx',
+  ['uuid', 'current_from', 'current_to'],
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:vytEjTpM7TM4Nv7NXjXZug
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:5sWJfA/pU5kywrhrUNz7zw
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

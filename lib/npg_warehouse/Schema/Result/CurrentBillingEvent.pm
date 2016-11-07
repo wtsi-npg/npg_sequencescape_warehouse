@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::CurrentBillingEvent;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<current_billing_events>
 
 =cut
 
-__PACKAGE__->table("current_billing_events");
+__PACKAGE__->table('current_billing_events');
 
 =head1 ACCESSORS
 
@@ -197,92 +199,92 @@ __PACKAGE__->table("current_billing_events");
 =cut
 
 __PACKAGE__->add_columns(
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 0 },
-  "reference",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "project_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "project_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "project_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "division",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "created_by",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "request_internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "request_uuid",
-  { data_type => "binary", is_nullable => 1, size => 16 },
-  "request_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "library_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "cost_code",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "price",
-  { data_type => "integer", is_nullable => 1 },
-  "quantity",
-  { data_type => "float", is_nullable => 1 },
-  "kind",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "description",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 0 },
-  "entry_date",
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 0 },
+  'reference',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'project_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'project_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'project_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'division',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'created_by',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'request_internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'request_uuid',
+  { data_type => 'binary', is_nullable => 1, size => 16 },
+  'request_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'library_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'cost_code',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'price',
+  { data_type => 'integer', is_nullable => 1 },
+  'quantity',
+  { data_type => 'float', is_nullable => 1 },
+  'kind',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'description',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 0 },
+  'entry_date',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "checked_at",
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "inserted_at",
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "deleted_at",
+  'deleted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "current_from",
+  'current_from',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "current_to",
+  'current_to',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "bait_library_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'bait_library_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
 
 =head1 UNIQUE CONSTRAINTS
@@ -297,7 +299,7 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->add_unique_constraint("internal_id_idx", ["internal_id"]);
+__PACKAGE__->add_unique_constraint('internal_id_idx', ['internal_id']);
 
 =head2 C<uuid_idx>
 
@@ -309,11 +311,11 @@ __PACKAGE__->add_unique_constraint("internal_id_idx", ["internal_id"]);
 
 =cut
 
-__PACKAGE__->add_unique_constraint("uuid_idx", ["uuid"]);
+__PACKAGE__->add_unique_constraint('uuid_idx', ['uuid']);
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:qRP2JP8SNAKuFVcQtWu2eA
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:VDO8D7ZfpiXoBqlLuffJoQ
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

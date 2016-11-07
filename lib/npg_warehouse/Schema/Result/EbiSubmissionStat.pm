@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::EbiSubmissionStat;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<ebi_submission_stats>
 
 =cut
 
-__PACKAGE__->table("ebi_submission_stats");
+__PACKAGE__->table('ebi_submission_stats');
 
 =head1 ACCESSORS
 
@@ -64,17 +66,17 @@ __PACKAGE__->table("ebi_submission_stats");
 =cut
 
 __PACKAGE__->add_columns(
-  "week_beginning",
-  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 0 },
-  "ena_bp",
-  { data_type => "bigint", is_nullable => 1 },
-  "ega_bp",
-  { data_type => "bigint", is_nullable => 1 },
-  "updated",
+  'week_beginning',
+  { data_type => 'date', datetime_undef_if_invalid => 1, is_nullable => 0 },
+  'ena_bp',
+  { data_type => 'bigint', is_nullable => 1 },
+  'ega_bp',
+  { data_type => 'bigint', is_nullable => 1 },
+  'updated',
   {
-    data_type => "timestamp",
+    data_type => 'timestamp',
     datetime_undef_if_invalid => 1,
-    default_value => \"current_timestamp",
+    default_value => \'current_timestamp',
     is_nullable => 0,
   },
 );
@@ -89,11 +91,11 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("week_beginning");
+__PACKAGE__->set_primary_key('week_beginning');
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:7DU1MnN4cqEjBzz5xovVcA
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:7bpxCGiN8EB+YaWkDWMuRA
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

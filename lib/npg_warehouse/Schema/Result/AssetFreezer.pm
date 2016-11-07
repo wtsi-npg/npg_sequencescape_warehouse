@@ -1,8 +1,10 @@
-use utf8;
+
 package npg_warehouse::Schema::Result::AssetFreezer;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
+
+##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
 
 =head1 NAME
 
@@ -28,13 +30,13 @@ extends 'DBIx::Class::Core';
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components('InflateColumn::DateTime');
 
 =head1 TABLE: C<asset_freezers>
 
 =cut
 
-__PACKAGE__->table("asset_freezers");
+__PACKAGE__->table('asset_freezers');
 
 =head1 ACCESSORS
 
@@ -135,51 +137,51 @@ __PACKAGE__->table("asset_freezers");
 =cut
 
 __PACKAGE__->add_columns(
-  "dont_use_id",
-  { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
-  "uuid",
-  { data_type => "binary", is_nullable => 0, size => 16 },
-  "internal_id",
-  { data_type => "integer", is_nullable => 1 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "asset_type",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "barcode",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "barcode_prefix",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "building",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "room",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "freezer",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "shelf",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "is_current",
-  { data_type => "tinyint", is_nullable => 1 },
-  "checked_at",
+  'dont_use_id',
+  { data_type => 'integer', is_auto_increment => 1, is_nullable => 0 },
+  'uuid',
+  { data_type => 'binary', is_nullable => 0, size => 16 },
+  'internal_id',
+  { data_type => 'integer', is_nullable => 1 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'asset_type',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'barcode',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'barcode_prefix',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'building',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'room',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'freezer',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'shelf',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'is_current',
+  { data_type => 'tinyint', is_nullable => 1 },
+  'checked_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "last_updated",
+  'last_updated',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "created",
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "inserted_at",
+  'inserted_at',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
@@ -195,11 +197,11 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("dont_use_id");
+__PACKAGE__->set_primary_key('dont_use_id');
 
 
-# Created by DBIx::Class::Schema::Loader v0.07035 @ 2013-07-26 21:01:09
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:WPRW0FL4WGVLNdMSgXBEFw
+# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:X1PaGgycTSitN00ju4yaDg
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration
