@@ -1,6 +1,11 @@
 ChangeLog for data_handling
 =============================
 
+ - marshall now uses ml_warehouse to identify candidates for composite genotype check
+ - image loader and viewer are removed
+ - code changes to eliminate warnings and PBP issues when running under Perl 5.22.2
+
+release 42.0
  - removed npg_common::sequence::BAM_MarkDuplicate
  - merged two perlcritic test files into one
  - updated DBIx binding
