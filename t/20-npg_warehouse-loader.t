@@ -354,7 +354,7 @@ my $plex_key = q[plexes];
   $expected->{4333}->{4}->{contaminants_scan_hit1_name}  = q[PhiX];
   $expected->{4333}->{4}->{contaminants_scan_hit1_score} = 97.30;
   $expected->{4333}->{4}->{contaminants_scan_hit2_name}  = q[Mus_musculus];
-  $expected->{4333}->{4}->{contaminants_scan_hit2_score} = 0.1;
+  $expected->{4333}->{4}->{contaminants_scan_hit2_score} = 0.12;
   $expected->{4333}->{4}->{tags_decode_percent} = undef;
   $expected->{4333}->{4}->{tags_decode_cv} = undef;
 
@@ -363,9 +363,9 @@ my $plex_key = q[plexes];
   $expected->{4333}->{1}->{adapters_percent_forward_read} = 31.99;
   $expected->{4333}->{1}->{adapters_percent_reverse_read} = 25.93;
   $expected->{4333}->{1}->{contaminants_scan_hit1_name}  = q[Mus_musculus];
-  $expected->{4333}->{1}->{contaminants_scan_hit1_score} = 16;
+  $expected->{4333}->{1}->{contaminants_scan_hit1_score} = 16.03;
   $expected->{4333}->{1}->{contaminants_scan_hit2_name}  = q[Homo_sapiens];
-  $expected->{4333}->{1}->{contaminants_scan_hit2_score} = 7;
+  $expected->{4333}->{1}->{contaminants_scan_hit2_score} = 6.96;
   $expected->{4333}->{1}->{tags_decode_percent} = 99.29;
   $expected->{4333}->{1}->{tags_decode_cv} = 55.1;
 
