@@ -31,7 +31,7 @@ sub sqlt_deploy_hook {
   my $db_type = $sqlt_schema->translator->producer_type;
   $db_type  =~ s/^SQL::Translator::Producer:://smx;
   if ($db_type eq 'SQLite') {
-    my @tables = grep { $_ !~ /^current_/smx && $_ !~ /^npg_/smx } $sqlt_schema->get_tables;
+    my @tables = grep { !( /^current_/smx || /^npg_/smx ) } $sqlt_schema->get_tables;
     foreach my $table_name (@tables) {
       $sqlt_schema->drop_table($table_name);
     }
