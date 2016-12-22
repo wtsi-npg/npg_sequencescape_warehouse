@@ -1,6 +1,9 @@
 ChangeLog for data_handling
 =============================
 
+release 42.1.1
+ - bug fix in dereferencing a hash
+
 release 42.1
  - marshall now uses ml_warehouse to identify candidates for composite genotype check
  - image loader and viewer are removed
