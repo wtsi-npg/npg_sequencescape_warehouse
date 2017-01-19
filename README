@@ -1,0 +1,5 @@
+npg_sscape_warehouse
+--------------------
+
+contains
+ - LIMS warehouse database DBIx binding and loader

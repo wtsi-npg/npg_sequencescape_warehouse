@@ -1,12 +1,3 @@
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       24 March 2010
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-#
-
 use strict;
 use warnings;
 use Test::More tests => 203;

@@ -455,10 +455,6 @@ __END__
 
 npg_warehouse::Schema::Result::Study
 
-=head1 VERSION
-
-$LastChangedRevision$
-
 =head1 SYNOPSIS
 
 =head1 DESCRIPTION

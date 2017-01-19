@@ -1,10 +1,3 @@
-#########
-# Author:        dj3
-# Last Modified: $Date$ $Author$
-# Id:            $Id$
-# $HeadURL$
-#
-
 use strict;
 use warnings;
 use Test::More tests => 21;

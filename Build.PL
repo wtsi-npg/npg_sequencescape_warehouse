@@ -1,16 +1,8 @@
-################
-# Created by: ajb
-# Maintainer: $Author$
-# Created on: 2009-04-08
-# Last Changed: $Date$
-# Id: $Id$
-# $HeadURL$
-
 use strict;
 use warnings;
 use Module::Build;
 
-our $VERSION = do { my @r = (q$Revision$ =~ /\d+/mxgs); sprintf '%d.'.'%03d' x $#r, @r };
+our $VERSION = '0';
 
 my $requires = {
                     'perl'                      => '5.010',
@@ -18,10 +10,8 @@ my $requires = {
                     'Cwd'                       => 0,
                     'Date::Calc'                => 0,
                     'DateTime'                  => 0,
-                    'DBI'                       => 0,
                     'DBIx::Class'               => 0,
                     'DBIx::Class::Schema::Loader' => 0,
-                    'Digest::MD5'               => 0,
                     'English'                   => 0,
                     'File::Basename'            => 0,
                     'File::Slurp'               => 0,
@@ -29,12 +19,10 @@ my $requires = {
                     'File::Spec::Functions'     => 0,
                     'FindBin'                   => 0,
                     'Getopt::Long'              => '2.37',
-                    'IPC::Open3'                => 0,
                     'JSON'                      => 0,
                     'List::MoreUtils'           => 0,
                     'List::Util'                => 0,
                     'LWP::UserAgent'            => 0,
-                    'MIME::Lite'                => 0,
                     'Moose'                     => 0,
                     'Moose::Role'               => 0,
                     'Moose::Util::TypeConstraints' => 0,
@@ -51,31 +39,19 @@ my $requires = {
                     'warnings'                  => 0,
                     'XML::LibXML'               => 0,
 
-                    'npg_common::roles::log'                  => 0,
-
                     'npg_qc::illumina::loader'                => 0,
                     'npg_qc::Schema'                          => 0,
                     'npg_qc::autoqc::role::result'            => 0,
                     'npg_qc::autoqc::qc_store'                => 0,
-                    'npg_tracking::data::reference'           => 0,
-                    'npg_tracking::data::reference::find'     => 0,
-                    'npg_tracking::glossary::run'             => 0,
-                    'npg_tracking::illumina::run::folder::validation' => 0,
-                    'npg_tracking::illumina::run::folder'     => 0,
-                    'npg_tracking::illumina::run::long_info'  => 0,
-                    'npg_tracking::illumina::run::short_info' => 0,
                     'npg_tracking::Schema'                    => 0,
                     'npg_tracking::util::db_connect'          => 0,
                     'st::api::lims'                           => 0,
-
-                    'WTSI::NPG::iRODS'                        => '>= 2.3.0',
-                    'npg_pipeline::cache'                     => 0,
 };
 
 my $builder = Module::Build->new(
                  'module_name'         => 'data_handling',
                  'dist_author'         => q(npg <npg@sanger.ac.uk>),
-                 'dist_version_from'   => q(lib/srpipe/runfolder.pm),
+                 'dist_version_from'   => q(lib/npg_warehouse/Schema.pm),
                  'dist_abstract'       => q(LIMS warehouse DBIx binding&loader),
                  'license'             => 'gpl',
 

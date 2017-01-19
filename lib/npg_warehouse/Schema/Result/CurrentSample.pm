@@ -377,16 +377,7 @@ __PACKAGE__->add_unique_constraint('uuid_idx', ['uuid']);
 # Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:5M+KM1VmWvaw4VtfFkN3qA
 
-
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       7 September 2012
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 =head1 SYNOPSIS
 

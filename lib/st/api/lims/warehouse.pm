@@ -1,10 +1,3 @@
-#########
-# Author:        David K Jackson <david.jackson@sanger.ac.uk>
-# Created:       16 July 2013
-# Maintainer:    $Author$
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
 package st::api::lims::warehouse;
 use Moose;
 use MooseX::StrictConstructor;
@@ -14,16 +7,11 @@ use npg_warehouse::Schema;
 use st::api::lims;
 use npg_warehouse::Schema::Result::CurrentAliquot;
 
-
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 =head1 NAME
 
 st::api::lims::warehouse
-
-=head1 VERSION
-
-$LastChangedRevision$
 
 =head1 SYNOPSIS
 
@@ -155,8 +143,6 @@ no Moose;
 =over
 
 =item Carp
-
-=item Readonly
 
 =item npg_warehouse::Schema
 

@@ -394,10 +394,6 @@ __END__
 
 npg_warehouse::Schema::Result::Sample
 
-=head1 VERSION
-
-$LastChangedRevision$
-
 =head1 SYNOPSIS
 
 =head1 DESCRIPTION

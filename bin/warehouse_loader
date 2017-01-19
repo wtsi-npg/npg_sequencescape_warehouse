@@ -1,14 +1,5 @@
 #!/usr/bin/env perl
 
-# $Id$
-# Created By: ajb
-# Mast Maintained By: $Author$
-# Created On: 2009-02-25
-# Last Changed On: $Date$
-# $HeadURL$
-
-package warehouse;
-
 use strict;
 use warnings;
 use FindBin qw($Bin);
@@ -18,7 +9,7 @@ use Pod::Usage;
 
 use npg_warehouse::loader;
 
-our $VERSION    = do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 my $verbose          = 0;
 my $with_lims        = 1;
@@ -94,10 +85,6 @@ __END__
 =head1 NAME
 
 warehouse_loader
-
-=head1 VERSION
-
-$LastChangedRevision$
 
 =head1 SYNOPSIS
 

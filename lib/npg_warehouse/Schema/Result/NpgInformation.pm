@@ -786,15 +786,7 @@ __PACKAGE__->add_unique_constraint('id_run_position', ['id_run', 'position']);
 
 # The text below will be preserved on regeneration
 
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       13 August 2010
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 with qw/ npg_qc::autoqc::role::rpt_key /;
 
@@ -955,8 +947,6 @@ Moose-based DBIx binding for the npg_information table of the warehouse database
 =item warnings
 
 =item Moose
-
-=item Readonly
 
 =item MooseX::NonMoose
 

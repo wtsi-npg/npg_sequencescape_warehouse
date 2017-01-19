@@ -1,12 +1,3 @@
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       4 August 2010
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-#
-
 use strict;
 use warnings;
 use Carp;

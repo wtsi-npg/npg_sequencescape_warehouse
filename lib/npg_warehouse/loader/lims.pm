@@ -1,21 +1,13 @@
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       4 August 2010
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
 package npg_warehouse::loader::lims;
 
 use Carp;
 use Moose;
 use English qw{-no_match_vars};
 use DateTime;
-
 use st::api::lims;
+use Readonly;
 
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 Readonly::Scalar our $LOOKBACK_NUM_DAYS => 50;
 
