@@ -1,10 +1,3 @@
-#########
-# Author:        David K Jackson <david.jackson@sanger.ac.uk>
-# Created:       16 July 2013
-# Maintainer:    $Author$
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
 package st::api::lims::warehouse;
 use Moose;
 use MooseX::StrictConstructor;
@@ -14,16 +7,11 @@ use npg_warehouse::Schema;
 use st::api::lims;
 use npg_warehouse::Schema::Result::CurrentAliquot;
 
-
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 =head1 NAME
 
 st::api::lims::warehouse
-
-=head1 VERSION
-
-$LastChangedRevision$
 
 =head1 SYNOPSIS
 
@@ -42,14 +30,15 @@ subtype __PACKAGE__.'::EAN13digits'
   => message { 'EAN13 barcode should be 13 digits' };
 
 subtype __PACKAGE__.'::EAN13'
-  => where {
-             my@a=split '',$_;
+  => where { ##no critic ( ValuesAndExpressions::ProhibitMagicNumbers)
+             my@a=split //sm, $_;
              my$chk=pop @a;
              my$sum=0; my$odd=0;
              while(@a){my$v=pop@a; $sum+= (($odd^=1) ? 3 : 1) * $v; }
              $sum %= 10;
              if($sum) {$sum = 10 - $sum;}
              $chk==$sum
+             ##use critic
            }
   => as __PACKAGE__.'::EAN13digits'
   => message { "EAN13 barcode checksum fail for code $_" };
@@ -70,7 +59,7 @@ sub _build_tube_barcode{
   if(! $self->tube_ean13_barcode){
     croak 'Require EAN13 barcode to figure out barcode number';
   }
-  my($barcode)=$self->tube_ean13_barcode=~/\d{3}(\d{7})\d{3}/sm;
+  my($barcode)=$self->tube_ean13_barcode=~/\d{3}(\d{7})\d{3}/smx;
   if($barcode){$barcode+=0;} #should be integer
   return $barcode
 }
@@ -156,8 +145,6 @@ no Moose;
 
 =item Carp
 
-=item Readonly
-
 =item npg_warehouse::Schema
 
 =item Moose
@@ -176,7 +163,7 @@ David K Jackson <david.jackson@sanger.ac.uk>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2013 GRL, by David Jackson
+Copyright (C) 2017 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

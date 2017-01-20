@@ -14,15 +14,7 @@ __PACKAGE__->load_namespaces;
 # Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:R8ea9/5ZIcfZU2PXYKtAFw
 
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       23 June 2010
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 with qw/npg_tracking::util::db_connect/;
 
@@ -72,8 +64,6 @@ for the warehouse database.
 
 =over
 
-=item Readonly
-
 =item Moose
 
 =item MooseX::MarkAsMethods
@@ -94,7 +84,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2016 GRL
+Copyright (C) 2017 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

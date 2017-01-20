@@ -372,14 +372,6 @@ __PACKAGE__->add_unique_constraint(
 # Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:jd9B+Auhe/8GuYiTu9oT9Q
 
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       13 August 2010
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
 __PACKAGE__->has_many(
   'npg_information',
   'npg_warehouse::Schema::Result::NpgInformation',
@@ -393,10 +385,6 @@ __END__
 =head1 NAME
 
 npg_warehouse::Schema::Result::Sample
-
-=head1 VERSION
-
-$LastChangedRevision$
 
 =head1 SYNOPSIS
 
@@ -432,7 +420,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2011 GRL, Marina Gourtovaia
+Copyright (C) 2017 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -786,15 +786,7 @@ __PACKAGE__->add_unique_constraint('id_run_position', ['id_run', 'position']);
 
 # The text below will be preserved on regeneration
 
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       13 August 2010
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 with qw/ npg_qc::autoqc::role::rpt_key /;
 
@@ -956,8 +948,6 @@ Moose-based DBIx binding for the npg_information table of the warehouse database
 
 =item Moose
 
-=item Readonly
-
 =item MooseX::NonMoose
 
 =item DBIx::Class::Core
@@ -978,7 +968,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2016 GRL
+Copyright (C) 2017 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

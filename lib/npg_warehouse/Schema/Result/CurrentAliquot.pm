@@ -333,21 +333,16 @@ __PACKAGE__->add_unique_constraint('uuid_idx', ['uuid']);
 # Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:O7NV+JOofrVrsP3cmhBdfg
 
-# Author:        david.jackson@sanger.ac.uk
-# Maintainer:    $Author: mg8 $
-# Created:       2010-04-08
-# Last Modified: $Date: 2012-11-26 09:53:48 +0000 (Mon, 26 Nov 2012) $
-# Id:            $Id: Run.pm 16269 2012-11-26 09:53:48Z mg8 $
-# $HeadURL: svn+ssh://svn.internal.sanger.ac.uk/repos/svn/new-pipeline-dev/npg-tracking/trunk/lib/npg_tracking/Schema/Result/Run.pm $
-
 BEGIN {
   use Moose;
   use MooseX::NonMoose;
   use MooseX::MarkAsMethods autoclean => 1;
-  use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision: 16389 $ =~ /(\d+)/mxs; $r; };
+  use Readonly;
   use Carp;
   extends 'DBIx::Class::Core';
 }
+
+our $VERSION = '0';
 
 for my $m (qw(receptacle sample study project library)){ # alias for study_internal_id of study_id - same for project and sample
   __PACKAGE__->meta->add_method($m.q(_id), \&{$m.q(_internal_id)});

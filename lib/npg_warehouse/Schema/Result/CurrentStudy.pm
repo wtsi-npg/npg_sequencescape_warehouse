@@ -410,16 +410,7 @@ __PACKAGE__->add_unique_constraint('uuid_idx', ['uuid']);
 # Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Ma0T9vVVx+JcXihsHcMwbQ
 
-
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       7 October 2012
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 sub study_name {
     my $self = shift;
@@ -537,7 +528,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2016 GRL
+Copyright (C) 2017 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

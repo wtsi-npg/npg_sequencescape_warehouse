@@ -1,107 +1,63 @@
-################
-# Created by: ajb
-# Maintainer: $Author$
-# Created on: 2009-04-08
-# Last Changed: $Date$
-# Id: $Id$
-# $HeadURL$
-
 use strict;
 use warnings;
-use Module::Build;
+use lib 'lib';
 
-our $VERSION = do { my @r = (q$Revision$ =~ /\d+/mxgs); sprintf '%d.'.'%03d' x $#r, @r };
+use WTSI::DNAP::Utilities::Build;
 
-my $requires = {
-                    'perl'                      => '5.010',
-                    'Carp'                      => 0,
-                    'Cwd'                       => 0,
-                    'Date::Calc'                => 0,
-                    'DateTime'                  => 0,
-                    'DBI'                       => 0,
-                    'DBIx::Class'               => 0,
-                    'DBIx::Class::Schema::Loader' => 0,
-                    'Digest::MD5'               => 0,
-                    'English'                   => 0,
-                    'File::Basename'            => 0,
-                    'File::Slurp'               => 0,
-                    'File::Spec'                => 0,
-                    'File::Spec::Functions'     => 0,
-                    'FindBin'                   => 0,
-                    'Getopt::Long'              => '2.37',
-                    'IPC::Open3'                => 0,
-                    'JSON'                      => 0,
-                    'List::MoreUtils'           => 0,
-                    'List::Util'                => 0,
-                    'LWP::UserAgent'            => 0,
-                    'MIME::Lite'                => 0,
-                    'Moose'                     => 0,
-                    'Moose::Role'               => 0,
-                    'Moose::Util::TypeConstraints' => 0,
-                    'MooseX::Getopt'             => 0,
-                    'MooseX::MarkAsMethods'     => 0,
-                    'MooseX::NonMoose'          => 0,
-                    'MooseX::StrictConstructor' => 0,
-                    'namespace::autoclean'      => 0,
-                    'Perl6::Slurp'              => 0,
-                    'Pod::Usage'                => 0,
-                    'POSIX'                     => '1.09',
-                    'strict'                    => 0,
-                    'Try::Tiny'                 => 0,
-                    'warnings'                  => 0,
-                    'XML::LibXML'               => 0,
+my $builder = WTSI::DNAP::Utilities::Build->new(
 
-                    'npg_common::roles::log'                  => 0,
-
-                    'npg_qc::illumina::loader'                => 0,
-                    'npg_qc::Schema'                          => 0,
-                    'npg_qc::autoqc::role::result'            => 0,
-                    'npg_qc::autoqc::qc_store'                => 0,
-                    'npg_tracking::data::reference'           => 0,
-                    'npg_tracking::data::reference::find'     => 0,
-                    'npg_tracking::glossary::run'             => 0,
-                    'npg_tracking::illumina::run::folder::validation' => 0,
-                    'npg_tracking::illumina::run::folder'     => 0,
-                    'npg_tracking::illumina::run::long_info'  => 0,
-                    'npg_tracking::illumina::run::short_info' => 0,
-                    'npg_tracking::Schema'                    => 0,
-                    'npg_tracking::util::db_connect'          => 0,
-                    'st::api::lims'                           => 0,
-
-                    'WTSI::NPG::iRODS'                        => '>= 2.3.0',
-                    'npg_pipeline::cache'                     => 0,
-};
-
-my $builder = Module::Build->new(
-                 'module_name'         => 'data_handling',
-                 'dist_author'         => q(npg <npg@sanger.ac.uk>),
-                 'dist_version_from'   => q(lib/srpipe/runfolder.pm),
-                 'dist_abstract'       => q(LIMS warehouse DBIx binding&loader),
-                 'license'             => 'gpl',
+                 'module_name'    => 'npg_sequencescape_warehouse',
+                 'dist_author'    => q(npg <npg@sanger.ac.uk>),
+                 'dist_version'   => WTSI::DNAP::Utilities::Build->report_version(),
+                 'dist_abstract'  => q(Sequencescape LIMs warehouse DBIx binding&loader),
+                 'license'        => 'gpl',
 
 		 'configure_requires'  => {
-                    'Readonly'                  => 0,
-                    'Readonly::XS'              => 0,
+                    'ExtUtils::CBuilder'        => 0,
+                    'Module::Build'             => '>= 0.42',
                  },
 
 		 'build_requires'      => {
-                    'Archive::Tar'                => 0,
-                    'File::Temp'                  => 0,
-                    'File::Path'                  => 0,
                     'Test::Compile'               => 0,
-                    'Test::Deep'                  => 0,
                     'Test::Distribution'          => 0,
                     'Test::Exception'             => 0,
                     'Test::More'                  => '0.8',
                     'Test::Perl::Critic'          => 0,
                     'Test::Pod'                   => '1.00',
-                    'Test::Pod::Coverage'         => '1.04',
-                    'Test::Warn'                  => 0,
-                    'YAML'                        => 0,
                     'npg_testing::db'             => 0,
                  },
 
-                 'requires'            => $requires,
+                 'requires'            => {
+                    'perl'                      => '5.010',
+                    'Carp'                      => 0,
+                    'DateTime'                  => 0,
+                    'DBIx::Class'               => 0,
+                    'DBIx::Class::Schema::Loader' => 0,
+                    'English'                   => 0,
+                    'File::Basename'            => 0,
+                    'FindBin'                   => 0,
+                    'Getopt::Long'              => '2.37',
+                    'Moose'                     => 0,
+                    'Moose::Util::TypeConstraints' => 0,
+                    'MooseX::Getopt'             => 0,
+                    'MooseX::MarkAsMethods'     => 0,
+                    'MooseX::NonMoose'          => 0,
+                    'MooseX::StrictConstructor' => 0,
+                    'Pod::Usage'                => 0,
+                    'Readonly'                  => 0,
+                    'Readonly::XS'              => 0,
+                    'strict'                    => 0,
+                    'warnings'                  => 0,
+
+                    'npg_qc::Schema'                => 0,
+                    'npg_qc::autoqc::qc_store'      => 0,
+                    'npg_qc::autoqc::role::rpt_key' => 0,
+                    'npg_tracking::Schema'          => 0,
+                    'st::api::lims'                 => 0,
+                    'npg_warehouse::loader::autoqc' => 0,
+                    'npg_warehouse::loader::npg'    => 0,
+                    'npg_warehouse::loader::qc'     => 0,
+               }
 );
 
 $builder->create_build_script();

@@ -574,15 +574,7 @@ __PACKAGE__->set_primary_key('id_run', 'position', 'tag_index');
 
 # You can replace this text with custom content, and it will be preserved on regeneration
 
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       13 August 2010
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
-use Readonly; Readonly::Scalar our $VERSION => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+our $VERSION = '0';
 
 =head2 npg_info
 
@@ -707,8 +699,6 @@ Moose-based DBIx binding for the npg_plex_information table of the warehouse dat
 
 =over
 
-=item Readonly
-
 =item strict
 
 =item warnings
@@ -735,7 +725,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2016 GRL
+Copyright (C) 2017 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

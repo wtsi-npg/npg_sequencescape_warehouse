@@ -1,11 +1,3 @@
-#########
-# Author:        Andy Brown and Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       2009-03-27
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
 package npg_warehouse::loader;
 
 use Carp;
@@ -24,12 +16,14 @@ use npg_warehouse::loader::qc;
 use npg_warehouse::loader::npg;
 use npg_warehouse::loader::run_status;
 
-use Readonly; Readonly::Scalar our $VERSION  => do { my ($r) = q$LastChangedRevision$ =~ /(\d+)/mxs; $r; };
+use Readonly;
 ## no critic (ProhibitLongChainsOfMethodCalls ProhibitExcessComplexity ProhibitNoisyQuotes)
 
 Readonly::Scalar our $FORWARD_END_INDEX   => 1;
 Readonly::Scalar our $REVERSE_END_INDEX   => 2;
 Readonly::Scalar our $PLEXES_KEY         => q[plexes];
+
+our $VERSION = '0';
 
 =head1 NAME
 
@@ -608,12 +602,11 @@ __END__
 
 =head1 AUTHOR
 
-Andy Brown
 Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2016 GRL
+Copyright (C) 2017 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
