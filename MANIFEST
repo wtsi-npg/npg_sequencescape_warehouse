@@ -80,6 +80,7 @@ t/10-npg_warehouse-Schema.t
 t/20-npg_warehouse-loader.t
 t/30-npg_warehouse-loader.t
 t/40-st_api_lims_warehouse.t
+t/data/.npg/npg_tracking
 t/data/fixtures/npg/000-CostCode.yml
 t/data/fixtures/npg/000-InstrumentStatusDict.yml
 t/data/fixtures/npg/000-RunStatusDict.yml

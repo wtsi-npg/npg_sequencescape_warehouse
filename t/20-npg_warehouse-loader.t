@@ -5,16 +5,14 @@ use Test::Exception;
 use Test::Deep;
 use DateTime;
 
+# Reset HOME to retrieve test npg_tracking configuratio file from ${HOME}/.npg
 local $ENV{'HOME'};
 BEGIN{ $ENV{'HOME'}='t/data';}
 
 use npg_qc::autoqc::qc_store;
 use t::npg_warehouse::util;
-
 use npg_warehouse::loader::autoqc;
 
-# set up the location of the test staging area
-local $ENV{TEST_DIR} = q[t/data/archive];
 local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data/npg_warehouse_loader];
 
 BEGIN { use_ok('npg_warehouse::loader'); }
