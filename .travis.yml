@@ -1,0 +1,23 @@
+udo: required
+
+language: perl
+
+perl:
+  - "5.16"
+  - "5.22-shrplib"
+
+addons:
+  apt:
+    packages:
+    - libgd2-xpm-dev
+
+env:
+  global:
+    - WTSI_NPG_GITHUB_URL=https://github.com/wtsi-npg
+
+install:
+  - ./.travis/install.sh
+  - cpanm --quiet --notest --installdeps .
+
+script:
+  - perl Build.PL && ./Build && ./Build test
