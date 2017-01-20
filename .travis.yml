@@ -10,6 +10,7 @@ addons:
   apt:
     packages:
     - libgd2-xpm-dev
+    - liblzma-dev
 
 env:
   global:

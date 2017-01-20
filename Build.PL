@@ -39,7 +39,6 @@ my $requires = {
                     'warnings'                  => 0,
                     'XML::LibXML'               => 0,
 
-                    'npg_qc::illumina::loader'                => 0,
                     'npg_qc::Schema'                          => 0,
                     'npg_qc::autoqc::role::result'            => 0,
                     'npg_qc::autoqc::qc_store'                => 0,
