@@ -408,14 +408,6 @@ __PACKAGE__->add_unique_constraint(
 
 # You can replace this text with custom content, and it will be preserved on regeneration
 
-#########
-# Author:        Marina Gourtovaia
-# Maintainer:    $Author$
-# Created:       4 April 2011
-# Last Modified: $Date$
-# Id:            $Id$
-# $HeadURL$
-
 use Carp;
 
 __PACKAGE__->has_many(
@@ -489,7 +481,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2011 GRL, Marina Gourtovaia
+Copyright (C) 2017 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
