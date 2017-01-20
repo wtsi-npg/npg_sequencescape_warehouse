@@ -12,7 +12,7 @@ use npg_tracking::Schema;
 use npg_qc::Schema;
 use WTSI::DNAP::Warehouse::Schema;
 use npg_qc::autoqc::qc_store;
-
+use st::api::lims;
 use npg_warehouse::loader::autoqc;
 use npg_warehouse::loader::lims;
 use npg_warehouse::loader::qc;
@@ -183,7 +183,7 @@ sub _build__run_lane_rs {
 }
 
 sub _create_lims_retriever {
-    my ($self, $id_run) = @_;
+    my ($self, $id_run, $batch_id) = @_;
 
     my $ref = {
         id_run      => $id_run,
@@ -191,7 +191,10 @@ sub _create_lims_retriever {
     };
     if ($self->lims_driver_type() =~ 'ml_warehouse') {
         $ref->{'mlwh_schema'} = $self->_schema_mlwarehouse();
+    } elsif ($self->lims_driver_type() eq 'xml') {
+        $ref->{'batch_id'} = $batch_id;
     }
+
     return npg_warehouse::loader::lims->new(
         lims     => st::api::lims->new($ref),
         plex_key => $PLEXES_KEY
@@ -254,15 +257,14 @@ sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
     my $qyields = $qc_retriever->retrieve_yields($id_run);
     my $run_cluster_density = $qc_retriever->retrieve_cluster_density($id_run);
 
+    my $batch_id = $lanes->[0]->run->batch_id;
     my $run_lane_info = {};
-    my $lims_retriever = $self->_create_lims_retriever($id_run);
+    my $lims_retriever = $self->_create_lims_retriever($id_run, $batch_id);
     try {
         $run_lane_info = $lims_retriever->retrieve($run_is_indexed);
     } catch {
         carp qq[Failed to retrieve LIMS data for run $id_run : $_];
     };
-
-    my $batch_id = $lanes->[0]->run->batch_id;
 
     foreach my $rs (@{$lanes})  {
 
@@ -486,9 +488,11 @@ __END__
 
 =item npg_qc::Schema
 
-=item WTSI::DNAP::Warehouse::Schema
-
 =item npg_qc::autoqc::qc_store
+
+=item st::api::lims
+
+=item WTSI::DNAP::Warehouse::Schema
 
 =item npg_warehouse::loader::autoqc
 
