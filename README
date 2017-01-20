@@ -1,5 +1,8 @@
-npg_sscape_warehouse
---------------------
+npg_sequencescape_warehouse
+---------------------------
 
-contains
- - LIMS warehouse database DBIx binding and loader
+Old sequencescape warehouse:
+  DBIx binding,
+  loader for npg tables,
+  LIMs driver for st::api::lims.
+
