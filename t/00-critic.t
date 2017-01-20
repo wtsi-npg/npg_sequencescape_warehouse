@@ -34,7 +34,9 @@ if($EVAL_ERROR) {
                  ],
   );
 
-  my @files = qw (lib/npg_warehouse/loader.pm
+  my @files = qw (
+                lib/st/api/lims/warehouse.pm
+                lib/npg_warehouse/loader.pm
                 lib/npg_warehouse/loader/lims.pm
                 lib/npg_warehouse/Schema.pm
                 lib/npg_warehouse/Schema/Result/NpgInformation.pm
@@ -42,8 +44,7 @@ if($EVAL_ERROR) {
                 lib/npg_warehouse/Schema/Result/CurrentStudy.pm
                 lib/npg_warehouse/Schema/Result/CurrentSample.pm
                );
-  push @files, Perl::Critic::Utils::all_perl_files(
-    'bin', 'lib/srpipe', 'lib/npg_common', 'lib/npg_validation');
+  push @files, Perl::Critic::Utils::all_perl_files('bin');
   foreach my $file (@files) {
     critic_ok($file);
   }

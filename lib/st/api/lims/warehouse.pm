@@ -30,14 +30,15 @@ subtype __PACKAGE__.'::EAN13digits'
   => message { 'EAN13 barcode should be 13 digits' };
 
 subtype __PACKAGE__.'::EAN13'
-  => where {
-             my@a=split '',$_;
+  => where { ##no critic ( ValuesAndExpressions::ProhibitMagicNumbers)
+             my@a=split //sm, $_;
              my$chk=pop @a;
              my$sum=0; my$odd=0;
              while(@a){my$v=pop@a; $sum+= (($odd^=1) ? 3 : 1) * $v; }
              $sum %= 10;
              if($sum) {$sum = 10 - $sum;}
              $chk==$sum
+             ##use critic
            }
   => as __PACKAGE__.'::EAN13digits'
   => message { "EAN13 barcode checksum fail for code $_" };
@@ -58,7 +59,7 @@ sub _build_tube_barcode{
   if(! $self->tube_ean13_barcode){
     croak 'Require EAN13 barcode to figure out barcode number';
   }
-  my($barcode)=$self->tube_ean13_barcode=~/\d{3}(\d{7})\d{3}/sm;
+  my($barcode)=$self->tube_ean13_barcode=~/\d{3}(\d{7})\d{3}/smx;
   if($barcode){$barcode+=0;} #should be integer
   return $barcode
 }
