@@ -4,6 +4,11 @@ Changes for npg_sequencescape_warehouse
  - Changes needed to convert an svn project to a git project.
    Only recent history has been transferred from the svn project.
  - Travis CI integration added.
+ - LIMs driver type option for the warehouse loader, defaults to
+   ml_warehouse_fc_cache
+ - stop loading LIMs data that are only available via an xml LIMs driver
+ - try to load LIMs data for all runs that are being loaded, remove 'recent' option
+ - stop loading 'is_dev' column of the npg_information table
 
 release 42.1.1
 
