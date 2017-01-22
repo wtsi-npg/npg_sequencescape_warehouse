@@ -3,7 +3,6 @@ use warnings;
 
 use Test::More tests => 10;
 use Test::Exception;
-use Test::Deep;
 use npg_tracking::Schema;
 use npg_qc::Schema;
 

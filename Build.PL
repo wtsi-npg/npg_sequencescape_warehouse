@@ -18,6 +18,7 @@ my $builder = WTSI::DNAP::Utilities::Build->new(
                  },
 
 		 'build_requires'      => {
+                    'DateTime'                    => 0,
                     'Test::Compile'               => 0,
                     'Test::Distribution'          => 0,
                     'Test::Exception'             => 0,
