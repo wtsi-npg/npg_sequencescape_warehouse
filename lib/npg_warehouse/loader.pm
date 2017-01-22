@@ -196,8 +196,8 @@ sub _create_lims_retriever {
     }
 
     return npg_warehouse::loader::lims->new(
-        lims     => st::api::lims->new($ref),
-        plex_key => $PLEXES_KEY
+            lims     => st::api::lims->new($ref),
+            plex_key => $PLEXES_KEY
     );
 }
 
@@ -259,11 +259,13 @@ sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
 
     my $batch_id = $lanes->[0]->run->batch_id;
     my $run_lane_info = {};
-    my $lims_retriever = $self->_create_lims_retriever($id_run, $batch_id);
     try {
-        $run_lane_info = $lims_retriever->retrieve($run_is_indexed);
+        $run_lane_info = $self->_create_lims_retriever($id_run, $batch_id)
+                              ->retrieve($run_is_indexed);
     } catch {
-        carp qq[Failed to retrieve LIMS data for run $id_run : $_];
+        if ($self->verbose) {
+            carp qq[Failed to retrieve LIMS data for run $id_run : $_];
+        }
     };
 
     foreach my $rs (@{$lanes})  {

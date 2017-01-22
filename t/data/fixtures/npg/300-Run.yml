@@ -173,7 +173,6 @@
   expected_cycle_count: 208
   flowcell_id: B00T5ACXX
   folder_name: 110731_HS17_06624_A_B00T5ACXX
-  folder_path_glob: '/{export,nfs}/sf34/ILorHSany_sf34/*/'
   id_instrument: 78
   id_instrument_format: 10
   id_run: 6624
@@ -186,7 +185,6 @@
   expected_cycle_count: 158
   flowcell_id: B020JACXX
   folder_name: 110804_HS22_06642_A_B020JACXX
-  folder_path_glob: '/{export,nfs}/sf39/ILorHSany_sf39/*/'
   id_instrument: 86
   id_instrument_format: 10
   id_run: 6642

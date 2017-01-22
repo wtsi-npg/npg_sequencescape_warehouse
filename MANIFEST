@@ -236,7 +236,6 @@ t/data/archive/nfs/sf45/IL21/analysis/100330_IL21_4799/Data/Intensities/Bustard-
 t/data/archive/nfs/sf45/IL21/analysis/100330_IL21_4799/Data/Intensities/Bustard-2010-03-30/PB_cal/archive/qc/4799_7_tag_decode_stats.json
 t/data/archive/nfs/sf45/IL21/analysis/100330_IL21_4799/Data/Intensities/Bustard-2010-03-30/PB_cal/archive/qc/4799_8.insert_size.json
 t/data/archive/nfs/sf45/IL21/analysis/100330_IL21_4799/Data/Intensities/Bustard-2010-03-30/PB_cal/archive/qc/4799_8_tag_decode_stats.json
-t/data/fixtures/npg/000-CostCode.yml
 t/data/fixtures/npg/000-InstrumentStatusDict.yml
 t/data/fixtures/npg/000-RunStatusDict.yml
 t/data/fixtures/npg/000-Tag.yml

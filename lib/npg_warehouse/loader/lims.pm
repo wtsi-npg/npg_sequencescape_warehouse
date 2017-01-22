@@ -99,7 +99,7 @@ sub _common_attrs {
         my @children = grep {
             ($_->position() == $lims->position) && (defined $_->tag_index) && !$_->is_control()
         } @{$all_lims};
-        
+
         $h->{'manual_qc'} = $lims->seq_qc_state();
         if (@children) {
             if (!defined $h->{'manual_qc'}) {
@@ -108,7 +108,7 @@ sub _common_attrs {
                 if (@qc_states == @children) {
 		    $h->{'manual_qc'} = all {$_->qc_state == 0} @children ? 0 : 1;
 	        }
-	    } 
+	    }
             if (!$run_is_indexed && scalar @children == 1) {
 	        $h->{'asset_id'}   = _lib4asset_id($children[0]->library_id);
             }
