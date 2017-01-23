@@ -54,7 +54,7 @@ if ($lims_driver_type) {
 }
 
 my $action = $run_statuses ? 'update_run_statuses' : 'load';
-npg_warehouse::loader->new($ref)->action();
+npg_warehouse::loader->new($ref)->$action();
 
 if ($verbose) {
   warn "Completed loading, exiting...\n";
