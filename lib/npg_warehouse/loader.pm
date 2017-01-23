@@ -4,6 +4,7 @@ use Carp;
 use namespace::autoclean;
 use Moose;
 use MooseX::StrictConstructor;
+use List::MoreUtils qw/uniq/;
 use Readonly;
 use Try::Tiny;
 
@@ -25,6 +26,7 @@ Readonly::Scalar my $FORWARD_END_INDEX   => 1;
 Readonly::Scalar my $REVERSE_END_INDEX   => 2;
 Readonly::Scalar my $PLEXES_KEY          => q[plexes];
 Readonly::Scalar my $DEFAULT_LIMS_DRIVER => q[ml_warehouse_fc_cache];
+Readonly::Scalar my $TENTHOUSAND         => 10_000;
 
 =head1 NAME
 
@@ -385,6 +387,12 @@ Retrieve data for one run and load these data to the warehouse
 =cut
 sub retrieve_load_run {
     my ($self, $run_lanes, $id_run) = @_;
+
+    if (!@{$run_lanes}) {
+      return;
+    }
+    (scalar uniq map { $_->id_run } @{$run_lanes}) == 1 or croak 'Incorrect list of lanes';
+
     try {
         my $data = $self->npg_data($run_lanes, $id_run);
         foreach my $table_name (sort keys %{$data}) {
@@ -412,13 +420,24 @@ sub load {
     my $previous_id_run = $rs->run->id_run;
     my $id_run;
     while ($rs) {
+        my $skip = 0;
         $id_run = $rs->run->id_run;
+        my $batch_id = $rs->run->batch_id;
+        if (!$batch_id && $id_run > $TENTHOUSAND) {
+            if ($self->verbose) {
+                carp "Skipping run $id_run";
+            }
+            $skip = 1;
+        }
         if($id_run != $previous_id_run) {
             $self->retrieve_load_run(\@run_lanes, $previous_id_run);
             @run_lanes = ();
             $previous_id_run = $id_run;
         }
-        push @run_lanes, $rs;
+        if (!$skip) {
+            push @run_lanes, $rs;
+        }
+
         $rs = $all_rs->next;
     }
 
@@ -483,6 +502,8 @@ __END__
 =item Moose
 
 =item MooseX::StrictConstructor
+
+=item List::MoreUtils
 
 =item npg_warehouse::Schema
 
