@@ -5,7 +5,7 @@ use Test::More tests => 115;
 use Test::Exception;
 use st::api::lims;
 
-local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data/npg_warehouse_loader];
+local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data];
 
 use_ok('npg_warehouse::loader::lims');
 

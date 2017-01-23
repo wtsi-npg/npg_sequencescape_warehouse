@@ -12,7 +12,7 @@ use npg_qc::autoqc::qc_store;
 use t::npg_warehouse::util;
 use npg_warehouse::loader::autoqc;
 
-local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data/npg_warehouse_loader];
+local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data];
 
 BEGIN { use_ok('npg_warehouse::loader'); }
 
