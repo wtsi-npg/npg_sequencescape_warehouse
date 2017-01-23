@@ -43,7 +43,7 @@ Name of the key to use in the hash returned by retrieve() for plex data.
 has 'plex_key' => ( isa             => 'Str',
                     is              => 'ro',
                     required        => 1,
-		  );
+		              );
 
 =head2 retrieve
 
@@ -51,30 +51,29 @@ Returns LIMSs data as a hash ready for loading to the warehouse.
 
 =cut
 sub retrieve {
-    my ($self, $run_is_indexed) = @_;
+  my ($self, $run_is_indexed) = @_;
 
-    my $info  = {};
-    my @alims = $self->lims()->associated_lims();
+  my $info  = {};
+  my @alims = $self->lims()->associated_lims();
 
-    foreach my $lims ( $self->lims()->associated_lims() ) {
+  foreach my $lims ( $self->lims()->associated_lims() ) {
+    my $position  = $lims->position;
+    my $tag_index = $lims->tag_index;
+    my $attrs = _common_attrs($lims, $run_is_indexed, \@alims);
 
-        my $position  = $lims->position;
-        my $tag_index = $lims->tag_index;
-        my $attrs = _common_attrs($lims, $run_is_indexed, \@alims);
-
-        if (!defined $tag_index) {  # lane level object
-            $info->{$position} = $attrs;
-            $info->{$position}->{'lane_type'}  = $lims->is_control ? q[control] :
+    if (!defined $tag_index) {  # lane level object
+      $info->{$position} = $attrs;
+      $info->{$position}->{'lane_type'}  = $lims->is_control ? q[control] :
                 ($lims->is_pool ? q[pool] : q[library]);
-            if ($lims->spiked_phix_tag_index) {
-               $info->{$position}->{'spike_tag_index'}  = $lims->spiked_phix_tag_index;
+      if ($lims->spiked_phix_tag_index) {
+        $info->{$position}->{'spike_tag_index'}  = $lims->spiked_phix_tag_index;
 	    }
-        } else { # plex level object
+    } else { # plex level object
 	    $info->{$position}->{$self->plex_key}->{$tag_index} = $attrs;
-        }
     }
+  }
 
-    return $info;
+  return $info;
 }
 
 sub _lib4asset_id {
@@ -83,41 +82,43 @@ sub _lib4asset_id {
 }
 
 sub _common_attrs {
-    my ($lims, $run_is_indexed, $all_lims) = @_;
+  my ($lims, $run_is_indexed, $all_lims) = @_;
 
-    my $with_spiked_control = 0;
-    my @study_ids     = $lims->study_ids($with_spiked_control);
-    my @library_types = $lims->library_types($with_spiked_control);
-    my $h = {
-        asset_id     => _lib4asset_id($lims->library_id),
-        sample_id    => $lims->sample_id || undef,
-        study_id     => scalar @study_ids     == 1 ? $study_ids[0]     : ($lims->study_id     || undef),
-        library_type => scalar @library_types == 1 ? $library_types[0] : ($lims->library_type || undef),
-    };
+  my $with_spiked_control = 0;
+  my @study_ids     = $lims->study_ids($with_spiked_control);
+  my @library_types = $lims->library_types($with_spiked_control);
+  my $h = {
+    asset_id     => _lib4asset_id($lims->library_id),
+    sample_id    => $lims->sample_id || undef,
+    study_id     => scalar @study_ids     == 1 ? $study_ids[0]     :
+                    ($lims->study_id     || undef),
+    library_type => scalar @library_types == 1 ? $library_types[0] :
+                    ($lims->library_type || undef),
+  };
 
-    if (!defined $lims->tag_index) {
-        my @children = grep {
-            ($_->position() == $lims->position) && (defined $_->tag_index) && !$_->is_control()
-        } @{$all_lims};
+  if (!defined $lims->tag_index) {
+    my @children = grep {
+      ($_->position() == $lims->position) && (defined $_->tag_index) && !$_->is_control()
+    } @{$all_lims};
 
-        $h->{'manual_qc'} = $lims->seq_qc_state();
-        if (@children) {
-            if (!defined $h->{'manual_qc'}) {
-	        my @qc_states = map {$_->qc_state} grep {defined $_->qc_state} @children;
-                # If all plexes have been qc-ed
-                if (@qc_states == @children) {
-		    $h->{'manual_qc'} = all {$_->qc_state == 0} @children ? 0 : 1;
-	        }
+    $h->{'manual_qc'} = $lims->seq_qc_state();
+    if (@children) {
+      if (!defined $h->{'manual_qc'}) {
+	      my @qc_states = map {$_->qc_state} grep {defined $_->qc_state} @children;
+        # If all plexes have been qc-ed
+        if (@qc_states == @children) {
+		      $h->{'manual_qc'} = all {$_->qc_state == 0} @children ? 0 : 1;
+	      }
 	    }
-            if (!$run_is_indexed && scalar @children == 1) {
-	        $h->{'asset_id'}   = _lib4asset_id($children[0]->library_id);
-            }
-	}
+      if (!$run_is_indexed && scalar @children == 1) {
+	      $h->{'asset_id'}   = _lib4asset_id($children[0]->library_id);
+      }
     }
+  }
 
-    $h->{'asset_name'} = $h->{'asset_id'};
+  $h->{'asset_name'} = $h->{'asset_id'};
 
-    return $h;
+  return $h;
 }
 
 __PACKAGE__->meta->make_immutable;
