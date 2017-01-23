@@ -20,6 +20,8 @@ use npg_warehouse::loader::qc;
 use npg_warehouse::loader::npg;
 use npg_warehouse::loader::run_status;
 
+with 'MooseX::Getopt';
+
 our $VERSION = '0';
 
 Readonly::Scalar my $FORWARD_END_INDEX   => 1;
@@ -53,6 +55,17 @@ Verbose flag
 
 =cut
 has 'verbose'      => ( isa        => 'Bool',
+                        is         => 'ro',
+                        required   => 0,
+                        default    => 0,
+                      );
+
+=head2 run_statuses
+
+Flag to load run statuses, false by default
+
+=cut
+has 'run_statuses' => ( isa        => 'Bool',
                         is         => 'ro',
                         required   => 0,
                         default    => 0,
@@ -455,6 +468,23 @@ sub update_run_statuses {
     my $self = shift;
     npg_warehouse::loader::run_status->new(schema_npg => $self->_schema_npg,
                                            schema_wh  => $self->_schema_wh)->copy_npg_tables;
+    return;
+}
+
+=head2 run
+
+Calls one of the loaders
+
+=cut
+sub run {
+    my $self = shift;
+    if (defined $ENV{dev} && $ENV{dev}) {
+        warn 'USING ' . $ENV{dev} . " DATABASES\n";
+    }
+    $self->run_statuses ? $self->update_run_statuses() : $self->load();
+    if ($self->verbose) {
+        warn "Completed loading, exiting...\n";
+    }
     return;
 }
 

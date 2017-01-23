@@ -5,63 +5,14 @@ use warnings;
 use FindBin qw($Bin);
 use lib ( -d "$Bin/../lib/perl5" ? "$Bin/../lib/perl5" : "$Bin/../lib" );
 use Getopt::Long;
-use Pod::Usage;
 
 use npg_warehouse::loader;
 
 our $VERSION = '0';
 
-my $verbose          = 0;
-my $help             = q[];
-my $id_runs          = [];
-my $run_statuses     = 0;
-my $lims_driver_type = q[];
-
-GetOptions ('verbose!'           => \$verbose,
-            'help'               => \$help,
-            'id_run=i@'          => \$id_runs,
-            'run_statuses!'      => \$run_statuses,
-            'lims_driver_type=s' => \$lims_driver_type,
-           );
-if ($help) { pod2usage(0); }
-
-if ($run_statuses) {
-  if ($verbose) {
-    warn qq[Updating run statuses\n];
-  }
-} else {
-  warn qq[Setting npg_warehouse::loader attributes:\n];
-  warn qq[  verbose\t$verbose\n];
-  if (@{$id_runs}) {
-  my $runs = join q[ ], sort {$a <=> $b} @{$id_runs};
-    warn qq[  id_run\t$runs\n];
-  }
-}
-
-if (defined $ENV{dev} && $ENV{dev}) {
-   warn 'LOADING TO ' . $ENV{dev} . " DATABASE\n";
-}
-# We always get the data from live databases,
-# but might need to load to different staging databases.
-my $schema = npg_warehouse::Schema->connect();
-
-local $ENV{dev} = q[live];
-
-my $ref = {_schema_wh => $schema, id_run => $id_runs};
-$ref->{'verbose'} = $verbose;
-if ($lims_driver_type) {
-  $ref->{'lims_driver_type'} = $lims_driver_type;
-}
-
-my $action = $run_statuses ? 'update_run_statuses' : 'load';
-npg_warehouse::loader->new($ref)->$action();
-
-if ($verbose) {
-  warn "Completed loading, exiting...\n";
-}
+npg_warehouse::loader->new_with_options()->run();
 
 1;
-
 
 __END__
 
@@ -82,6 +33,7 @@ warehouse_loader [options]
    --noverbose (a default option)
    --id_run  : load particular run, multiple runs can be specified by repeating this option
    --lims_driver_type  : an optional lims driver type
+   --run_statuses : call run status loader
 
 =head1 DESCRIPTION
 
@@ -110,10 +62,6 @@ warehouse_loader [options]
 =item warnings
 
 =item npg_warehouse::loader
-
-=item Getopt::Long
-
-=item Pod::Usage
 
 =back
 
