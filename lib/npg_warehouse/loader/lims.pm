@@ -76,7 +76,7 @@ sub retrieve {
   return $info;
 }
 
-sub _lib4asset_id {
+sub _lib2asset_id {
   my $lib_id = shift;
   return $lib_id && $lib_id =~ /\A\d+\Z/smx ? $lib_id : undef;
 }
@@ -87,14 +87,14 @@ sub _common_attrs {
   my $with_spiked_control = 0;
   my @study_ids     = $lims->study_ids($with_spiked_control);
   my @library_types = $lims->library_types($with_spiked_control);
-  my $h = {
-    asset_id     => _lib4asset_id($lims->library_id),
-    sample_id    => $lims->sample_id || undef,
-    study_id     => scalar @study_ids     == 1 ? $study_ids[0]     :
-                    ($lims->study_id     || undef),
-    library_type => scalar @library_types == 1 ? $library_types[0] :
-                    ($lims->library_type || undef),
-  };
+  my $h = {};
+  $h->{'asset_id'}     = _lib2asset_id($lims->library_id);
+  $h->{'asset_name'}   = $lims->library_name;
+  $h->{'sample_id'}    = $lims->sample_id || undef;
+  $h->{'study_id'}     = scalar @study_ids     == 1 ? $study_ids[0]     :
+                          ($lims->study_id     || undef);
+  $h->{'library_type'} = scalar @library_types == 1 ? $library_types[0] :
+                          ($lims->library_type || undef);
 
   if (!defined $lims->tag_index) {
     my @children = grep {
@@ -107,16 +107,15 @@ sub _common_attrs {
 	      my @qc_states = map {$_->qc_state} grep {defined $_->qc_state} @children;
         # If all plexes have been qc-ed
         if (@qc_states == @children) {
-		      $h->{'manual_qc'} = all {$_->qc_state == 0} @children ? 0 : 1;
+		      $h->{'manual_qc'} = (all {$_->qc_state == 0} @children) ? 0 : 1;
 	      }
 	    }
       if (!$run_is_indexed && scalar @children == 1) {
-	      $h->{'asset_id'}   = _lib4asset_id($children[0]->library_id);
+	      $h->{'asset_id'}   = _lib2asset_id($children[0]->library_id);
+        $h->{'asset_name'} = $children[0]->library_name;
       }
     }
   }
-
-  $h->{'asset_name'} = $h->{'asset_id'};
 
   return $h;
 }

@@ -28,22 +28,22 @@ my $plex_key = q[plexes];
 
   my $expected = {
   4965 => {
-  1 => {asset_id=>'59157',asset_name=>'59157', sample_id=>'9272', lane_type=>'library', study_id => 377, library_type=>'qPCR only',},
-  4 => {asset_id=>'79577',asset_name=>'79577', sample_id=>'9836', lane_type=>'control', study_id => undef, library_type=>undef,},
-  7 => {asset_id=>'59259',asset_name=>'59259', sample_id=>'9388', lane_type=>'library', study_id => 188, library_type=>'qPCR only',},
+  1 => {asset_id=>'59157',asset_name=>'B1267_Exp4 1', sample_id=>'9272', lane_type=>'library', study_id => 377, library_type=>'qPCR only',},
+  4 => {asset_id=>'79577',asset_name=>'phiX CT1462-2 1', sample_id=>'9836', lane_type=>'control', study_id => undef, library_type=>undef,},
+  7 => {asset_id=>'59259',asset_name=>'NA18563pd2a 1', sample_id=>'9388', lane_type=>'library', study_id => 188, library_type=>'qPCR only',},
         },
   6669 => {
-  1 => {asset_id=>'236583',asset_name=>'236583', sample_id=>'112662', lane_type=>'library', study_id => 576, library_type=>'Custom',},
-  4 => {asset_id=>'79572',asset_name=>'79572', sample_id=>'9831', lane_type=>'control',study_id => undef, library_type=>undef,},
-  7 => {asset_id=>'236519',asset_name=>'236519', lane_type=>'pool', sample_id => undef, study_id => 590, library_type=>'Custom',},
+  1 => {asset_id=>'236583',asset_name=>'O157_Input 236583', sample_id=>'112662', lane_type=>'library', study_id => 576, library_type=>'Custom',},
+  4 => {asset_id=>'79572',asset_name=>'phiX_SI_SPRI 1', sample_id=>'9831', lane_type=>'control',study_id => undef, library_type=>undef,},
+  7 => {asset_id=>'236519',asset_name=>'26May2010', lane_type=>'pool', sample_id => undef, study_id => 590, library_type=>'Custom',},
        } 
   };
 
   my $plexes = {
-  1 => {asset_id=>'236515',asset_name=>'236515', sample_id=>'112635', study_id=>590, library_type=>'Custom',},
-  2 => {asset_id=>'236516',asset_name=>'236516', sample_id=>'112636', study_id=>590, library_type=>'Custom',},
-  3 => {asset_id=>'236517',asset_name=>'236517', sample_id=>'112637', study_id=>590, library_type=>'Custom',},
-  4 => {asset_id=>'236518',asset_name=>'236518', sample_id=>'112638', study_id=>590, library_type=>'Custom',},
+  1 => {asset_id=>'236515',asset_name=>'U266 236515', sample_id=>'112635', study_id=>590, library_type=>'Custom',},
+  2 => {asset_id=>'236516',asset_name=>'10E-4NPM1_U266 236516', sample_id=>'112636', study_id=>590, library_type=>'Custom',},
+  3 => {asset_id=>'236517',asset_name=>'10E-3NPM1_U266 236517', sample_id=>'112637', study_id=>590, library_type=>'Custom',},
+  4 => {asset_id=>'236518',asset_name=>'10E-2NPM1_U266 236518', sample_id=>'112638', study_id=>590, library_type=>'Custom',},
                };
 
   foreach my $batch_id (@batch_ids) {
