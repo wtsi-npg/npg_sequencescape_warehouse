@@ -82,6 +82,7 @@ t/20-npg_warehouse-loader.t
 t/30-npg_warehouse-loader.t
 t/40-st_api_lims_warehouse.t
 t/data/.npg/npg_tracking
+t/data/samplesheet_21690.csv
 t/data/samplesheet_21721.csv
 t/data/sf39/ILorHSany_sf39/outgoing/110731_HS17_06624_A_B00T5ACXX/Data/Intensities/PB_basecalls_20110811-145428/PB_cal/archive/lane3/qc/6624_3#0_bam_flagstats.json
 t/data/sf39/ILorHSany_sf39/outgoing/110731_HS17_06624_A_B00T5ACXX/Data/Intensities/PB_basecalls_20110811-145428/PB_cal/archive/lane3/qc/6624_3#1.genotype.json

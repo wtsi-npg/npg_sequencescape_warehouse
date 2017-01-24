@@ -34,7 +34,7 @@ subtest 'object instantiation' => sub {
 };
 
 subtest 'retrieval with ml_warehouse_fc_cache driver' => sub {
-  plan tests => 3;
+  plan tests => 4;
 
   my $schema_package = q[WTSI::DNAP::Warehouse::Schema];
   my $fixtures_path = q[t/data/fixtures/mlwarehouse];
@@ -86,6 +86,70 @@ subtest 'retrieval with ml_warehouse_fc_cache driver' => sub {
   $data = $lr->retrieve();
   $expected->{1}{manual_qc} = 1;
   is_deeply ($data, $expected, 'ml_warehouse_fc_cache - correct data retrieved');
+
+  local $ENV{NPG_CACHED_SAMPLESHEET_FILE} = 't/data/samplesheet_21690.csv';
+  $lims = st::api::lims->new(driver_type => 'samplesheet',
+                                id_run      => 21690);
+  $lr = npg_warehouse::loader::lims->new(plex_key => $plex_key, lims => $lims);
+  my $is_indexed = 0; # One library in a pool!
+  $data = $lr->retrieve($is_indexed);
+
+  $expected = {
+               '2' => {
+                        'lane_type' => 'pool',
+                        'library_type' => 'HiSeqX PCR free',
+                        'study_id' => '3982',
+                        'plexes' => {
+                                      '888' => {
+                                                 'library_type' => undef,
+                                                 'study_id' => '198',
+                                                 'sample_id' => '1255141',
+                                                 'asset_name' => '12453814',
+                                                 'asset_id' => '12453814'
+                                               },
+                                      '1' => {
+                                               'library_type' => 'HiSeqX PCR free',
+                                               'study_id' => '3982',
+                                               'sample_id' => '2461560',
+                                               'asset_name' => '15755930',
+                                               'asset_id' => '15755930'
+                                             }
+                                    },
+                        'manual_qc' => undef,
+                        'asset_id' => '15755930',
+                        'asset_name' => '15755930',
+                        'sample_id' => '2461560',
+                        'spike_tag_index' => '888'
+                      },
+               '5' => {
+                        'lane_type' => 'pool',
+                        'library_type' => 'HiSeqX PCR free',
+                        'study_id' => '3982',
+                        'plexes' => {
+                                      '888' => {
+                                                 'library_type' => undef,
+                                                 'study_id' => '198',
+                                                 'sample_id' => '1255141',
+                                                 'asset_name' => '12453814',
+                                                 'asset_id' => '12453814'
+                                               },
+                                      '1' => {
+                                               'library_type' => 'HiSeqX PCR free',
+                                               'study_id' => '3982',
+                                               'sample_id' => '2468161',
+                                               'asset_name' => '15755914',
+                                               'asset_id' => '15755914'
+                                             }
+                                    },
+                        'manual_qc' => undef,
+                        'asset_id' => '15755914',
+                        'asset_name' => '15755914',
+                        'sample_id' => '2468161',
+                        'spike_tag_index' => '888'
+                      }
+             };
+
+  is_deeply ($data, $expected, 'samplesheet - correct data retrieved');
 };
 
 subtest 'retrieval with xml driver - test 1' => sub {
