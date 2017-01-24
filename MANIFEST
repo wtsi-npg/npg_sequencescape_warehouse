@@ -82,6 +82,7 @@ t/20-npg_warehouse-loader.t
 t/30-npg_warehouse-loader.t
 t/40-st_api_lims_warehouse.t
 t/data/.npg/npg_tracking
+t/data/samplesheet_21721.csv
 t/data/sf39/ILorHSany_sf39/outgoing/110731_HS17_06624_A_B00T5ACXX/Data/Intensities/PB_basecalls_20110811-145428/PB_cal/archive/lane3/qc/6624_3#0_bam_flagstats.json
 t/data/sf39/ILorHSany_sf39/outgoing/110731_HS17_06624_A_B00T5ACXX/Data/Intensities/PB_basecalls_20110811-145428/PB_cal/archive/lane3/qc/6624_3#1.genotype.json
 t/data/sf39/ILorHSany_sf39/outgoing/110731_HS17_06624_A_B00T5ACXX/Data/Intensities/PB_basecalls_20110811-145428/PB_cal/archive/lane3/qc/6624_3#1.pulldown_metrics.json
@@ -236,6 +237,10 @@ t/data/sf45/IL21/analysis/100330_IL21_4799/Data/Intensities/Bustard-2010-03-30/P
 t/data/sf45/IL21/analysis/100330_IL21_4799/Data/Intensities/Bustard-2010-03-30/PB_cal/archive/qc/4799_7_tag_decode_stats.json
 t/data/sf45/IL21/analysis/100330_IL21_4799/Data/Intensities/Bustard-2010-03-30/PB_cal/archive/qc/4799_8.insert_size.json
 t/data/sf45/IL21/analysis/100330_IL21_4799/Data/Intensities/Bustard-2010-03-30/PB_cal/archive/qc/4799_8_tag_decode_stats.json
+t/data/fixtures/mlwarehouse/100-Sample.yml
+t/data/fixtures/mlwarehouse/100-Study.yml
+t/data/fixtures/mlwarehouse/200-IseqFlowcell.yml
+t/data/fixtures/mlwarehouse/300-IseqProductMetric.yml
 t/data/fixtures/npg/000-InstrumentStatusDict.yml
 t/data/fixtures/npg/000-RunStatusDict.yml
 t/data/fixtures/npg/000-Tag.yml

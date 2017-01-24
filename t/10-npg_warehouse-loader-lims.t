@@ -1,25 +1,98 @@
 use strict;
 use warnings;
-use Carp;
-use Test::More tests => 115;
+use Test::More tests => 6;
 use Test::Exception;
 use st::api::lims;
-
-local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data];
+use t::npg_warehouse::util;
 
 use_ok('npg_warehouse::loader::lims');
 
 my $plex_key = q[plexes];
+local $ENV{'http_proxy'} = 'http://wibble.com'; # unable to make live http requests
+local $ENV{'HOME'}       = 't/data';            # no live db conf
 
-{
+subtest 'object instantiation' => sub {
+  plan tests => 4;
+
+  throws_ok {npg_warehouse::loader::lims->new(plex_key => $plex_key)}
+    qr/Attribute \(lims\) is required/,
+    'st::api::lims object should be given';
+
+  local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data];
   my $lims = st::api::lims->new(driver_type => 'xml', batch_id => 6669);
   my $l;
   lives_ok {$l  = npg_warehouse::loader::lims->new(plex_key => $plex_key, lims => $lims)}
-    'object instantiated';
+    'object instantiated, xml driver used';
   isa_ok ($l, 'npg_warehouse::loader::lims');
-}
+  local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[];
 
-{
+  local $ENV{NPG_CACHED_SAMPLESHEET_FILE} = 't/data/samplesheet_21721.csv';
+  lives_ok {
+    $lims = st::api::lims->new(driver_type => 'samplesheet', id_run => 21721);
+    $l  = npg_warehouse::loader::lims->new(plex_key => $plex_key, lims => $lims);
+  } 'object instantiated, samplesheet driver used';
+};
+
+subtest 'retrieval with ml_warehouse_fc_cache driver' => sub {
+  plan tests => 3;
+
+  my $schema_package = q[WTSI::DNAP::Warehouse::Schema];
+  my $fixtures_path = q[t/data/fixtures/mlwarehouse];
+  my $mlwh_schema;
+  lives_ok{ $mlwh_schema = t::npg_warehouse::util->new()
+    ->create_test_db($schema_package, $fixtures_path) }
+    'ml_warehouse test db created';
+
+  my $expected = { '1' => {
+                        'lane_type' => 'pool',
+                        'library_type' => 'qPCR only',
+                        'study_id' => '3272',
+                        'plexes' => {
+                                      '1' => {
+                                               'library_type' => 'qPCR only',
+                                               'study_id' => '3272',
+                                               'sample_id' => '2887722',
+                                               'asset_name' => 18378967,
+                                               'asset_id' => 18378967
+                                             },
+                                      '2' => {
+                                               'library_type' => 'qPCR only',
+                                               'study_id' => '3272',
+                                               'sample_id' => '2887723',
+                                               'asset_name' => 18378968,
+                                               'asset_id' => 18378968
+                                             }
+                                    },
+                        'manual_qc' => undef,
+                        'asset_id' => undef,
+                        'asset_name' => undef,
+                        'sample_id' => undef,
+                          }
+                 };
+
+  local $ENV{NPG_CACHED_SAMPLESHEET_FILE} = 't/data/samplesheet_21721.csv';
+  my $lims = st::api::lims->new(driver_type => 'samplesheet',
+                                id_run      => 21721);
+  my $lr = npg_warehouse::loader::lims->new(plex_key => $plex_key, lims => $lims);
+  my $data = $lr->retrieve();
+  is_deeply ($data, $expected, 'samplesheet - correct data retrieved');
+  local $ENV{NPG_CACHED_SAMPLESHEET_FILE} = q[];
+
+  $lims = st::api::lims->new(driver_type => 'ml_warehouse_fc_cache',
+                             id_run      => 21721,
+                             mlwh_schema => $mlwh_schema
+  );
+  $lr = npg_warehouse::loader::lims->new(plex_key => $plex_key, lims => $lims);
+  $data = $lr->retrieve();
+  $expected->{1}{manual_qc} = 1;
+  is_deeply ($data, $expected, 'ml_warehouse_fc_cache - correct data retrieved');
+};
+
+subtest 'retrieval with xml driver - test 1' => sub {
+  plan tests => 52;
+
+  local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data];
+
   my @positions = qw/ 1 4 7 /;
   my @runs = qw/ 4025 4799 /;
   my @batch_ids = qw/4965 6669/;
@@ -75,9 +148,13 @@ my $plex_key = q[plexes];
       }
     }
   }
-}
+};
 
-{
+subtest 'retrieval with xml driver - test 2' => sub {
+  plan tests => 4;
+
+  local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data];
+
   my $lims = st::api::lims->new(driver_type => 'xml', batch_id => 12509);
   my $l = npg_warehouse::loader::lims->new(plex_key => $plex_key, lims => $lims);
   my $meta  = $l->retrieve();
@@ -86,9 +163,13 @@ my $plex_key = q[plexes];
   is ($meta->{5}->{spike_tag_index}, '168', 'spike tag index for lane 5');
   ok (!exists $meta->{1}->{$plex_key}->{1}->{spike_tag_index},
     'spike tag index field not present for a plex');
-}
+};
 
-{
+subtest 'retrieval with xml driver - test 3' => sub {
+  plan tests => 56;
+
+  local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data];
+
   my @batch_ids = qw/2044 4354 4178 4445 4380 4915 4965/;
   my $manual_qc = {
   2044 => {1=>undef, 2=>undef, 3=>undef, 4=>undef, 5=>undef, 6=>undef, 7=>undef, 8=>undef,},
@@ -113,6 +194,6 @@ my $plex_key = q[plexes];
       }
     }
   }
-}
+};
 
 1;
