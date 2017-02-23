@@ -31,7 +31,7 @@ subtype __PACKAGE__.'::EAN13digits'
 
 subtype __PACKAGE__.'::EAN13'
   => where { ##no critic ( ValuesAndExpressions::ProhibitMagicNumbers)
-             my@a=split //sm, $_;
+             my@a=split //sm;
              my$chk=pop @a;
              my$sum=0; my$odd=0;
              while(@a){my$v=pop@a; $sum+= (($odd^=1) ? 3 : 1) * $v; }
