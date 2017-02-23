@@ -3,7 +3,7 @@
 # Created:       16 July 2013
 use strict;
 use warnings;
-use Test::More tests => 39;
+use Test::More tests => 38;
 use Test::Exception;
 use t::npg_warehouse::util;
 
@@ -71,10 +71,8 @@ ok($lims->study_contains_nonconsented_human, 'nonconsented human is present');
 is($lims->purpose,'qc','purpose');
 
 throws_ok{ st::api::lims::warehouse->new(@ws,tube_ean13_barcode => '3980331130774') } qr/checksum fail/, 'EAN13 checksum fail'; 
-dies_ok  { st::api::lims::warehouse->new(@ws,tube_ean13_barcode => '980331130778') } 'expect 13 characters for EAN13';
-TODO: { local $TODO = 'Fix error reported for too few character in EAN13'; # then replace above dies_ok with throws_ok below
-  throws_ok{ st::api::lims::warehouse->new(@ws,tube_ean13_barcode => '980331130774') } qr/should be 13 digits/, 'expect 13 characters for EAN13';
-}
+throws_ok{ st::api::lims::warehouse->new(@ws,tube_ean13_barcode => '980331130774') }
+  qr/EAN13 barcode checksum fail for code 980331130774/, 'expect 13 characters for EAN13';
 lives_and { is st::api::lims::warehouse->new(@ws,tube_ean13_barcode => '0280331130779')->tube_barcode, '331130' } 'EAN13 barcode can start with 0';
 
 1;
