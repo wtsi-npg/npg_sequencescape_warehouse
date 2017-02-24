@@ -1,29 +1,34 @@
 package npg_warehouse::loader;
 
 use Carp;
-use English qw{-no_match_vars};
+use namespace::autoclean;
 use Moose;
 use MooseX::StrictConstructor;
+use List::MoreUtils qw/uniq/;
+use Readonly;
+use Try::Tiny;
 
 use npg_warehouse::Schema;
 use npg_tracking::Schema;
 use npg_qc::Schema;
+use WTSI::DNAP::Warehouse::Schema;
 use npg_qc::autoqc::qc_store;
-
+use st::api::lims;
 use npg_warehouse::loader::autoqc;
 use npg_warehouse::loader::lims;
 use npg_warehouse::loader::qc;
 use npg_warehouse::loader::npg;
 use npg_warehouse::loader::run_status;
 
-use Readonly;
-## no critic (ProhibitLongChainsOfMethodCalls ProhibitExcessComplexity ProhibitNoisyQuotes)
-
-Readonly::Scalar our $FORWARD_END_INDEX   => 1;
-Readonly::Scalar our $REVERSE_END_INDEX   => 2;
-Readonly::Scalar our $PLEXES_KEY         => q[plexes];
+with 'MooseX::Getopt';
 
 our $VERSION = '0';
+
+Readonly::Scalar my $FORWARD_END_INDEX   => 1;
+Readonly::Scalar my $REVERSE_END_INDEX   => 2;
+Readonly::Scalar my $PLEXES_KEY          => q[plexes];
+Readonly::Scalar my $DEFAULT_LIMS_DRIVER => q[ml_warehouse_fc_cache];
+Readonly::Scalar my $TENTHOUSAND         => 10_000;
 
 =head1 NAME
 
@@ -31,15 +36,18 @@ npg_warehouse::loader
 
 =head1 SYNOPSIS
 
- npg_:warehouse::loader->new()->load;
+ npg_warehouse::loader->new()->load();
+ npg_warehouse::loader->new(id_run => [5566, 6655])->load(); 
 
 =head1 DESCRIPTION
 
+A module that loads data to the old sequencescape warehouse.
+The source of LIMs data is defined by the lims_driver_type attributes
+that defaults to ml_warehouse_fc_cache.
 
 =head1 SUBROUTINES/METHODS
 
 =cut
-
 
 =head2 verbose
 
@@ -52,31 +60,39 @@ has 'verbose'      => ( isa        => 'Bool',
                         default    => 0,
                       );
 
+=head2 run_statuses
 
-=head2 with_lims
-
-Flag indicating whether to load LIMS data
-
-=cut
-has 'with_lims'     => ( isa        => 'Bool',
-                          is         => 'ro',
-                          required   => 0,
-                          default    => 1,
-                        );
-
-
-=head2 recent
-
-Flag indicating whether to retrieve LIMS data for all or only recent runs.
+Flag to load run statuses, false by default
 
 =cut
-has 'recent' =>           ( isa        => 'Bool',
+has 'run_statuses' => ( isa        => 'Bool',
+                        is         => 'ro',
+                        required   => 0,
+                        default    => 0,
+                      );
+
+=head2 lims_driver_type
+
+An optional LIMs driver type as defined in st::api::lims.
+
+=cut
+has 'lims_driver_type' => ( isa        => 'Str',
                             is         => 'ro',
                             required   => 0,
-                            default    => 1,
-                            writer     => '_set_recent',
+                            default    => $DEFAULT_LIMS_DRIVER,
                           );
 
+=head2 id_run
+
+An array ref of run ids that have to be loaded. If not set
+or empty, all runs will be loaded.
+
+=cut
+has 'id_run'        =>    ( isa      => 'ArrayRef[Int]',
+                            is       => 'ro',
+                            required => 0,
+                            default  => sub { return []; },
+                          );
 
 =head2 _schema_wh
 
@@ -89,12 +105,7 @@ has '_schema_wh'  =>  ( isa        => 'npg_warehouse::Schema',
                         lazy_build => 1,
                       );
 sub _build__schema_wh {
-    my $self = shift;
-    my $schema = npg_warehouse::Schema->connect();
-    if($self->verbose) {
-        carp q[Connected to the warehouse db, schema object ] . $schema;
-    }
-    return $schema;
+    return npg_warehouse::Schema->connect();
 }
 
 
@@ -109,24 +120,8 @@ has '_schema_npg' =>  ( isa        => 'npg_tracking::Schema',
                         lazy_build => 1,
                       );
 sub _build__schema_npg {
-    my $self = shift;
-    my $schema = npg_tracking::Schema->connect();
-    if($self->verbose) {
-        carp q[Connected to the npg db, schema object ] . $schema;
-    }
-    return $schema;
+    return npg_tracking::Schema->connect();
 }
-
-=head2 _faster_globs
-
-A boolean flag
-
-=cut
-has '_faster_globs' => ( isa        => 'Bool',
-                         is         => 'ro',
-                         default    => 1,
-                       );
-
 
 =head2 _schema_qc
 
@@ -139,12 +134,7 @@ has '_schema_qc' =>   ( isa        => 'npg_qc::Schema',
                         lazy_build => 1,
                       );
 sub _build__schema_qc {
-    my $self = shift;
-    my $schema = npg_qc::Schema->connect();
-    if($self->verbose) {
-        carp q[Connected to the qc db, schema object ] . $schema;
-    }
-    return $schema;
+    return npg_qc::Schema->connect();
 }
 
 
@@ -167,52 +157,19 @@ sub _build__autoqc_store {
                                          qc_schema => $self->_schema_qc);
 }
 
-=head2 dev_cost_codes
+=head2 _schema_mlwarehouse
 
-R&D cost codes.
+DBIx schema object for the mlwarehouse database
 
 =cut
-has 'dev_cost_codes' =>   ( isa             => 'ArrayRef',
-                            is              => 'ro',
-                            required        => 0,
-                            lazy_build      => 1,
-                          );
-sub _build_dev_cost_codes {
-    my $self = shift;
-    return npg_warehouse::loader::npg->new(schema_npg => $self->_schema_npg)->dev_cost_codes;
+has '_schema_mlwarehouse' => ( isa        => 'WTSI::DNAP::Warehouse::Schema',
+                               is         => 'ro',
+                               required   => 0,
+                               lazy_build => 1,
+                             );
+sub _build__schema_mlwarehouse {
+    return WTSI::DNAP::Warehouse::Schema->connect();
 }
-
-=head2 _lims_retriever
-
-An object for retrieving informtion about LIMS
-
-=cut
-has '_lims_retriever' =>   ( isa        => 'npg_warehouse::loader::lims',
-                            is         => 'ro',
-                            lazy_build => 1,
-                           );
-sub _build__lims_retriever {
-    my $self = shift;
-    return  npg_warehouse::loader::lims->new(
-                    verbose        => $self->verbose,
-                    plex_key       => $PLEXES_KEY,
-                    dev_cost_codes => $self->dev_cost_codes,
-                    recent         => $self->recent);
-}
-
-
-=head2 id_run
-
-An array ref of run ids that have to be loaded. If not set,
-all runs will be loaded.
-
-=cut
-has 'id_run'        =>    ( isa      => 'ArrayRef[Int]',
-                            is       => 'ro',
-                            required => 0,
-                            default  => sub { return []; },
-                          );
-
 
 =head2 _run_lane_rs
 
@@ -240,28 +197,23 @@ sub _build__run_lane_rs {
     return $all_rs;
 }
 
+sub _create_lims_retriever {
+    my ($self, $id_run, $batch_id) = @_;
 
-=head2 BUILD
-
-The last method that is called before the new() constructor returns
-an instance of the object to the caller. Makes some sanity checking.
-
-=cut
-sub BUILD {
-    my $self = shift;
-    my @schemas = qw(npg qc wh);
-    foreach my $schema (@schemas) {
-        my $method = join q[_], q[_schema], $schema;
-        if (!$self->$method) {
-            croak qq[$schema schema object is not defined];
-        }
+    my $ref = {
+        id_run      => $id_run,
+        driver_type => $self->lims_driver_type()
+    };
+    if ($self->lims_driver_type() =~ 'ml_warehouse') {
+        $ref->{'mlwh_schema'} = $self->_schema_mlwarehouse();
+    } elsif ($self->lims_driver_type() eq 'xml') {
+        $ref->{'batch_id'} = $batch_id;
     }
 
-    if (@{$self->id_run} && $self->recent) {
-        $self->_set_recent(0);
-        warn "Since specific id_runs are set, recent setting is reset to false\n";
-    }
-    return;
+    return npg_warehouse::loader::lims->new(
+            lims     => st::api::lims->new($ref),
+            plex_key => $PLEXES_KEY
+    );
 }
 
 =head2 npg_data
@@ -270,7 +222,7 @@ Retrieves data for one run. Returns per-table hashes of key-value pairs that
 are suitable for use in updating/creating rows with DBIx.
 
 =cut
-sub npg_data {
+sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
     my ($self, $lanes, $id_run) = @_;
 
     my $array              = [];
@@ -278,9 +230,10 @@ sub npg_data {
 
     my $end = $lanes->[0]->run->id_run_pair ? $REVERSE_END_INDEX : $FORWARD_END_INDEX;
 
-    my $run_retriever =  npg_warehouse::loader::npg->new(schema_npg => $self->_schema_npg,
-                                                         verbose    => $self->verbose,
-                                                         id_run     => $id_run);
+    my $run_retriever =  npg_warehouse::loader::npg->new(
+        schema_npg => $self->_schema_npg,
+        verbose    => $self->verbose,
+        id_run     => $id_run);
 
     my $run_is_cancelled = $run_retriever->run_is_cancelled();
     my $run_is_paired_read = $run_retriever->run_is_paired_read();
@@ -294,11 +247,10 @@ sub npg_data {
         $forward_id_run = $lanes->[0]->run->id_run_pair;
     } else {
         if (!$run_is_cancelled) {
-            my $npgschema = $self->_faster_globs ? $self->_schema_npg : undef;
             $run_autoqc = npg_warehouse::loader::autoqc->new(
-                                autoqc_store => $self->_autoqc_store,
-                                verbose => $self->verbose,
-                                plex_key => $PLEXES_KEY)->retrieve($forward_id_run, $npgschema);
+                autoqc_store => $self->_autoqc_store,
+                verbose => $self->verbose,
+                plex_key => $PLEXES_KEY)->retrieve($forward_id_run, $self->_schema_npg);
         }
     }
     #Remove newer metrics - only available in new ml_warehouse
@@ -310,25 +262,26 @@ sub npg_data {
       }
     }
 
-    my $qc_retriever = npg_warehouse::loader::qc->new(schema_qc         => $self->_schema_qc,
-                                                      verbose           => $self->verbose,
-                                                      reverse_end_index => $REVERSE_END_INDEX,
-                                                      plex_key          => $PLEXES_KEY);
-    my $run_end_summary = $qc_retriever->retrieve_summary($forward_id_run, $end, $lanes->[0]->run->is_paired);
+    my $qc_retriever = npg_warehouse::loader::qc->new(
+        schema_qc         => $self->_schema_qc,
+        verbose           => $self->verbose,
+        reverse_end_index => $REVERSE_END_INDEX,
+        plex_key          => $PLEXES_KEY);
+    my $run_end_summary = $qc_retriever
+        ->retrieve_summary($forward_id_run, $end, $lanes->[0]->run->is_paired);
     my $qyields = $qc_retriever->retrieve_yields($id_run);
     my $run_cluster_density = $qc_retriever->retrieve_cluster_density($id_run);
 
     my $batch_id = $lanes->[0]->run->batch_id;
-
     my $run_lane_info = {};
-    if ($self->with_lims) {
-        eval {
-            $run_lane_info = $self->_lims_retriever->retrieve($batch_id, $dates->{run_pending}, $run_is_cancelled, $run_is_indexed);
-            1;
-        } or do {
-            carp qq[Failed to retrieve LIMS data for run $id_run : $EVAL_ERROR];
-        };
-    }
+    try {
+        $run_lane_info = $self->_create_lims_retriever($id_run, $batch_id)
+                              ->retrieve($run_is_indexed);
+    } catch {
+        if ($self->verbose) {
+            carp qq[Failed to retrieve LIMS data for run $id_run : $_];
+        }
+    };
 
     foreach my $rs (@{$lanes})  {
 
@@ -360,8 +313,10 @@ sub npg_data {
             $values->{clusters_raw}  = $run_end_summary->{$position}->{$end}->{clusters_raw};
             $values->{cluster_count} = $run_end_summary->{$position}->{$end}->{clusters_pf};
             $values->{pf_bases}      = $run_end_summary->{$position}->{$end}->{lane_yield};
-            if (!$values->{has_two_runfolders} && exists $run_end_summary->{$position}->{$REVERSE_END_INDEX}) {
-                $values->{pf_bases} += $run_end_summary->{$position}->{$REVERSE_END_INDEX}->{lane_yield};
+            if (!$values->{has_two_runfolders} &&
+                    exists $run_end_summary->{$position}->{$REVERSE_END_INDEX}) {
+                $values->{pf_bases} +=
+                    $run_end_summary->{$position}->{$REVERSE_END_INDEX}->{lane_yield};
             }
         }
 
@@ -413,7 +368,8 @@ sub load_run {
         my $rs_in = $self->_schema_wh->resultset($table_name);
         foreach my $row (@{$rows}) {
             if($self->verbose) {
-                my $message =  q[Updating or creating row for batch ] . $row->{batch_id} . qq[ run $id_run position ] . $row->{position};
+                my $message =  q[Updating or creating row for batch ] .
+                    $row->{batch_id} . qq[ run $id_run position ] . $row->{position};
                 if ($table_name =~ /plex/ismx) {
                     $message .= q[ tag_index ] . $row->{tag_index};
                 }
@@ -423,11 +379,10 @@ sub load_run {
         }
     };
 
-    eval {
+    try {
         $self->_schema_wh->txn_do($transaction);
-        1;
-    } or do {
-        my $err = $EVAL_ERROR;
+    } catch {
+        my $err = $_;
         if ($err =~ /Rollback failed/sxm) {
             croak $err;
         }
@@ -445,14 +400,19 @@ Retrieve data for one run and load these data to the warehouse
 =cut
 sub retrieve_load_run {
     my ($self, $run_lanes, $id_run) = @_;
-    eval {
+
+    if (!@{$run_lanes}) {
+      return;
+    }
+    (scalar uniq map { $_->id_run } @{$run_lanes}) == 1 or croak 'Incorrect list of lanes';
+
+    try {
         my $data = $self->npg_data($run_lanes, $id_run);
         foreach my $table_name (sort keys %{$data}) {
             $self->load_run($table_name, $data->{$table_name}, $id_run);
         }
-        1;
-    } or do {
-        carp "Failed to retrieve and load $id_run: $EVAL_ERROR";
+    } catch {
+        carp "Failed to retrieve and load $id_run: $_";
     };
     return;
 }
@@ -473,13 +433,24 @@ sub load {
     my $previous_id_run = $rs->run->id_run;
     my $id_run;
     while ($rs) {
+        my $skip = 0;
         $id_run = $rs->run->id_run;
+        my $batch_id = $rs->run->batch_id;
+        if (!$batch_id && $id_run > $TENTHOUSAND) {
+            if ($self->verbose) {
+                carp "Skipping run $id_run";
+            }
+            $skip = 1;
+        }
         if($id_run != $previous_id_run) {
             $self->retrieve_load_run(\@run_lanes, $previous_id_run);
             @run_lanes = ();
             $previous_id_run = $id_run;
         }
-        push @run_lanes, $rs;
+        if (!$skip) {
+            push @run_lanes, $rs;
+        }
+
         $rs = $all_rs->next;
     }
 
@@ -500,35 +471,20 @@ sub update_run_statuses {
     return;
 }
 
+=head2 run
 
-=head2 update_manual_qc 
-
-Updates manual qc values for one run.
+Calls one of the loaders
 
 =cut
-
-sub update_manual_qc {
-    my ($self) = @_;
-    if (scalar @{$self->id_run} != 1) {
-      croak 'Cannot update manual qc for multiple runs';
+sub run {
+    my $self = shift;
+    if (defined $ENV{dev} && $ENV{dev}) {
+        warn 'USING ' . $ENV{dev} . " DATABASES\n";
     }
-    my $id_run = $self->id_run->[0];
-    eval {
-      my $batch_id = $self->_schema_npg->resultset(q{Run})->find($id_run)->batch_id;
-      my @rows = ();
-      my $qc = $self->_lims_retriever->retrieve_manual_qc($batch_id);
-      foreach my $position  (keys %{$qc}) {
-          my $row = $qc->{$position};
-          $row->{'position'} = $position;
-          $row->{'id_run'  } = $id_run;
-          $row->{'batch_id'} = $batch_id;
-          push @rows, $row;
-      }
-      $self->load_run(q{NpgInformation}, \@rows, $id_run);
-      1;
-    } or do {
-      carp "Failed to update manual qc ru run $id_run: $EVAL_ERROR";
-    };
+    $self->run_statuses ? $self->update_run_statuses() : $self->load();
+    if ($self->verbose) {
+        warn "Completed loading, exiting...\n";
+    }
     return;
 }
 
@@ -541,7 +497,8 @@ sub _copy_plex_values {
                     next;
                 }
                 foreach my $column_name (keys %{ $source->{$position}->{$PLEXES_KEY}->{$tag_index} } ) {
-                    $destination->{$tag_index}->{$column_name} = $source->{$position}->{$PLEXES_KEY}->{$tag_index}->{$column_name};
+                    $destination->{$tag_index}->{$column_name} =
+                        $source->{$position}->{$PLEXES_KEY}->{$tag_index}->{$column_name};
                 }
             }
         } else {
@@ -570,11 +527,13 @@ __END__
 
 =item Readonly
 
-=item English
+=item namespace::autoclean
 
 =item Moose
 
 =item MooseX::StrictConstructor
+
+=item List::MoreUtils
 
 =item npg_warehouse::Schema
 
@@ -583,6 +542,10 @@ __END__
 =item npg_qc::Schema
 
 =item npg_qc::autoqc::qc_store
+
+=item st::api::lims
+
+=item WTSI::DNAP::Warehouse::Schema
 
 =item npg_warehouse::loader::autoqc
 

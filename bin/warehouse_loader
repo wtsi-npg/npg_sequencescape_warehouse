@@ -5,80 +5,14 @@ use warnings;
 use FindBin qw($Bin);
 use lib ( -d "$Bin/../lib/perl5" ? "$Bin/../lib/perl5" : "$Bin/../lib" );
 use Getopt::Long;
-use Pod::Usage;
 
 use npg_warehouse::loader;
 
 our $VERSION = '0';
 
-my $verbose          = 0;
-my $with_lims        = 1;
-my $recent           = 1;
-my $help             = q[];
-my $id_runs          = [];
-my $run_statuses     = 0;
+npg_warehouse::loader->new_with_options()->run();
 
-## no critic (Variables::RequireLocalizedPunctuationVars)
-
-GetOptions ('verbose!'        => \$verbose,
-            'help'            => \$help,
-            'load-lims-data!' => \$with_lims,
-            'recent!'         => \$recent,
-            'id_run=i@'       => \$id_runs,
-            'run_statuses!'   => \$run_statuses,
-            );
-if ($help) { pod2usage(0); }
-
-if ($run_statuses) {
-  if ($verbose) {
-    warn qq[Updating run statuses\n];
-  }
-} else {
-  warn qq[Setting npg_warehouse::loader attributes:\n];
-  warn qq[  verbose\t$verbose\n];
-  warn qq[  with_lims\t$with_lims\n];
-  warn qq[  recent\t$recent\n];
-  if (@{$id_runs}) {
-  my $runs = join q[ ], sort {$a <=> $b} @{$id_runs};
-    warn qq[  id_run\t$runs\n];
-  }
-}
-
-if (defined $ENV{dev} && $ENV{dev}) {
-   warn 'LOADING TO ' . $ENV{dev} . " DATABASE\n";
-}
-
-# We always get the data from live databases,
-# but might need to load to different staging databases.
-my $schema = npg_warehouse::Schema->connect();
-$ENV{dev} = q[live];
-my $loader = npg_warehouse::loader->new(
-                      verbose          => $verbose,
-                      with_lims        => $with_lims,
-                      recent           => $recent,
-                      _schema_wh       => $schema,
-                      id_run           => $id_runs,
-                                       );
-if ($run_statuses) {
-  $loader->update_run_statuses;
-} else {
-  $loader->load();
-  if (scalar @{$id_runs} == 1 && ( $ENV{'NPG_WEBSERVICE_CACHE_DIR'} || $ENV{'NPG_CACHED_SAMPLESHEET_FILE'}) ) {
-    my $id_run = $id_runs->[0];
-    if ($verbose) {
-      warn qq[Updating (live) manual qc for run $id_run\n];
-    }
-    local $ENV{'NPG_WEBSERVICE_CACHE_DIR'}    = undef;
-    local $ENV{'NPG_CACHED_SAMPLESHEET_FILE'} = undef;
-    $loader->update_manual_qc();
-  }
-}
-
-if ($verbose) {
-  warn "Completed loading, exiting...\n";
-}
-exit 0;
-
+1;
 
 __END__
 
@@ -88,7 +22,8 @@ warehouse_loader
 
 =head1 SYNOPSIS
 
-Script to load NPG, NPG QC, NPG AUTOQC and LIMS data into the npg_X tables of the warehouse database
+Script to load NPG, NPG QC, NPG AUTOQC and LIMs data into the npg_X tables
+of the ols sequencescape warehouse.
 
 warehouse_loader [options]
 
@@ -96,11 +31,9 @@ warehouse_loader [options]
    --help brief help message
    --verbose (disabled by default)
    --noverbose (a default option)
-   --load-lims-data (a default option) : lims data will be loaded
-   --noload-lims-data                  : lims data will not be loaded
-   --recent (a default option)         : lims data for recent runs will be loaded, prerequisite - enabled --load-lims-data
-   --norecent                          : lims data for all runs will be loaded, prerequisite - enabled --lad-lims-data
-   --id_run                            : load particular run, multiple runs can be specified by repeating this option
+   --id_run  : load particular run, multiple runs can be specified by repeating this option
+   --lims_driver_type  : an optional lims driver type
+   --run_statuses : call run status loader
 
 =head1 DESCRIPTION
 
@@ -129,10 +62,6 @@ warehouse_loader [options]
 =item warnings
 
 =item npg_warehouse::loader
-
-=item Getopt::Long
-
-=item Pod::Usage
 
 =back
 

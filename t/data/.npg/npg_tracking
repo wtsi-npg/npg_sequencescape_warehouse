@@ -2,6 +2,6 @@
 my $VAR1 = {
   'staging_areas' => {
     'indexes' => [39,45],
-    'prefix' => 't/data/archive/nfs/sf'
+    'prefix' => 't/data/sf'
   },
 }
