@@ -24,11 +24,14 @@ with 'MooseX::Getopt';
 
 our $VERSION = '0';
 
-Readonly::Scalar my $FORWARD_END_INDEX   => 1;
-Readonly::Scalar my $REVERSE_END_INDEX   => 2;
-Readonly::Scalar my $PLEXES_KEY          => q[plexes];
-Readonly::Scalar my $DEFAULT_LIMS_DRIVER => q[ml_warehouse_fc_cache];
-Readonly::Scalar my $TENTHOUSAND         => 10_000;
+Readonly::Scalar my $FORWARD_END_INDEX        => 1;
+Readonly::Scalar my $REVERSE_END_INDEX        => 2;
+Readonly::Scalar my $PLEXES_KEY               => q[plexes];
+Readonly::Scalar my $DEFAULT_LIMS_DRIVER      => q[ml_warehouse_fc_cache];
+# Data for runs with no or zero batch id and with run id larger than
+# this value will not be loaded - likely to be GCLP runs, whose LIMs
+# ids are strings and, therefore, cannot be loaded to this schema.
+Readonly::Scalar my $MAX_RUN_WITH_NO_BATCH_ID => 10_000;
 
 =head1 NAME
 
@@ -436,7 +439,7 @@ sub load {
         my $skip = 0;
         $id_run = $rs->run->id_run;
         my $batch_id = $rs->run->batch_id;
-        if (!$batch_id && $id_run > $TENTHOUSAND) {
+        if (!$batch_id && $id_run > $MAX_RUN_WITH_NO_BATCH_ID) {
             if ($self->verbose) {
                 carp "Skipping run $id_run";
             }
