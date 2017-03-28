@@ -3,6 +3,7 @@ Changes for npg_sequencescape_warehouse
 
 some changes
 
+release 43.0
  - Changes needed to convert an svn project to a git project.
    Only recent history has been transferred from the svn project.
  - Travis CI integration added.
