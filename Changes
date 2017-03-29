@@ -1,6 +1,9 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 43.0.1
+ - meaningful variable name
+
 release 43.0
  - Changes needed to convert an svn project to a git project.
    Only recent history has been transferred from the svn project.
