@@ -31,13 +31,13 @@ my $schema_wh = t::npg_warehouse::util->new()->create_test_db($schema_package, $
 $schema_wh or die 'Failed to created warehouse test database';
 use_ok('npg_warehouse::loader');
 
-{ 
+{
   my $loader = npg_warehouse::loader->new( 
                          _schema_wh => $schema_wh,
                          lims_driver_type => 'xml',
                          verbose    => 0,
                          id_run     => [1, 1937, 4950, 5316, 5970, 6566, 6589, 6857, 7110, 8398, 8284],
-                                            );
+                                         );
 
   isa_ok($loader, 'npg_warehouse::loader');
   is ($loader->verbose, 0, 'verbose option is off');
@@ -64,7 +64,7 @@ TODO: {
                       lims_driver_type => 'xml',
                       verbose    => 0,
                       id_run     => [4950],
-                                          );
+                                      );
   lives_ok {$loader->load()}   'load run again';
 
 TODO: {
