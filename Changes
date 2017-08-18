@@ -1,6 +1,7 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 43.0.2
  - adds TODO test to fix temporary DB fail test in npg_warehouse-loader
 
 release 43.0.1
