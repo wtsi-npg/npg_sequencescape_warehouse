@@ -1,6 +1,10 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 43.0.3
+ - test data changes to ensure compatibility with npg_qc release 64.1
+ - travis build: request uuid dev libraries are present
+
 release 43.0.2
  - adds TODO test to fix temporary DB fail test in npg_warehouse-loader
 
