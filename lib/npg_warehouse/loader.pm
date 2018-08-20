@@ -270,8 +270,6 @@ sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
         verbose           => $self->verbose,
         reverse_end_index => $REVERSE_END_INDEX,
         plex_key          => $PLEXES_KEY);
-    my $run_end_summary = $qc_retriever
-        ->retrieve_summary($forward_id_run, $end, $lanes->[0]->run->is_paired);
     my $qyields = $qc_retriever->retrieve_yields($id_run);
     my $run_cluster_density = $qc_retriever->retrieve_cluster_density($id_run);
 
@@ -310,17 +308,6 @@ sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
                                         $run_cluster_density->{$position} : {};
         foreach my $column (keys %{$lane_cluster_density}) {
             $values->{$column} = $lane_cluster_density->{$column};
-        }
-
-        if (exists $run_end_summary->{$position}->{$end}) {
-            $values->{clusters_raw}  = $run_end_summary->{$position}->{$end}->{clusters_raw};
-            $values->{cluster_count} = $run_end_summary->{$position}->{$end}->{clusters_pf};
-            $values->{pf_bases}      = $run_end_summary->{$position}->{$end}->{lane_yield};
-            if (!$values->{has_two_runfolders} &&
-                    exists $run_end_summary->{$position}->{$REVERSE_END_INDEX}) {
-                $values->{pf_bases} +=
-                    $run_end_summary->{$position}->{$REVERSE_END_INDEX}->{lane_yield};
-            }
         }
 
         foreach my $data_hash (($run_lane_info, $run_autoqc, $qyields)) {
