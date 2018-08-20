@@ -225,7 +225,7 @@ Retrieves data for one run. Returns per-table hashes of key-value pairs that
 are suitable for use in updating/creating rows with DBIx.
 
 =cut
-sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
+sub npg_data {
     my ($self, $lanes, $id_run) = @_;
 
     my $array              = [];
