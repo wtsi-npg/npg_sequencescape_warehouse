@@ -1,6 +1,9 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+ - exclude values for column names not present in this warehouse
+ - load q30 and q40 yields from qX_Yield autoqc results
+
 release 43.0.3
  - test data changes to ensure compatibility with npg_qc release 64.1
  - travis build: request uuid dev libraries are present
@@ -30,5 +33,5 @@ release 42.0
  - Updated DBIx binding.
  - DBIx binding generator filters code to make it more acceptable for perlcritic.
 
-See earlier project history in the internal SVN data_handling priject.
+See earlier project history in the internal SVN data_handling project.
 
