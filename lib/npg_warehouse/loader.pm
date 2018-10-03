@@ -4,7 +4,7 @@ use Carp;
 use namespace::autoclean;
 use Moose;
 use MooseX::StrictConstructor;
-use List::MoreUtils qw/uniq/;
+use List::MoreUtils qw/none uniq/;
 use Readonly;
 use Try::Tiny;
 
@@ -97,11 +97,6 @@ has 'id_run'        =>    ( isa      => 'ArrayRef[Int]',
                             default  => sub { return []; },
                           );
 
-=head2 _schema_wh
-
-DBIx schema object for the warehouse database
-
-=cut
 has '_schema_wh'  =>  ( isa        => 'npg_warehouse::Schema',
                         is         => 'ro',
                         required   => 0,
@@ -111,12 +106,6 @@ sub _build__schema_wh {
     return npg_warehouse::Schema->connect();
 }
 
-
-=head2 _schema_npg
-
-DBIx schema object for the npg database
-
-=cut
 has '_schema_npg' =>  ( isa        => 'npg_tracking::Schema',
                         is         => 'ro',
                         required   => 0,
@@ -126,11 +115,6 @@ sub _build__schema_npg {
     return npg_tracking::Schema->connect();
 }
 
-=head2 _schema_qc
-
-DBIx schema object for the NPG QC database
-
-=cut
 has '_schema_qc' =>   ( isa        => 'npg_qc::Schema',
                         is         => 'ro',
                         required   => 0,
@@ -140,14 +124,6 @@ sub _build__schema_qc {
     return npg_qc::Schema->connect();
 }
 
-
-=head2 _autoqc_store
-
-A driver to retrieve autoqc objects. If DB storage is not available,
-it will give no error, so no need to mock DB for this one in tests.
-Just mock the staging area in your tests
-
-=cut
 has '_autoqc_store' =>    ( isa        => 'npg_qc::autoqc::qc_store',
                             is         => 'ro',
                             required   => 0,
@@ -160,11 +136,6 @@ sub _build__autoqc_store {
                                          qc_schema => $self->_schema_qc);
 }
 
-=head2 _schema_mlwarehouse
-
-DBIx schema object for the mlwarehouse database
-
-=cut
 has '_schema_mlwarehouse' => ( isa        => 'WTSI::DNAP::Warehouse::Schema',
                                is         => 'ro',
                                required   => 0,
@@ -174,11 +145,6 @@ sub _build__schema_mlwarehouse {
     return WTSI::DNAP::Warehouse::Schema->connect();
 }
 
-=head2 _run_lane_rs
-
-Result set object for run lanes that have to be loaded
-
-=cut
 has '_run_lane_rs' =>     ( isa        => 'DBIx::Class::ResultSet',
                             is         => 'ro',
                             required   => 0,
@@ -266,11 +232,7 @@ sub npg_data {
     }
 
     my $qc_retriever = npg_warehouse::loader::qc->new(
-        schema_qc         => $self->_schema_qc,
-        verbose           => $self->verbose,
-        reverse_end_index => $REVERSE_END_INDEX,
-        plex_key          => $PLEXES_KEY);
-    my $qyields = $qc_retriever->retrieve_yields($id_run);
+                       schema_qc => $self->_schema_qc);
     my $run_cluster_density = $qc_retriever->retrieve_cluster_density($id_run);
 
     my $batch_id = $lanes->[0]->run->batch_id;
@@ -310,7 +272,7 @@ sub npg_data {
             $values->{$column} = $lane_cluster_density->{$column};
         }
 
-        foreach my $data_hash (($run_lane_info, $run_autoqc, $qyields)) {
+        foreach my $data_hash (($run_lane_info, $run_autoqc)) {
             if (exists $data_hash->{$position} ) {
                 foreach my $column (keys %{$data_hash->{$position}}) {
                     if ($column ne $PLEXES_KEY) {
@@ -328,8 +290,6 @@ sub npg_data {
                 $plexes = $run_lane_info->{$position}->{$PLEXES_KEY};
             }
             $plexes = _copy_plex_values($plexes, $run_autoqc, $position);
-            $plexes = _copy_plex_values($plexes, $qyields, $position, 1);
-
             foreach my $tag_index (keys %{$plexes}) {
                 my $plex_values = $plexes->{$tag_index};
                 $plex_values->{id_run}    = $id_run;
@@ -356,6 +316,7 @@ sub load_run {
 
     my $transaction = sub {
         my $rs_in = $self->_schema_wh->resultset($table_name);
+        my @column_names = $rs_in->result_source->columns;
         foreach my $row (@{$rows}) {
             if($self->verbose) {
                 my $message =  q[Updating or creating row for batch ] .
@@ -364,6 +325,11 @@ sub load_run {
                     $message .= q[ tag_index ] . $row->{tag_index};
                 }
                 carp $message;
+            }
+            for my $key (keys %{$row}) {
+                if ( none { $_ eq $key} @column_names) {
+                    delete $row->{$key};
+                }
             }
             $rs_in->update_or_create($row);
         }
