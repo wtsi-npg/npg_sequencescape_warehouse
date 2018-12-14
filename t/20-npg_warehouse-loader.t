@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 186;
+use Test::More tests => 185;
 use Test::Exception;
 use DateTime;
 
@@ -354,7 +354,7 @@ my $plex_key   = q[plexes];
   $expected->{4333}->{8}->{insert_size_median}    = 189;
   $expected->{4333}->{8}->{tags_decode_percent} =81.94;
   $expected->{4333}->{8}->{tags_decode_cv} =122.4;
-  #the third quartile has been skipped - the value is too large
+  #the first is quartile has been skipped - the value is too large
  
   my $autoqc = {};
   while (my $row = $rs->next) {
@@ -362,6 +362,7 @@ my $plex_key   = q[plexes];
       $autoqc->{4333}->{$row->position}->{$column} = $row->$column;
     }
   }
+
   is_deeply($autoqc, $expected, 'loaded autoqc results');
 }
 
@@ -528,7 +529,6 @@ my $plex_key   = q[plexes];
   is($lane->split_human_percent(), undef, 'split human percent not present');
 
   $lane = $schema_wh->resultset('NpgInformation')->find({id_run=>6642,position=>2});
-  cmp_ok(sprintf('%.2f',$lane->split_human_percent()), q(==), 0.18, 'split human percent');
   my $plex = $schema_wh->resultset('NpgPlexInformation')->find({id_run=>6642,position=>2,tag_index=>4});
   cmp_ok(sprintf('%.2f',$plex->bam_human_percent_mapped()), q(==), 55.3, 'bam human mapped percent');
   cmp_ok(sprintf('%.2f',$plex->bam_human_percent_duplicate()), q(==), 68.09, 'bam human duplicate percent');
