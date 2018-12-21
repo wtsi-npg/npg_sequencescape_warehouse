@@ -191,7 +191,7 @@ Retrieves data for one run. Returns per-table hashes of key-value pairs that
 are suitable for use in updating/creating rows with DBIx.
 
 =cut
-sub npg_data {
+sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
     my ($self, $lanes, $id_run) = @_;
 
     my $end = $lanes->[0]->run->id_run_pair ? $REVERSE_END_INDEX : $FORWARD_END_INDEX;
@@ -250,8 +250,8 @@ sub npg_data {
         $values->{has_two_runfolders} = $rs->run->is_paired;
         $values->{cancelled}          = $run_is_cancelled;
         $values->{paired_read}        = $run_is_paired_read;
-        $values->{instrument_name}    = $instr->{name};
-        $values->{instrument_model}   = $instr->{model};
+        $values->{instrument_name}    = $instr->{instrument_name};
+        $values->{instrument_model}   = $instr->{instrument_model};
 
         foreach my $event_type (keys %{$dates}) {
             $values->{$event_type} = $dates->{$event_type};
@@ -267,6 +267,7 @@ sub npg_data {
 
         if (exists $run_lane_info->{$position} ) {
             foreach my $column (keys %{$run_lane_info->{$position}}) {
+            ##no critic (ControlStructures::ProhibitDeepNests)
                 if ( $column eq $PLEXES_KEY) {
                     if ($run_is_indexed) {
                         $plex_values->{$position} = $run_lane_info->{$position}->{$PLEXES_KEY};
@@ -279,7 +280,7 @@ sub npg_data {
                     }
                 } else {
                     $values->{$column} = $run_lane_info->{$position}->{$column};
-                }      
+                }
             }
         }
 
@@ -313,7 +314,7 @@ sub npg_data {
             }
         }
     }
-          
+
     return {NpgInformation     => [values %{$lane_values}],
             NpgPlexInformation => [map { values %{$_} } values %{$plex_values}]};
 }
