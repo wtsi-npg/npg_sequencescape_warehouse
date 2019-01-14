@@ -1,12 +1,8 @@
 use strict;
 use warnings;
-use Test::More tests => 189;
+use Test::More tests => 186;
 use Test::Exception;
 use DateTime;
-
-# Reset HOME to retrieve test npg_tracking configuratio file from ${HOME}/.npg
-local $ENV{'HOME'};
-BEGIN{ $ENV{'HOME'}='t/data';}
 
 use npg_qc::autoqc::qc_store;
 use t::npg_warehouse::util;
@@ -14,7 +10,7 @@ use npg_warehouse::loader::autoqc;
 
 local $ENV{NPG_WEBSERVICE_CACHE_DIR} = q[t/data];
 
-BEGIN { use_ok('npg_warehouse::loader'); }
+use_ok('npg_warehouse::loader');
 
 ################################################################
 #         Test cases description
@@ -29,10 +25,10 @@ BEGIN { use_ok('npg_warehouse::loader'); }
 #4965     #  4025   #               # 1           # 1  #  1  # 1
 #4380     #  3519   #               #             #    #  1  #
 #5169     #  4138   #               #             #    #  1  #  this run is cancelled without qc complete status
-#5498     #  4333   #               # 1           #    #  1  # 1 tag decoding stats added
+#5498     #  4333   #               # 1           #    #  1  # 1
 #6669     #  4779   # 
-#12509    #  6624   #               # 1           #    #     # 1 split and bam stats added; tag metrics and tag decode added; pulldown metrics added
-#12498    #  6642   #               # 1           #    #     # 1 split and bam stats added
+#12509    #  6624   #               # 1           #    #     # 1
+#12498    #  6642   #               # 1           #    #     # 1
 ################################################################
 
 my $util = t::npg_warehouse::util->new();
@@ -66,24 +62,27 @@ my $plex_key   = q[plexes];
   lives_ok{ $schema_npg = $util->create_test_db($schema_package, $fixtures_path) } 'npg test db created';
 
   # for some runs, set the date of qc complete status within the last month
-  # for one run create an extra status line
-
   my $dt = DateTime->now(time_zone => 'floating');
   $dt->subtract(days => 4);
+  my $rs_in = $schema_npg->resultset('RunStatus');
+  $rs_in->update_or_create({id_run_status => 55660, date => $dt,}); #run 4025
+  $rs_in->update_or_create({id_run_status => 54689, date => $dt,}); #run 3965
+  $rs_in->update_or_create({id_run_status => 64464, date => $dt,}); #run 4799
 
-  $transaction = sub {
-    my $rs_in = $schema_npg->resultset('RunStatus');
-    $rs_in->update_or_create({id_run_status => 55660, date => $dt,}); #run 4025
-    $rs_in->update_or_create({id_run_status => 54689, date => $dt,}); #run 3965
-    $rs_in->update_or_create({id_run_status => 64464, date => $dt,}); #run 4799
-                     };
-  lives_ok {$schema_npg->txn_do($transaction);} 'date changes ok in the npg test database';
-
-  $transaction = sub {
-    map {$_->set_tag('new-seq-pipe', 'staging')} $schema_npg->resultset('Run')
-      ->search({id_run => [4333,4799,6624,6642]})->all();
+  my $rfolders = {
+    4333 => '100330_IL21_4333',
+    4799 => '100330_HS21_4799',
+    6624 => '110731_HS17_06624_A_B00T5ACXX',
+    6642 => '110804_HS22_06642_A_B020JACXX'
   };
-  lives_ok {$schema_npg->txn_do($transaction);} 'staging tag assigned';
+  my $folder_glob = q[t/data/runfolders/];
+  my @runs = $schema_npg->resultset('Run')
+             ->search({id_run => [4333,4799,6624,6642]})->all();
+  for my $run (@runs) {  
+    $run->set_tag('new-seq-pipe', 'staging');
+    $run->update({folder_path_glob => $folder_glob,
+                  folder_name      => $rfolders->{$run->id_run}});    
+  }
 }
 
 {
@@ -288,7 +287,6 @@ my $plex_key   = q[plexes];
        {id_run => 4799, position=>7, tag_index => 5},
   )->first;
   ok($result, 'a row for  a tag index that is not listed in batch exists - a mock for tag_index=0');
-  #is($result->asset_id, undef, 'asset id not defined for a tag index that is not listed in batch');
 }
 
 {
@@ -531,7 +529,6 @@ my $plex_key   = q[plexes];
 
   $lane = $schema_wh->resultset('NpgInformation')->find({id_run=>6642,position=>2});
   cmp_ok(sprintf('%.2f',$lane->split_human_percent()), q(==), 0.18, 'split human percent');
-
   my $plex = $schema_wh->resultset('NpgPlexInformation')->find({id_run=>6642,position=>2,tag_index=>4});
   cmp_ok(sprintf('%.2f',$plex->bam_human_percent_mapped()), q(==), 55.3, 'bam human mapped percent');
   cmp_ok(sprintf('%.2f',$plex->bam_human_percent_duplicate()), q(==), 68.09, 'bam human duplicate percent');
@@ -540,7 +537,6 @@ my $plex_key   = q[plexes];
   cmp_ok(sprintf('%.2f',$plex->bam_percent_duplicate()), q(==), 6.34, 'bam (nonhuman) duplicate percent');
 
   $lane = $schema_wh->resultset('NpgInformation')->find({id_run=>6624,position=>3});
-  cmp_ok(sprintf('%.2f',$lane->split_phix_percent()), q(==), 0.44, 'split phix percent');
   $plex = $schema_wh->resultset('NpgPlexInformation')->find({id_run=>6624,position=>3,tag_index=>4});
   cmp_ok(sprintf('%.2f',$plex->bam_num_reads()), q(==), 33605036, 'bam number of reads');
   cmp_ok(sprintf('%.2f',$plex->bam_percent_mapped()), q(==), 96.12, 'bam (nonphix) mapped percent');
