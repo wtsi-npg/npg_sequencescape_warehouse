@@ -1,10 +1,11 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+ - accommodate a change in data format returned by the autoqc retriever
+
 release 43.1
  - exclude values for column names not present in this warehouse
  - load q30 and q40 yields from qX_Yield autoqc results
- - accommodate a change in data format returned by the autoqc retriever
 
 release 43.0.3
  - test data changes to ensure compatibility with npg_qc release 64.1
