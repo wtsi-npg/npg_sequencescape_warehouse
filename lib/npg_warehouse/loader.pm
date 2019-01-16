@@ -191,11 +191,8 @@ Retrieves data for one run. Returns per-table hashes of key-value pairs that
 are suitable for use in updating/creating rows with DBIx.
 
 =cut
-sub npg_data {
+sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
     my ($self, $lanes, $id_run) = @_;
-
-    my $array              = [];
-    my $plex_array         = [];
 
     my $end = $lanes->[0]->run->id_run_pair ? $REVERSE_END_INDEX : $FORWARD_END_INDEX;
 
@@ -218,17 +215,8 @@ sub npg_data {
         if (!$run_is_cancelled) {
             $run_autoqc = npg_warehouse::loader::autoqc->new(
                 autoqc_store => $self->_autoqc_store,
-                verbose => $self->verbose,
-                plex_key => $PLEXES_KEY)->retrieve($forward_id_run, $self->_schema_npg);
+            )->retrieve($forward_id_run, $self->_schema_npg);
         }
-    }
-    #Remove newer metrics - only available in new ml_warehouse
-    foreach my$hr(values %{$run_autoqc}){
-      delete $hr->{'unexpected_tags_percent'};
-      delete $hr->{'chimeric_reads_percent'};
-      foreach my$phr(values %{$hr->{$PLEXES_KEY}||{}}){
-        delete $phr->{'chimeric_reads_percent'};
-      }
     }
 
     my $qc_retriever = npg_warehouse::loader::qc->new(
@@ -245,6 +233,9 @@ sub npg_data {
             carp qq[Failed to retrieve LIMS data for run $id_run : $_];
         }
     };
+
+    my $lane_values = {};
+    my $plex_values = {};
 
     foreach my $rs (@{$lanes})  {
 
@@ -267,41 +258,65 @@ sub npg_data {
         }
 
         my $lane_cluster_density = exists $run_cluster_density->{$position} ?
-                                        $run_cluster_density->{$position} : {};
+                                          $run_cluster_density->{$position} : {};
         foreach my $column (keys %{$lane_cluster_density}) {
             $values->{$column} = $lane_cluster_density->{$column};
         }
 
-        foreach my $data_hash (($run_lane_info, $run_autoqc)) {
-            if (exists $data_hash->{$position} ) {
-                foreach my $column (keys %{$data_hash->{$position}}) {
-                    if ($column ne $PLEXES_KEY) {
-                        $values->{$column} = $data_hash->{$position}->{$column};
+        $plex_values->{$position} = {};
+
+        if (exists $run_lane_info->{$position} ) {
+            foreach my $column (keys %{$run_lane_info->{$position}}) {
+            ##no critic (ControlStructures::ProhibitDeepNests)
+                if ( $column eq $PLEXES_KEY) {
+                    if ($run_is_indexed) {
+                        $plex_values->{$position} = $run_lane_info->{$position}->{$PLEXES_KEY};
+                        foreach my $ti (keys %{$run_lane_info->{$position}->{$PLEXES_KEY}}) {
+                            $plex_values->{$position}->{$ti}->{batch_id}  = $batch_id;
+                            $plex_values->{$position}->{$ti}->{id_run}    = $id_run;
+                            $plex_values->{$position}->{$ti}->{position}  = $position;
+                            $plex_values->{$position}->{$ti}->{tag_index} = $ti;
+                        }
                     }
+                } else {
+                    $values->{$column} = $run_lane_info->{$position}->{$column};
                 }
             }
         }
 
-        push @{$array}, $values;
+        $lane_values->{$position} = $values;
+    }
 
-        my $plexes = {};
-        if ($run_is_indexed) {
-            if (exists $run_lane_info->{$position}->{$PLEXES_KEY} ) {
-                $plexes = $run_lane_info->{$position}->{$PLEXES_KEY};
+    foreach my $digest (keys %{$run_autoqc}) {
+        my $values = $run_autoqc->{$digest};
+        my $composition = delete $values->{'composition'};
+        if ($composition->num_components > 1) {
+            next;
+        }
+        my $component = $composition->get_component(0);
+        my $position  = $component->position;
+        my $tag_index = $component->tag_index;
+        if (defined $tag_index) {
+            if ($run_is_indexed) {
+                if (!exists $plex_values->{$position}->{$tag_index}) {
+                    $values->{id_run}    = $id_run;
+                    $values->{position}  = $position;
+                    $values->{tag_index} = $tag_index;
+                    $values->{batch_id}  = $batch_id;
+                }
+                while (my ($column_name, $value) = each %{$values}) {
+                    $plex_values->{$position}->{$tag_index}->{$column_name} = $value;
+                }
             }
-            $plexes = _copy_plex_values($plexes, $run_autoqc, $position);
-            foreach my $tag_index (keys %{$plexes}) {
-                my $plex_values = $plexes->{$tag_index};
-                $plex_values->{id_run}    = $id_run;
-                $plex_values->{position}  = $position;
-                $plex_values->{tag_index} = $tag_index;
-                $plex_values->{batch_id}  = $batch_id;
-                push @{$plex_array}, $plex_values;
+        } else {
+            while (my ($column_name, $value) = each %{$values}) {
+                $lane_values->{$position}->{$column_name} = $value;
             }
         }
     }
 
-    return {NpgInformation => $array, NpgPlexInformation => $plex_array,};
+    return {NpgInformation     => [values %{$lane_values}],
+            NpgPlexInformation => [map { values %{$_} } values %{$plex_values}]};
 }
 
 =head2 load_run
@@ -442,26 +457,6 @@ sub run {
         warn "Completed loading, exiting...\n";
     }
     return;
-}
-
-sub _copy_plex_values {
-    my ($destination, $source, $position, $only_existing) = @_;
-    if (exists $source->{$position}->{$PLEXES_KEY}) {
-        if (scalar keys %{$destination}) {
-            foreach my $tag_index (keys %{ $source->{$position}->{$PLEXES_KEY} } ) {
-                if ($only_existing && !exists $destination->{$tag_index}) {
-                    next;
-                }
-                foreach my $column_name (keys %{ $source->{$position}->{$PLEXES_KEY}->{$tag_index} } ) {
-                    $destination->{$tag_index}->{$column_name} =
-                        $source->{$position}->{$PLEXES_KEY}->{$tag_index}->{$column_name};
-                }
-            }
-        } else {
-            $destination = $source->{$position}->{$PLEXES_KEY};
-        }
-    }
-    return $destination;
 }
 
 __PACKAGE__->meta->make_immutable;
