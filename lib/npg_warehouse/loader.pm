@@ -250,8 +250,8 @@ sub npg_data { ##no critic (Subroutines::ProhibitExcessComplexity)
         $values->{has_two_runfolders} = $rs->run->is_paired;
         $values->{cancelled}          = $run_is_cancelled;
         $values->{paired_read}        = $run_is_paired_read;
-        $values->{instrument_name}    = $instr->{name};
-        $values->{instrument_model}   = $instr->{model};
+        $values->{instrument_name}    = $instr->{instrument_name};
+        $values->{instrument_model}   = $instr->{instrument_model};
 
         foreach my $event_type (keys %{$dates}) {
             $values->{$event_type} = $dates->{$event_type};
