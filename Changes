@@ -1,6 +1,7 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 43.2
  - accommodate a change in data format returned by the autoqc retriever
    and the retriever of instrument info
 
