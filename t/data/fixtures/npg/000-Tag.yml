@@ -93,3 +93,7 @@
   tag: verified_r1
 - id_tag: 46
   tag: verified_r2
+- id_tag: 50
+  tag: workflow_NovaSeqStandard
+- id_tag: 51
+  tag: workflow_NovaSeqXp
