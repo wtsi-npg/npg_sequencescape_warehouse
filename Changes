@@ -1,6 +1,10 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 43.2.1
+ - test data fixes following ml warehouse schema changes, see
+   https://github.com/wtsi-npg/ml_warehouse/pull/104 for details
+
 release 43.2
  - accommodate a change in data format returned by the autoqc retriever
    and the retriever of instrument info
