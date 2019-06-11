@@ -36,9 +36,6 @@ make_schema_at(
               my $code = $text;
               $code =~ s/use\ utf8;//;
               $code =~ tr/"/'/;
-              if ($type eq 'result') {
-                $code =~ s/=head1\ NAME/\#\#no\ critic\(RequirePodAtEnd\ RequirePodLinksIncludeText\ ProhibitMagicNumbers\ ProhibitEmptyQuotes\)\n\n=head1\ NAME/;
-              }
               return $code;
             },
           }, 

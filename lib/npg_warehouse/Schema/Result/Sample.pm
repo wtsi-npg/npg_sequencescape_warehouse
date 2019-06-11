@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::Sample;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::Sample
@@ -369,8 +367,8 @@ __PACKAGE__->add_unique_constraint(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:jd9B+Auhe/8GuYiTu9oT9Q
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Jd1pJ3a7yc5pBnBHfagftA
 
 __PACKAGE__->has_many(
   'npg_information',

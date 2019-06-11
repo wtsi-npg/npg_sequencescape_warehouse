@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::EgaDataset;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::EgaDataset
@@ -83,8 +81,8 @@ __PACKAGE__->add_columns(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:D7+29HFknRlKa9OigpHQKA
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Tw/AH3K++qoFhWE3xD3ioQ
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

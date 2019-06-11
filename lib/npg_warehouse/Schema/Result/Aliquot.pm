@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::Aliquot;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::Aliquot
@@ -325,8 +323,8 @@ __PACKAGE__->add_unique_constraint(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:NC9O6Fwpf1tuKsFbamPDbA
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:04FiYjok54DeVC1+S3hcjw
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

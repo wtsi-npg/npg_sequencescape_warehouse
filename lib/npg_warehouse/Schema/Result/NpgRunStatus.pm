@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::NpgRunStatus;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::NpgRunStatus
@@ -118,8 +116,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:zcnxezE6B+HM/XjTys6IUg
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:02e7x+5XVh5tCo5S2BpOSw
 
 
 __PACKAGE__->belongs_to(

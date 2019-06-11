@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::CurrentAliquot;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::CurrentAliquot
@@ -330,8 +328,8 @@ __PACKAGE__->add_unique_constraint('internal_id_idx', ['internal_id']);
 __PACKAGE__->add_unique_constraint('uuid_idx', ['uuid']);
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:O7NV+JOofrVrsP3cmhBdfg
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:w9KjbHwJSV20JhTRcXUj4A
 
 BEGIN {
   use Moose;
