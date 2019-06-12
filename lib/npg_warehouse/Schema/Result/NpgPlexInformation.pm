@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::NpgPlexInformation;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::NpgPlexInformation
@@ -568,8 +566,8 @@ __PACKAGE__->add_columns(
 __PACKAGE__->set_primary_key('id_run', 'position', 'tag_index');
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Bjy11S1+7ZlvSU2rKvVQ+A
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:qCqjHGcNGqo1Q9BGgsKRlQ
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

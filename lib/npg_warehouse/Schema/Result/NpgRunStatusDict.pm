@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::NpgRunStatusDict;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::NpgRunStatusDict
@@ -114,8 +112,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:kf5wQFLpC19UI/D/pTl2pQ
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:zvtnGfiRTbyjXlvTmtXTHg
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

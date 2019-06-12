@@ -1,6 +1,11 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 43.2.2
+ - blacklist PBP policies which were previously disabled in each
+   module explicitly - makes tests pass even if some of these
+   policies are not installed
+
 release 43.2.1
  - test data fixes following ml warehouse schema changes, see
    https://github.com/wtsi-npg/ml_warehouse/pull/104 for details
