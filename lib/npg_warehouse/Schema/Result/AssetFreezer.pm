@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::AssetFreezer;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::AssetFreezer
@@ -200,8 +198,8 @@ __PACKAGE__->add_columns(
 __PACKAGE__->set_primary_key('dont_use_id');
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:42
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:X1PaGgycTSitN00ju4yaDg
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:43
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:F+T7hXk9teViZ1nhNX9ZjQ
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration

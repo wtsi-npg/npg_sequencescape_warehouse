@@ -1,3 +1,6 @@
+[-Documentation::RequirePodAtEnd]
+[-Documentation::RequirePodLinksIncludeText]
+[-ValuesAndExpressions::ProhibitMagicNumbers]
 [NamingConventions::Capitalization]
 packages = :no_restriction
 [Documentation::RequirePodSections]

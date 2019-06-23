@@ -30,7 +30,7 @@ subtype __PACKAGE__.'::EAN13digits'
   => message { 'EAN13 barcode should be 13 digits' };
 
 subtype __PACKAGE__.'::EAN13'
-  => where { ##no critic ( ValuesAndExpressions::ProhibitMagicNumbers)
+  => where {
              my@a=split //sm;
              my$chk=pop @a;
              my$sum=0; my$odd=0;

@@ -4,8 +4,6 @@ package npg_warehouse::Schema::Result::Submission;
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
-##no critic(RequirePodAtEnd RequirePodLinksIncludeText ProhibitMagicNumbers ProhibitEmptyQuotes)
-
 =head1 NAME
 
 npg_warehouse::Schema::Result::Submission
@@ -197,8 +195,8 @@ __PACKAGE__->add_unique_constraint(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-07-29 10:46:43
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:PVYjVFVkfIaNeUJUl506/Q
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-06-11 16:30:44
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:IP4aEGrFd5qHqMCE9t/tLQ
 
 
 # You can replace this text with custom content, and it will be preserved on regeneration
