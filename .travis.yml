@@ -6,6 +6,9 @@ perl:
   - "5.16"
   - "5.22-shrplib"
 
+dist:
+  - precise
+
 addons:
   apt:
     packages:
@@ -15,11 +18,10 @@ addons:
 
 env:
   global:
+    - TEST_AUTHOR=1
     - WTSI_NPG_GITHUB_URL=https://github.com/wtsi-npg
 
-install:
+before_install:
   - ./.travis/install.sh
   - cpanm --quiet --notest --installdeps .
 
-script:
-  - perl Build.PL && ./Build && ./Build test
