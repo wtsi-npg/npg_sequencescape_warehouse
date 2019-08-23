@@ -1,6 +1,10 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 43.2.3
+ - run folders for test data restructured to reflect new-style
+   product hierarchy
+
 release 43.2.2
  - blacklist PBP policies which were previously disabled in each
    module explicitly - makes tests pass even if some of these
