@@ -12,7 +12,7 @@ dist:
 addons:
   apt:
     packages:
-    - libgd2-xpm-dev
+    - libgd-dev
     - liblzma-dev
     - uuid-dev
 
