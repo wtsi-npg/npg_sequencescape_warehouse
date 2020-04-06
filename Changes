@@ -1,6 +1,9 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 43.2.4
+ - Travis CI build fixes
+
 release 43.2.3
  - run folders for test data restructured to reflect new-style
    product hierarchy
