@@ -3,16 +3,15 @@ sudo: required
 language: perl
 
 perl:
-  - "5.16"
-  - "5.22-shrplib"
+  - "5.26-shrplib"
 
 dist:
-  - precise
+  - bionic
 
 addons:
   apt:
     packages:
-    - libgd2-xpm-dev
+    - libgd-dev
     - liblzma-dev
     - uuid-dev
 
