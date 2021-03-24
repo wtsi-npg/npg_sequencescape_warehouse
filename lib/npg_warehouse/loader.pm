@@ -18,7 +18,6 @@ use npg_warehouse::loader::autoqc;
 use npg_warehouse::loader::lims;
 use npg_warehouse::loader::qc;
 use npg_warehouse::loader::npg;
-use npg_warehouse::loader::run_status;
 
 with 'MooseX::Getopt';
 
@@ -58,17 +57,6 @@ Verbose flag
 
 =cut
 has 'verbose'      => ( isa        => 'Bool',
-                        is         => 'ro',
-                        required   => 0,
-                        default    => 0,
-                      );
-
-=head2 run_statuses
-
-Flag to load run statuses, false by default
-
-=cut
-has 'run_statuses' => ( isa        => 'Bool',
                         is         => 'ro',
                         required   => 0,
                         default    => 0,
@@ -430,21 +418,9 @@ sub load {
     return;
 }
 
-=head2 update_run_statuses
-
-Copies run statuses from npg tracking database
-
-=cut
-sub update_run_statuses {
-    my $self = shift;
-    npg_warehouse::loader::run_status->new(schema_npg => $self->_schema_npg,
-                                           schema_wh  => $self->_schema_wh)->copy_npg_tables;
-    return;
-}
-
 =head2 run
 
-Calls one of the loaders
+Calls the loader
 
 =cut
 sub run {
@@ -452,7 +428,7 @@ sub run {
     if (defined $ENV{dev} && $ENV{dev}) {
         warn 'USING ' . $ENV{dev} . " DATABASES\n";
     }
-    $self->run_statuses ? $self->update_run_statuses() : $self->load();
+    $self->load();
     if ($self->verbose) {
         warn "Completed loading, exiting...\n";
     }
@@ -506,8 +482,6 @@ __END__
 
 =item npg_warehouse::loader::npg
 
-=item npg_warehouse::loader::run_status
-
 =back
 
 =head1 INCOMPATIBILITIES
@@ -520,7 +494,7 @@ Marina Gourtovaia
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2017 Genome Research Ltd.
+Copyright (C) 2016,2017,2018,2019,2021 Genome Research Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

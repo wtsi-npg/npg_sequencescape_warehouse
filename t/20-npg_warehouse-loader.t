@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More tests => 185;
+use Test::More tests => 183;
 use Test::Exception;
 use DateTime;
 
@@ -590,12 +590,6 @@ my $plex_key   = q[plexes];
   $plex = $schema_wh->resultset('NpgPlexInformation')->find({id_run=>6624,position=>1,tag_index=>0});
   ok(!defined $plex->tag_sequence(), 'index zero tag sequence is not defined');
   is($plex->tag_decode_count(), 1831358, 'lane 1 tag index 0 count');
-}
-
-{
-  $loader->update_run_statuses;
-  is ($loader->_schema_wh->resultset('NpgRunStatusDict')->search({})->count, 24, '24 rows loaded to the run status dictionary');
-  is ($loader->_schema_wh->resultset('NpgRunStatus')->search({})->count, 223, '223 rows loaded to the run status table');  
 }
 
 {
