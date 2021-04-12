@@ -35,7 +35,6 @@ my $builder = WTSI::DNAP::Utilities::Build->new(
                     'DBIx::Class::Schema::Loader' => 0,
                     'English'                   => 0,
                     'FindBin'                   => 0,
-                    'Getopt::Long'              => '2.37',
                     'List::MoreUtils'           => 0,
                     'Moose'                     => 0,
                     'Moose::Util::TypeConstraints' => 0,

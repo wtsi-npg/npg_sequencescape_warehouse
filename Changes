@@ -1,6 +1,9 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 44.0.0
+ - remove functionality for loading npg_run_status table
+
 release 43.2.4
  - Travis CI build fixes
 
