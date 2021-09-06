@@ -1,8 +1,5 @@
 npg_sequencescape_warehouse
 ---------------------------
 
-Old sequencescape warehouse:
-  DBIx binding,
-  loader for npg tables,
-  LIMs driver for st::api::lims.
+DBIx binding for the old sequencescape warehouse.
 
