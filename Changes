@@ -1,6 +1,9 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+ - remove the loader and the warehouse lims driver since they are
+   no longer in use
+
 release 44.0.0
  - remove functionality for loading npg_run_status table
 
