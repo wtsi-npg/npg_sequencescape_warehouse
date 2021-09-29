@@ -585,9 +585,6 @@ Related object: L<npg_warehouse::Schema::Result::NpgInformation>
 __PACKAGE__->has_one('npg_info' => 'npg_warehouse::Schema::Result::NpgInformation',
                      {'foreign.id_run'=>'self.id_run', 'foreign.position'=>'self.position'});
 
-
-with qw/ npg_qc::autoqc::role::rpt_key /;
-
 =head2 sample
 
 Type: belongs_to
@@ -709,8 +706,6 @@ Moose-based DBIx binding for the npg_plex_information table of the warehouse dat
 =item MooseX::MarkAsMethods
 
 =item DBIx::Class::Core
-
-=item npg_qc::autoqc::role::rpt_key
 
 =back
 

@@ -786,8 +786,6 @@ __PACKAGE__->add_unique_constraint('id_run_position', ['id_run', 'position']);
 
 our $VERSION = '0';
 
-with qw/ npg_qc::autoqc::role::rpt_key /;
-
 =head2 npg_plex_information
 
 Related object: L<npg_warehouse::Schema::Result::NpgPlexInformation>
@@ -953,8 +951,6 @@ Moose-based DBIx binding for the npg_information table of the warehouse database
 =item DBIx::Class::Core
 
 =item MooseX::MarkAsMethods
-
-=item npg_qc::autoqc::role::rpt_key
 
 =back
 
