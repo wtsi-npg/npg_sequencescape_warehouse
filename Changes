@@ -1,6 +1,12 @@
 Changes for npg_sequencescape_warehouse
 =======================================
 
+release 45.0.0
+ - remove the loader and the warehouse lims driver since they are
+   no longer in use
+ - fix some auto generated dbic code
+ - remove dependency on npg_qc for rpt_key role
+
 release 44.0.0
  - remove functionality for loading npg_run_status table
 

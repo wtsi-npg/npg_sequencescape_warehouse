@@ -266,8 +266,6 @@ __PACKAGE__->has_many(
   'npg_warehouse::Schema::Result::NpgInformation',
   { 'foreign.project_id' => 'self.internal_id'  },
 );
-1;
-
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;

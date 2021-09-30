@@ -786,8 +786,6 @@ __PACKAGE__->add_unique_constraint('id_run_position', ['id_run', 'position']);
 
 our $VERSION = '0';
 
-with qw/ npg_qc::autoqc::role::rpt_key /;
-
 =head2 npg_plex_information
 
 Related object: L<npg_warehouse::Schema::Result::NpgPlexInformation>
@@ -921,6 +919,8 @@ sub current_run_status {
   return $crs->id_run_status_dict->description();
 }
 
+# You can replace this text with custom code or comments, and it will be preserved on regeneration
+__PACKAGE__->meta->make_immutable;
 1;
 __END__
 
@@ -952,8 +952,6 @@ Moose-based DBIx binding for the npg_information table of the warehouse database
 
 =item MooseX::MarkAsMethods
 
-=item npg_qc::autoqc::role::rpt_key
-
 =back
 
 =head1 INCOMPATIBILITIES
@@ -982,8 +980,3 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 =cut
-
-
-# You can replace this text with custom code or comments, and it will be preserved on regeneration
-__PACKAGE__->meta->make_immutable;
-1;
