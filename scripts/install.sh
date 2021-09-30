@@ -2,9 +2,8 @@
 
 set -e -x
 
-# The default build branch for all repositories. This defaults to
-# TRAVIS_BRANCH unless set in the Travis build environment.
-WTSI_NPG_BUILD_BRANCH=${WTSI_NPG_BUILD_BRANCH:=$TRAVIS_BRANCH}
+WTSI_NPG_BUILD_BRANCH=${WTSI_NPG_BUILD_BRANCH:=devel}
+WTSI_NPG_GITHUB_URL=${WTSI_NPG_GITHUB_URL:=https://github.com/wtsi-npg}
 
 # CPAN
 cpanm --quiet --notest Alien::Tidyp # For npg_tracking
@@ -13,7 +12,7 @@ cpanm --quiet --notest https://github.com/chapmanb/vcftools-cpan/archive/v0.953.
 
 # WTSI NPG Perl repo dependencies
 repos=""
-for repo in perl-dnap-utilities perl-irods-wrap ml_warehouse npg_tracking npg_seq_common npg_qc npg_ml_warehouse; do
+for repo in perl-dnap-utilities npg_tracking; do
     cd /tmp
     # Always clone master when using depth 1 to get current tag
     git clone --branch master --depth 1 "${WTSI_NPG_GITHUB_URL}/${repo}.git" ${repo}.git
@@ -49,7 +48,3 @@ do
     cpanm --quiet --notest --installdeps .
     ./Build install
 done
-
-#cd $TRAVIS_BUILD_DIR
-
-#cpanm --quiet --notest --installdeps .
